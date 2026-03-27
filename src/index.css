@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #0c0600;
+    color: #fef3e2;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(60, 30, 0, 0.3);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(240, 112, 11, 0.4);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(240, 112, 11, 0.7);
+  }
+
+  /* Text selection */
+  ::selection {
+    background: rgba(240, 112, 11, 0.35);
+    color: #fde68a;
+  }
+
+  /* Focus rings */
+  :focus-visible {
+    outline: 2px solid rgba(240, 112, 11, 0.6);
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+}
+
+@layer components {
+  .font-devanagari {
+    font-family: 'Noto Sans Devanagari', 'Noto Serif Devanagari', sans-serif;
+  }
+
+  .prose-invert p {
+    color: rgba(254, 226, 189, 0.8);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .prose-invert h1, .prose-invert h2, .prose-invert h3 {
+    color: rgb(253, 186, 116);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .prose-invert ul, .prose-invert ol {
+    color: rgba(254, 226, 189, 0.8);
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose-invert li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* PDF layer fixes */
+  .react-pdf__Page__textContent {
+    color: transparent;
+    mix-blend-mode: multiply;
+  }
+
+  /* Shimmer skeleton loader */
+  .skeleton {
+    background: linear-gradient(90deg,
+      rgba(60,30,0,0.5) 25%,
+      rgba(120, 60, 0, 0.3) 50%,
+      rgba(60,30,0,0.5) 75%
+    );
+    background-size: 400% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+}
