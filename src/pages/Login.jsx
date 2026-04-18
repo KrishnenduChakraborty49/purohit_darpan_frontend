@@ -45,7 +45,7 @@ export default function Login() {
             <span className="text-4xl">🪔</span>
           </div>
           <h1 className="font-devanagari text-3xl text-orange-300 font-bold tracking-wide">
-            पुरोहित दर्पण
+            পুরোহিত দর্পণ
           </h1>
           <p className="text-orange-200/60 text-sm mt-1">Your Digital Vedic Mentor</p>
         </div>

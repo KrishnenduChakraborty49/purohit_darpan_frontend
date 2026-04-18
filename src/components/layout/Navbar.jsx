@@ -61,7 +61,7 @@ export default function Navbar() {
               <span className="text-white font-bold text-lg">🪔</span>
             </div>
             <span className="font-devanagari text-orange-300 font-bold text-lg hidden sm:block tracking-wide">
-              पुरोहित दर्पण
+              পুরোহিত দর্পণ
             </span>
           </Link>
 
