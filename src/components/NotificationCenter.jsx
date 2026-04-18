@@ -16,7 +16,7 @@ export default function NotificationCenter({ isOpen, onClose }) {
   const fetchNotifications = async () => {
     setLoading(true);
     try {
-      const { data } = await axiosInstance.get(`/notifications/history/ + user.userId + `);
+      const { data } = await axiosInstance.get(`/notifications/history/${user.userId}`);
       setNotifications(data.content || []);
     } catch (err) {
       console.error('Failed to fetch notifications', err);
