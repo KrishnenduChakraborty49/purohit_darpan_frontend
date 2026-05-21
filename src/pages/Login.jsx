@@ -118,7 +118,7 @@ export default function Login() {
           {/* Demo credentials */}
           <div className="mt-4 p-3 bg-orange-500/10 rounded-xl border border-orange-500/20">
             <p className="text-orange-300/70 text-xs text-center">
-              Demo: <span className="font-mono text-orange-300">admin</span> / <span className="font-mono text-orange-300">Admin@123</span>
+              Demo: <span className="font-mono text-orange-200">admin</span> / <span className="font-mono text-orange-200">password</span>
             </p>
           </div>
         </div>
