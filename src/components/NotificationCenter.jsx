@@ -17,7 +17,8 @@ export default function NotificationCenter({ isOpen, onClose }) {
     setLoading(true);
     try {
       const { data } = await axiosInstance.get(`/notifications/history/${user.userId}`);
-      setNotifications(data.content || []);
+      // The backend returns a raw array, not a paginated object with .content
+      setNotifications(Array.isArray(data) ? data : (data?.content || []));
     } catch (err) {
       console.error('Failed to fetch notifications', err);
     } finally {
