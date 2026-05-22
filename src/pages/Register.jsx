@@ -48,7 +48,7 @@ export default function Register() {
                           flex items-center justify-center shadow-saffron animate-glow mb-4">
             <span className="text-4xl">🪔</span>
           </div>
-          <h1 className="font-devanagari text-3xl text-orange-300 font-bold">পুরোহিত দর্পণ</h1>
+          <h1 className="font-devanagari text-3xl text-orange-300 font-bold">Purohit Darpan</h1>
           <p className="text-orange-200/60 text-sm mt-1">Begin Your Vedic Journey</p>
         </div>
 
