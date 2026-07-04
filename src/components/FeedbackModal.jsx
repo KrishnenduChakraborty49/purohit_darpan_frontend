@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Star, X, Send } from 'lucide-react';
-import axiosInstance from '../../api/axiosInstance';
+import axiosInstance from '../api/axiosInstance';
 import toast from 'react-hot-toast';
 
 export default function FeedbackModal({ isOpen, onClose }) {
