@@ -6,8 +6,9 @@ import axiosInstance from '../../api/axiosInstance';
 import NotificationCenter from '../NotificationCenter';
 import {
   BookOpen, Calendar, Home, LogOut, Menu, X, MessageCircle,
-  Bell, User, ChevronDown, Sparkles
+  Bell, User, ChevronDown, Sparkles, MessageSquareHeart
 } from 'lucide-react';
+import FeedbackModal from '../FeedbackModal';
 
 export default function Navbar() {
   const { user, logout } = useAuthStore();
@@ -18,6 +19,7 @@ export default function Navbar() {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+  const [feedbackOpen, setFeedbackOpen] = useState(false);
 
   useEffect(() => {
     if (user?.userId) {
@@ -146,6 +148,13 @@ export default function Navbar() {
                     Settings
                   </Link>
                   <button
+                    onClick={() => { setFeedbackOpen(true); setProfileOpen(false); }}
+                    className="w-full flex items-center gap-3 px-4 py-3
+                               text-orange-200 hover:bg-orange-500/10 text-sm transition-all border-t border-orange-500/5">
+                    <MessageSquareHeart size={15} />
+                    Send Feedback
+                  </button>
+                  <button
                     onClick={handleLogout}
                     className="w-full flex items-center gap-3 px-4 py-3
                                text-red-400 hover:bg-red-500/10 text-sm transition-all border-t border-orange-500/5">
@@ -183,6 +192,7 @@ export default function Navbar() {
           </div>
         )}
       </div>
+      <FeedbackModal isOpen={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
     </nav>
   );
 }
