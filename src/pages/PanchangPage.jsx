@@ -106,6 +106,25 @@ export default function PanchangPage() {
     return `${day} ${month}, ${year}`;
   };
 
+  const formatTimeStr = (timeStr) => {
+    if (!timeStr) return '';
+    // timeStr is like "06:15:00" or "18:30:00"
+    const [h, m, s] = timeStr.split(':');
+    if (!h || !m) return timeStr;
+    
+    if (lang === 'bn') {
+      const hBn = toLocalNumbers(parseInt(h));
+      const mBn = toLocalNumbers(parseInt(m));
+      const sBn = toLocalNumbers(parseInt(s || 0));
+      return `${hBn} টা ${mBn} মি ${sBn} সে`;
+    } else {
+      const hInt = parseInt(h);
+      const ampm = hInt >= 12 ? 'PM' : 'AM';
+      const h12 = hInt % 12 || 12;
+      return `${h12}:${m} ${ampm}`;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-stone-50 pt-24 pb-12 font-sans">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -200,7 +219,7 @@ export default function PanchangPage() {
                     <span className="text-white font-medium">{t.sunrise}</span>
                   </div>
                   <p className="text-white text-sm font-medium tracking-wide">
-                    {lang === 'bn' ? '৫ টা ১৭ মি ০ সে' : lang === 'hi' ? '5:17 AM' : '5:17 AM'}
+                    {panchangData?.sunrise ? formatTimeStr(panchangData.sunrise) : (lang === 'bn' ? '৫ টা ১৭ মি ০ সে' : '5:17 AM')}
                   </p>
                 </div>
                 
@@ -210,7 +229,7 @@ export default function PanchangPage() {
                     <span className="text-xl">🌇</span>
                   </div>
                   <p className="text-white text-sm font-medium tracking-wide">
-                    {lang === 'bn' ? '৬ টা ৬ মি ০ সে' : lang === 'hi' ? '6:06 PM' : '6:06 PM'}
+                    {panchangData?.sunset ? formatTimeStr(panchangData.sunset) : (lang === 'bn' ? '৬ টা ৬ মি ০ সে' : '6:06 PM')}
                   </p>
                 </div>
               </div>
@@ -224,6 +243,61 @@ export default function PanchangPage() {
                 <span className="text-stone-500 italic mt-2 block">{t.notice2}</span>
               </p>
             </div>
+
+            {/* Detailed Panchang Data from API */}
+            {panchangData && (
+              <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-5 mt-4">
+                <h3 className="text-lg font-bold text-stone-800 mb-4 border-b border-stone-100 pb-2">
+                  {lang === 'bn' ? 'আজকের পঞ্চাঙ্গ' : lang === 'hi' ? 'आज का पंचांग' : 'Today\'s Panchang'}
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-stone-50 p-3 rounded-xl border border-stone-100">
+                    <p className="text-xs text-stone-500 font-semibold uppercase">{lang === 'bn' ? 'তিথি' : lang === 'hi' ? 'तिथि' : 'Tithi'}</p>
+                    <p className="text-stone-800 font-bold">{panchangData.tithi || '-'}</p>
+                  </div>
+                  <div className="bg-stone-50 p-3 rounded-xl border border-stone-100">
+                    <p className="text-xs text-stone-500 font-semibold uppercase">{lang === 'bn' ? 'নক্ষত্র' : lang === 'hi' ? 'नक्षत्र' : 'Nakshatra'}</p>
+                    <p className="text-stone-800 font-bold">{panchangData.nakshatra || '-'}</p>
+                  </div>
+                  <div className="bg-stone-50 p-3 rounded-xl border border-stone-100">
+                    <p className="text-xs text-stone-500 font-semibold uppercase">{lang === 'bn' ? 'যোগ' : lang === 'hi' ? 'योग' : 'Yoga'}</p>
+                    <p className="text-stone-800 font-bold">{panchangData.yoga || '-'}</p>
+                  </div>
+                  <div className="bg-stone-50 p-3 rounded-xl border border-stone-100">
+                    <p className="text-xs text-stone-500 font-semibold uppercase">{lang === 'bn' ? 'করণ' : lang === 'hi' ? 'करण' : 'Karana'}</p>
+                    <p className="text-stone-800 font-bold">{panchangData.karana || '-'}</p>
+                  </div>
+                </div>
+                
+                {panchangData.brahmaMuhurtaStart && panchangData.brahmaMuhurtaEnd && (
+                  <div className="mt-4 bg-purple-50 p-3 rounded-xl border border-purple-100 flex items-center justify-between">
+                    <div>
+                      <p className="text-xs text-purple-600 font-semibold uppercase">{lang === 'bn' ? 'ব্রহ্ম মুহূর্ত' : lang === 'hi' ? 'ब्रह्म मुहूर्त' : 'Brahma Muhurta'}</p>
+                      <p className="text-purple-900 font-bold text-sm mt-1">
+                        {formatTimeStr(panchangData.brahmaMuhurtaStart)} - {formatTimeStr(panchangData.brahmaMuhurtaEnd)}
+                      </p>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-xl">
+                      🕉️
+                    </div>
+                  </div>
+                )}
+                
+                {panchangData.rahuStart && panchangData.rahuEnd && (
+                  <div className="mt-3 bg-red-50 p-3 rounded-xl border border-red-100 flex items-center justify-between">
+                    <div>
+                      <p className="text-xs text-red-600 font-semibold uppercase">{lang === 'bn' ? 'রাহু কাল' : lang === 'hi' ? 'राहु काल' : 'Rahu Kaal'}</p>
+                      <p className="text-red-900 font-bold text-sm mt-1">
+                        {formatTimeStr(panchangData.rahuStart)} - {formatTimeStr(panchangData.rahuEnd)}
+                      </p>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-xl">
+                      ⚠️
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           {/* Right Column: Icon Grid */}
