@@ -4,6 +4,7 @@ import { usePanchangStore } from '../store/panchangStore';
 import toast from 'react-hot-toast';
 import { ShoppingCart, Settings, MapPin, CalendarDays, ChevronRight, Globe } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import RashipholModal from '../components/panchang/RashipholModal';
 
 const TRANSLATIONS = {
   bn: {
@@ -64,6 +65,7 @@ export default function PanchangPage() {
   const [viewDate] = useState(new Date());
   const [lang, setLang] = useState('bn');
   const [showLangMenu, setShowLangMenu] = useState(false);
+  const [isRashipholOpen, setIsRashipholOpen] = useState(false);
   const navigate = useNavigate();
 
   const t = TRANSLATIONS[lang];
@@ -79,7 +81,7 @@ export default function PanchangPage() {
   const gridItems = [
     { label: t.grid[0], icon: '📅', color: 'text-orange-500', bg: 'bg-orange-50', action: handleComingSoon },
     { label: t.grid[1], icon: '🌌', color: 'text-indigo-500', bg: 'bg-indigo-50', action: handleComingSoon },
-    { label: t.grid[2], icon: '♈', color: 'text-purple-500', bg: 'bg-purple-50', action: handleComingSoon },
+    { label: t.grid[2], icon: '♈', color: 'text-purple-500', bg: 'bg-purple-50', action: () => setIsRashipholOpen(true) },
     { label: t.grid[3], icon: '🙏', color: 'text-teal-500', bg: 'bg-teal-50', action: () => navigate('/pujas') },
     { label: t.grid[4], icon: '🎁', color: 'text-red-500', bg: 'bg-red-50', action: handleComingSoon },
     { label: t.grid[5], icon: '📖', color: 'text-green-500', bg: 'bg-green-50', action: handleComingSoon },
@@ -323,6 +325,13 @@ export default function PanchangPage() {
 
         </div>
       </div>
+
+      {/* Rashiphol Modal */}
+      <RashipholModal
+        isOpen={isRashipholOpen}
+        onClose={() => setIsRashipholOpen(false)}
+        lang={lang}
+      />
     </div>
   );
 }
