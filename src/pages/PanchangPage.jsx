@@ -6,6 +6,7 @@ import { ShoppingCart, Settings, MapPin, CalendarDays, ChevronRight, Globe } fro
 import { useNavigate } from 'react-router-dom';
 import RashipholModal from '../components/panchang/RashipholModal';
 import CalendarModal from '../components/panchang/CalendarModal';
+import PujaDaysModal from '../components/panchang/PujaDaysModal';
 
 const TRANSLATIONS = {
   bn: {
@@ -65,6 +66,7 @@ export default function PanchangPage() {
   const { today: panchangData, fetchDate, loading } = usePanchangStore();
   const [viewDate, setViewDate] = useState(new Date());
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+  const [isPujaDaysOpen, setIsPujaDaysOpen] = useState(false);
   const [lang, setLang] = useState('bn');
   const [showLangMenu, setShowLangMenu] = useState(false);
   const [isRashipholOpen, setIsRashipholOpen] = useState(false);
@@ -84,7 +86,7 @@ export default function PanchangPage() {
     { label: t.grid[0], icon: '📅', color: 'text-orange-500', bg: 'bg-orange-50', action: () => setIsCalendarOpen(true) },
     { label: t.grid[1], icon: '🌌', color: 'text-indigo-500', bg: 'bg-indigo-50', action: handleComingSoon },
     { label: t.grid[2], icon: '♈', color: 'text-purple-500', bg: 'bg-purple-50', action: () => setIsRashipholOpen(true) },
-    { label: t.grid[3], icon: '🙏', color: 'text-teal-500', bg: 'bg-teal-50', action: () => navigate('/pujas') },
+    { label: t.grid[3], icon: '🙏', color: 'text-teal-500', bg: 'bg-teal-50', action: () => setIsPujaDaysOpen(true) },
     { label: t.grid[4], icon: '🎁', color: 'text-red-500', bg: 'bg-red-50', action: handleComingSoon },
     { label: t.grid[5], icon: '📖', color: 'text-green-500', bg: 'bg-green-50', action: handleComingSoon },
     { label: t.grid[6], icon: '🌑', color: 'text-slate-500', bg: 'bg-slate-50', action: handleComingSoon },
@@ -327,6 +329,17 @@ export default function PanchangPage() {
 
         </div>
       </div>
+
+      {/* Puja Days Modal */}
+      <PujaDaysModal
+        isOpen={isPujaDaysOpen}
+        onClose={() => setIsPujaDaysOpen(false)}
+        lang={lang}
+        onSelectDate={(newDate) => {
+          setViewDate(newDate);
+          fetchDate(newDate);
+        }}
+      />
 
       {/* Calendar Modal */}
       <CalendarModal
