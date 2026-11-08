@@ -162,12 +162,25 @@ export default function AIAssistant() {
                     ? 'bg-orange-500/20 border border-orange-500/30 text-orange-100 text-sm rounded-tr-sm'
                     : 'bg-stone-800/80 border border-orange-500/10 rounded-tl-sm'
                   }`}>
-                  {msg.role === 'assistant'
-                    ? <AIResponseContent content={msg.content} />
-                    : <p className="text-sm">{msg.content}</p>
-                  }
+                  {msg.role === 'assistant' ? (
+                    msg.content ? (
+                      <>
+                        <AIResponseContent content={msg.content} />
+                        {msg.isStreaming && (
+                          <span className="inline-block w-1.5 h-3.5 bg-orange-400 ml-1 rounded-sm animate-pulse align-middle" />
+                        )}
+                      </>
+                    ) : (
+                      <div className="flex items-center gap-2 py-1">
+                        <Loader size={13} className="text-orange-400 animate-spin" />
+                        <span className="text-orange-200/70 text-xs font-medium">Guru is contemplating your question...</span>
+                      </div>
+                    )
+                  ) : (
+                    <p className="text-sm">{msg.content}</p>
+                  )}
 
-                  {msg.role === 'assistant' && (
+                  {msg.role === 'assistant' && !msg.isStreaming && msg.content && (
                     <div className="flex items-center gap-2 mt-3 pt-2 border-t border-orange-500/10">
                       <button onClick={() => handleCopy(msg.content)}
                         className="p-1 text-orange-400/40 hover:text-orange-300 transition-colors">
@@ -186,16 +199,16 @@ export default function AIAssistant() {
             ))
           )}
 
-          {isLoading && (
+          {isLoading && messages.length > 0 && messages[messages.length - 1].role === 'user' && (
             <div className="flex gap-3">
               <div className="w-8 h-8 rounded-full bg-gradient-saffron flex-shrink-0
-                              flex items-center justify-center shadow-saffron">
+                              flex items-center justify-center shadow-saffron animate-pulse">
                 <span className="text-sm">🙏</span>
               </div>
               <div className="bg-stone-800/80 border border-orange-500/10 rounded-2xl rounded-tl-sm
                               px-4 py-3 flex items-center gap-2">
                 <Loader size={14} className="text-orange-400 animate-spin" />
-                <span className="text-orange-200/50 text-xs">Guru is thinking...</span>
+                <span className="text-orange-200/50 text-xs">Guru is connecting to sacred texts...</span>
               </div>
             </div>
           )}
