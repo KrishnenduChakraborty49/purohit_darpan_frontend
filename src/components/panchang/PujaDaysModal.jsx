@@ -121,7 +121,7 @@ const MASTER_FESTIVALS = [
     nameEn: 'Mahalaya (Tarpan)',
     eventDate: '2026-10-10',
     tithiBn: 'আশ্বিন অমাবস্যা',
-    description: 'পিতৃপক্ষের সমাপ্তি ও দেবীপক্ষের শুভ আগমà¦¨ী।',
+    description: 'পিতৃপক্ষের সমাপ্তি ও দেবীপক্ষের শুভ আগমনী।',
     icon: '🌑',
     category: 'major',
     pujaId: null
@@ -132,7 +132,7 @@ const MASTER_FESTIVALS = [
     nameEn: 'Durga Puja - Maha Shashthi',
     eventDate: '2026-10-16',
     tithiBn: 'আশ্বিন শুক্লা ষষ্ঠী',
-    description: 'দেবীর কà¦²à§à¦ªà¦¾à¦°à¦®à§à¦­, বà§à¦§à¦¨ ও অà¦§à¦¿à¦¬à¦¾à¦¸।',
+    description: 'দেবীর কল্পারম্ভ, বোধন ও অধিবাস।',
     icon: '🌸',
     category: 'major',
     pujaId: null
@@ -142,96 +142,96 @@ const MASTER_FESTIVALS = [
     nameBn: 'দুর্গাপূজা (মহাসপ্তমী)',
     nameEn: 'Durga Puja - Maha Saptami',
     eventDate: '2026-10-17',
-    tithiBn: 'আশ্বিন শুক্লা সà¦ªà§à¦¤à¦®à§',
-    description: 'নবà¦ªà¦¤à§à¦°à¦¿à¦à¦¾ (কà¦²à¦¾à¦¬à§) পà§à¦°à¦¬à§à¦¶ ও সà¦ªà§à¦¤à¦®à§ বà¦¿à¦¹à¦¿à¦¤ পà§à¦à¦¾।',
+    tithiBn: 'আশ্বিন শুক্লা সপ্তমী',
+    description: 'নবপত্রিকা (কলাবৌ) প্রবেশ ও সপ্তমী বিহিত পূজা।',
     icon: '🌼',
     category: 'major',
     pujaId: null
   },
   {
     id: 114,
-    nameBn: 'দুর্গাপূজা (মহাঅষ্টমী ও সন্ধিপূজà¦¾)',
+    nameBn: 'দুর্গাপূজা (মহাঅষ্টমী ও সন্ধিপূজা)',
     nameEn: 'Durga Puja - Maha Ashtami & Sandhi Puja',
     eventDate: '2026-10-18',
-    tithiBn: 'আশ্বিন শুক্লা অà¦·à§à¦à¦®à§',
-    description: 'কà§à¦®à¦¾à¦°à§ পà§à¦à¦¾ এà¦¬à¦ ১à§¦à§® পà¦¦à§à¦®সà¦¹ পà¦¬à¦¿à¦¤à§à¦° সà¦¨à§à¦§à¦¿পà§à¦à¦¾।',
+    tithiBn: 'আশ্বিন শুক্লা অষ্টমী',
+    description: 'কুমারী পূজা এবং ১০৮ পদ্মসহ পবিত্র সন্ধিপূজা।',
     icon: '🪔',
     category: 'major',
     pujaId: null
   },
   {
     id: 115,
-    nameBn: 'দুর্গাপূজা (মহানবমà§)',
+    nameBn: 'দুর্গাপূজা (মহানবমী)',
     nameEn: 'Durga Puja - Maha Navami',
     eventDate: '2026-10-19',
-    tithiBn: 'আশ্বিন শুক্লা নà¦¬à¦®à§',
-    description: 'মà¦¹à¦¾à¦¨à¦¬à¦®à§ বà¦¿à¦¹à¦¿à¦¤ পà§à¦à¦¾, হà§à¦®-যà¦à§à¦ এà¦¬à¦ আà¦°à¦¤à¦¿।',
+    tithiBn: 'আশ্বিন শুক্লা নবমী',
+    description: 'মহানবমী বিহিত পূজা, হোম-যজ্ঞ এবং আরতি।',
     icon: '🔥',
     category: 'major',
     pujaId: null
   },
   {
     id: 116,
-    nameBn: 'বিজয়া দশমà§ (দর্পà¦£ বà¦¿à¦¸à¦°à§à¦à¦¨ ও সিঁদà§à¦° খà§à¦²à¦¾)',
+    nameBn: 'বিজয়া দশমী (দর্পণ বিসর্জন ও সিঁদুর খেলা)',
     nameEn: 'Vijaya Dashami (Dussehra)',
     eventDate: '2026-10-20',
-    tithiBn: 'আশ্বিন শুক্লা দà¦¶à¦®à§',
-    description: 'দেবà§র দà¦°à§à¦ªà¦£ বà¦¿à¦¸à¦°à§à¦à¦¨, সà¦¿ঁà¦¦à§à¦° খà§à¦²à¦¾ ও শুà¦­ বà¦¿à¦à¦¯়à¦¾র পà§à¦°à¦£à¦¾à¦®।',
+    tithiBn: 'আশ্বিন শুক্লা দশমী',
+    description: 'দেবীর দর্পণ বিসর্জন, সিঁদুর খেলা ও শুভ বিজয়ার প্রণাম।',
     icon: '🩰',
     category: 'major',
     pujaId: null
   },
   {
     id: 117,
-    nameBn: 'কোজাগরী লক্ষ্মীপূà¦à¦¾',
+    nameBn: 'কোজাগরী লক্ষ্মীপূজা',
     nameEn: 'Kojagari Lakshmi Puja',
     eventDate: '2026-10-25',
-    tithiBn: 'আশ্বিন পূà¦°à§à¦£à¦¿à¦®à¦¾',
-    description: 'ধন-ধà¦¾à¦¨à§à¦¯à§র দà§বà§ মà¦¾ লà¦à§à¦·à§মà§র পà§à¦à¦¾ ও পà¦¾ঁà¦à¦¾à¦²à§ পà¦¾à¦ ।',
+    tithiBn: 'আশ্বিন পূর্ণিমা',
+    description: 'ধন-ধান্যের দেবী মা লক্ষ্মীর পূজা ও পাঁচালী পাঠ।',
     icon: '🌾',
     category: 'major',
     pujaId: 2
   },
   {
     id: 118,
-    nameBn: 'শ্রী শ্রী শ্যà¦¾à¦®à¦¾পূà¦à¦¾ ও দীপাবà¦²à¦¿ (Kali Puja)',
+    nameBn: 'শ্রী শ্রী শ্যামাপূজা ও দীপাবলি (Kali Puja)',
     nameEn: 'Kali Puja & Diwali',
     eventDate: '2026-11-08',
-    tithiBn: 'কার্à¦¤à¦¿ক অমাবস্যà¦¾',
-    description: 'মà¦¾ কà¦¾à¦²à§র নà¦¿à¦¶à§à¦¥ আà¦°à¦¾à¦§à¦¨à¦¾ ও দীà¦ªà¦¾বà¦²à¦¿।',
+    tithiBn: 'কার্তিক অমাবস্যা',
+    description: 'মা কালীর নিশীথ আরাধনা ও দীপাবলি।',
     icon: '🪔',
     category: 'major',
     pujaId: null
   },
   {
     id: 119,
-    nameBn: 'ভ্রà¦¾তà§দà§বà¦¿তà§য়à¦¾ (ভà¦¾ইফà§ঁà¦à¦¾)',
+    nameBn: 'ভ্রাতৃদ্বিতীয়া (ভাইফোঁটা)',
     nameEn: 'Bhai Phonta (Bhatri Dwitiya)',
     eventDate: '2026-11-10',
-    tithiBn: 'কার্à¦¤à¦¿ক শুকà§লা দà§বà¦¿তà§য়à¦¾',
-    description: 'ভà¦¾ইয়à§র দà§à¦°à§ঘà¦¾à¦¯়à§ কà¦¾à¦®à¦¨à¦¾যà¦¼ বà§à¦¨েদà§র ফà§ঁà¦à¦¾।',
+    tithiBn: 'কার্তিক শুক্লা দ্বিতীয়া',
+    description: 'ভাইয়ের দীর্ঘায়ু কামনায় বোনেদের ফোঁটা।',
     icon: '💝',
     category: 'traditional',
     pujaId: null
   },
   {
     id: 120,
-    nameBn: 'শ্রà§ শ্রà§ জà¦à¦¦à§à¦§à¦¾à¦¤à§à¦°à§ পà§à¦à¦¾',
+    nameBn: 'শ্রী শ্রী জগদ্ধাত্রী পূজা',
     nameEn: 'Jagaddhatri Puja',
     eventDate: '2026-11-17',
-    tithiBn: 'কার্à¦¤à¦¿ক শুকà§লা নà¦¬à¦®à§',
-    description: 'জà¦à¦¤ধà¦¾à¦°à¦¿à¦£à§ দà§বà§ জà¦à¦¦à§à¦§à¦¾à¦¤à§à¦°à§র মà¦¹à¦¾পà§à¦à¦¾।',
+    tithiBn: 'কার্তিক শুক্লা নবমী',
+    description: 'জগদ্ধারিণী দেবী জগদ্ধাত্রীর মহাপূজা।',
     icon: '👑',
     category: 'major',
     pujaId: null
   },
   {
     id: 121,
-    nameBn: 'শ্রà§ শ্রà§ রà¦¾à¦¸à¦¯à¦¾à¦¤à§à¦°à¦¾ (রà¦¾à¦¸ পà§à¦°à§à¦£à¦¿মà¦¾)',
+    nameBn: 'শ্রী শ্রী রাসযাত্রা (রাস পূর্ণিমা)',
     nameEn: 'Rash Yatra',
     eventDate: '2026-11-23',
-    tithiBn: 'কার্à¦¤à¦¿ক পà§à¦°à§à¦£à¦¿মà¦¾',
-    description: 'শ্রà§ রà¦¾à¦§à¦¾কà§ষà§ণà§র মà¦¹à¦¾রà¦¾à¦¸à§ৎà¦¸à¦¬।',
+    tithiBn: 'কার্তিক পূর্ণিমা',
+    description: 'শ্রী রাধাকৃষ্ণের মহারাসোৎসব।',
     icon: '🌕',
     category: 'major',
     pujaId: null
@@ -521,7 +521,7 @@ export default function PujaDaysModal({ isOpen, onClose, lang = 'bn', onSelectDa
                         className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 px-4 py-2 bg-stone-100 hover:bg-stone-200 text-stone-700 rounded-xl text-xs font-semibold transition-all"
                       >
                         <BookOpen size={14} />
-                        {lang === 'bn' ? 'পূজা লà¦¾র্নিং' : 'Puja Learning'}
+                        {lang === 'bn' ? 'পূজা শিক্ষা' : 'Puja Learning'}
                       </button>
                     )}
 

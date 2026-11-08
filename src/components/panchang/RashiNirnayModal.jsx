@@ -10,7 +10,7 @@ const RASHI_DATA = [
     lord: 'মঙ্গল (Mars)',
     element: 'অগ্নি (Fire)',
     luckyColor: 'লাল (Red)',
-    luckyNumber: 'à§¯, à§§',
+    luckyNumber: '৯, ১',
     gemstone: 'রক্তপ্রবাল (Red Coral)',
     letters: 'চু, চে, চো, লা, লি, লু, লে, লো, অ (Chu, Che, Cho, La, Li, Lu, Le, Lo, A)'
   },
@@ -22,7 +22,7 @@ const RASHI_DATA = [
     lord: 'শুক্র (Venus)',
     element: 'পৃথিবী (Earth)',
     luckyColor: 'সাদা, রুপোলি (White)',
-    luckyNumber: 'à§¬, à§¨',
+    luckyNumber: '৬, ২',
     gemstone: 'হীরা / ওপাল (Diamond / Opal)',
     letters: 'ই, ঈ, উ, এ, ও, বা, বি, বু, বে, বো (I, Ee, U, E, O, Ba, Bi, Bu, Be, Bo)'
   },
@@ -34,7 +34,7 @@ const RASHI_DATA = [
     lord: 'বুধ (Mercury)',
     element: 'বায়ু (Air)',
     luckyColor: 'সবুজ (Green)',
-    luckyNumber: 'à§«, à§©',
+    luckyNumber: '৫, ৩',
     gemstone: 'পান্না (Emerald)',
     letters: 'কা, কি, কু, ঘ, ঙ, ছ, কে, কো, হ (Ka, Ki, Ku, Gha, Chha, Ke, Ko, Ha)'
   },
@@ -46,7 +46,7 @@ const RASHI_DATA = [
     lord: 'চন্দ্র (Moon)',
     element: 'জল (Water)',
     luckyColor: 'দুধে সাদা, মুক্তা (Cream)',
-    luckyNumber: 'à§¨, à§­',
+    luckyNumber: '২, ৭',
     gemstone: 'মুক্তা / মুনস্টোন (Pearl)',
     letters: 'হি, হু, হে, হো, ডা, ডি, ডু, ডে, ডো (Hi, Hu, He, Ho, Da, Di, Du, De, Do)'
   },
@@ -58,7 +58,7 @@ const RASHI_DATA = [
     lord: 'সূর্য (Sun)',
     element: 'অগ্নি (Fire)',
     luckyColor: 'সোনালী, কমলা (Gold / Orange)',
-    luckyNumber: 'à§§, à§ª',
+    luckyNumber: '১, ৪',
     gemstone: 'মাণিক্য (Ruby)',
     letters: 'মা, মি, মু, মে, মো, টা, টি, টু, টে (Ma, Mi, Mu, Me, Mo, Ta, Ti, Tu, Te)'
   },
@@ -70,7 +70,7 @@ const RASHI_DATA = [
     lord: 'বুধ (Mercury)',
     element: 'পৃথিবী (Earth)',
     luckyColor: 'গাঢ় সবুজ (Deep Green)',
-    luckyNumber: 'à§«, à§¬',
+    luckyNumber: '৫, ৬',
     gemstone: 'পান্না (Emerald)',
     letters: 'টো, পা, পি, পু, ষ, ণ, ঠ, পে, পো (To, Pa, Pi, Pu, Sha, Tha, Pe, Po)'
   },
@@ -82,7 +82,7 @@ const RASHI_DATA = [
     lord: 'শুক্র (Venus)',
     element: 'বায়ু (Air)',
     luckyColor: 'নীল, সাদা (Light Blue)',
-    luckyNumber: 'à§¬, à§®',
+    luckyNumber: '৬, ৮',
     gemstone: 'হীরা / ওপাল (Opal / Diamond)',
     letters: 'রা, রি, রু, রে, রো, তা, তি, তু, তে (Ra, Ri, Ru, Re, Ro, Ta, Ti, Tu, Te)'
   },
@@ -94,7 +94,7 @@ const RASHI_DATA = [
     lord: 'মঙ্গল (Mars)',
     element: 'জল (Water)',
     luckyColor: 'গাঢ় লাল, খয়রি (Maroon)',
-    luckyNumber: 'à§¯, à§©',
+    luckyNumber: '৯, ৩',
     gemstone: 'রক্তপ্রবাল (Red Coral)',
     letters: 'তো, না, নি, নু, নে, নো, য়া, য়ি, য়ু (To, Na, Ni, Nu, Ne, No, Ya, Yi, Yu)'
   },
@@ -106,7 +106,7 @@ const RASHI_DATA = [
     lord: 'বৃহস্পতি (Jupiter)',
     element: 'অগ্নি (Fire)',
     luckyColor: 'হলুদ, বাসন্তী (Yellow)',
-    luckyNumber: 'à§©, à§¯',
+    luckyNumber: '৩, ৯',
     gemstone: 'পীত পোখরাজ (Yellow Sapphire)',
     letters: 'য়ে, য়ো, ভা, ভি, ভু, ধা, ফা, ঢা, ভে (Ye, Yo, Bha, Bhi, Bhu, Dha, Pha, Dha, Bhe)'
   },
@@ -118,7 +118,7 @@ const RASHI_DATA = [
     lord: 'শনি (Saturn)',
     element: 'পৃথিবী (Earth)',
     luckyColor: 'নীল, কালো (Navy Blue / Black)',
-    luckyNumber: 'à§®, à§ª',
+    luckyNumber: '৮, ৪',
     gemstone: 'নীলা (Blue Sapphire)',
     letters: 'ভো, জা, জি, খি, খু, খে, খো, গা, গি (Bho, Ja, Ji, Khi, Khu, Khe, Kho, Ga, Gi)'
   },
@@ -130,7 +130,7 @@ const RASHI_DATA = [
     lord: 'শনি (Saturn)',
     element: 'বায়ু (Air)',
     luckyColor: 'আসমানী, বেগুনি (Cyan / Purple)',
-    luckyNumber: 'à§®, à§­',
+    luckyNumber: '৮, ৭',
     gemstone: 'নীলা / জামুনিয়া (Amethyst)',
     letters: 'গু, গে, গো, সা, সি, সু, সে, সো, দা (Gu, Ge, Go, Sa, Si, Su, Se, So, Da)'
   },
@@ -142,7 +142,7 @@ const RASHI_DATA = [
     lord: 'বৃহস্পতি (Jupiter)',
     element: 'জল (Water)',
     luckyColor: 'হলুদ, কমলা (Yellow)',
-    luckyNumber: 'à§©, à§­',
+    luckyNumber: '৩, ৭',
     gemstone: 'পোখরাজ / মুক্তা (Yellow Sapphire)',
     letters: 'দি, দু, থ, ঝ, ঞ, দে, দো, চ, চি (Di, Du, Tha, Jha, De, Do, Cha, Chi)'
   }
@@ -261,7 +261,7 @@ export default function RashiNirnayModal({ isOpen, onClose, lang = 'bn', onOpenR
                 type="text"
                 value={searchLetter}
                 onChange={(e) => setSearchLetter(e.target.value)}
-                placeholder={lang === 'en' ? 'Search letter e.g. à¦, à¦°, à¦...' : 'অক্ষর লিখুন যেমন ক, র, ম...'}
+                placeholder={lang === 'en' ? 'Search letter e.g. ক, র, অ (or K, R, A)...' : 'অক্ষর খুঁজুন যেমন ক, র, অ...'}
                 className="w-full px-3 py-1.5 text-xs sm:text-sm rounded-xl bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-800"
               />
             </div>

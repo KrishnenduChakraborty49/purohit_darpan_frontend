@@ -247,7 +247,7 @@ export default function MoonPhaseModal({ isOpen, onClose, initialTab = 'amavasya
                 <span className="text-xs px-2.5 py-1 rounded-lg bg-black/30 text-white font-medium">
                   {(() => {
                     const days = getDaysDiff(nextPhase.date);
-                    if (days === 0) return lang === 'en' ? 'Today!' : 'আজকেà¦!';
+                    if (days === 0) return lang === 'en' ? 'Today!' : 'আজকেই!';
                     if (days === 1) return lang === 'en' ? 'Tomorrow' : 'আগামীকাল';
                     return lang === 'en' ? `In ${days} days` : `আর ${days} দিন বাকি`;
                   })()}
