@@ -14,6 +14,7 @@ import AuspiciousMuhuratModal from '../components/panchang/AuspiciousMuhuratModa
 import MoonPhaseModal from '../components/panchang/MoonPhaseModal';
 import RashiNirnayModal from '../components/panchang/RashiNirnayModal';
 import VrataModal from '../components/panchang/VrataModal';
+import FestivalNotificationBanner from '../components/panchang/FestivalNotificationBanner';
 
 const TRANSLATIONS = {
   bn: {
@@ -161,6 +162,16 @@ export default function PanchangPage() {
   return (
     <div className="min-h-screen bg-stone-50 pt-24 pb-12 font-sans">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
+
+        {/* Festival & Sacred Occasion Notification Banner */}
+        <FestivalNotificationBanner 
+          lang={lang}
+          onOpenPujaModal={() => setIsPujaDaysOpen(true)}
+          onViewPanchang={() => {
+            const el = document.getElementById('panchang-details');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }}
+        />
         
         {/* Responsive Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">

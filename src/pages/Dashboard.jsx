@@ -5,6 +5,7 @@ import { usePujaStore } from '../store/pujaStore';
 import { usePanchangStore } from '../store/panchangStore';
 import { BookOpen, Calendar, Sparkles, ChevronRight, Sun, Star } from 'lucide-react';
 import { format } from 'date-fns';
+import FestivalNotificationBanner from '../components/panchang/FestivalNotificationBanner';
 
 export default function Dashboard() {
   const { user } = useAuthStore();
@@ -28,6 +29,13 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-950 to-amber-950/20 pt-16">
       <div className="max-w-7xl mx-auto px-4 py-8 space-y-8">
+
+        {/* Sacred Festival Occasion Notification */}
+        <FestivalNotificationBanner 
+          lang="bn"
+          onOpenPujaModal={() => navigate('/panchang')}
+          onViewPanchang={() => navigate('/panchang')}
+        />
 
         {/* Welcome hero */}
         <div className="relative overflow-hidden bg-gradient-to-r from-amber-950/80 to-orange-950/60

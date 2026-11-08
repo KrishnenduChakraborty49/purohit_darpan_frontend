@@ -9,11 +9,26 @@ import {
   Bell, User, ChevronDown, Sparkles, MessageSquareHeart
 } from 'lucide-react';
 import FeedbackModal from '../FeedbackModal';
+import { getActiveFestivalNotifications } from '../../utils/festivalNotifications';
 
 export default function Navbar() {
   const { user, logout } = useAuthStore();
   const [notifOpen, setNotifOpen] = useState(false);
   const [notifUnread, setNotifUnread] = useState(0);
+  const [festivalAlertsCount, setFestivalAlertsCount] = useState(0);
+  const [hasTodayFestival, setHasTodayFestival] = useState(false);
+
+  useEffect(() => {
+    try {
+      const alerts = getActiveFestivalNotifications();
+      const readIds = JSON.parse(localStorage.getItem('purohit_read_notifications') || '[]');
+      const unreadAlerts = alerts.filter(a => !readIds.includes(a.id));
+      setFestivalAlertsCount(unreadAlerts.length);
+      setHasTodayFestival(alerts.some(a => a.isToday));
+    } catch {
+      // fallback
+    }
+  }, [notifOpen]);
   const { togglePanel } = useAIStore();
   const navigate = useNavigate();
   const location = useLocation();
@@ -109,11 +124,19 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setNotifOpen(!notifOpen)}
-                className="p-2 rounded-lg text-orange-300/70 hover:text-orange-300 hover:bg-orange-500/10 transition-all relative">
+                aria-label="View notifications and festival alerts"
+                className="p-2 rounded-lg text-orange-300/80 hover:text-orange-200 hover:bg-orange-500/10 transition-all relative">
                 <Bell size={20} />
-                {notifUnread > 0 && (
+                {hasTodayFestival ? (
+                  <span className="absolute -top-0.5 -right-0.5 flex h-4 w-4">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-4 w-4 bg-gradient-to-r from-amber-500 to-orange-600 text-[10px] font-bold text-stone-950 items-center justify-center shadow-sm">
+                      {Math.max(1, (notifUnread || 0) + festivalAlertsCount)}
+                    </span>
+                  </span>
+                ) : ((notifUnread > 0 || festivalAlertsCount > 0) && (
                   <span className="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 border-2 border-stone-950 rounded-full animate-pulse" />
-                )}
+                ))}
               </button>
               <NotificationCenter isOpen={notifOpen} onClose={() => setNotifOpen(false)} />
             </div>
