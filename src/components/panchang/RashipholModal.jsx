@@ -191,9 +191,15 @@ const TEXTS = {
   }
 };
 
-export default function RashipholModal({ isOpen, onClose, lang = 'bn' }) {
+export default function RashipholModal({ isOpen, onClose, lang = 'bn', initialRashiCode }) {
   const [rashis, setRashis] = useState(DEFAULT_RASHIS);
-  const [selectedRashiCode, setSelectedRashiCode] = useState('aries');
+  const [selectedRashiCode, setSelectedRashiCode] = useState(initialRashiCode || 'aries');
+
+  useEffect(() => {
+    if (initialRashiCode) {
+      setSelectedRashiCode(initialRashiCode);
+    }
+  }, [initialRashiCode, isOpen]);
   const [loading, setLoading] = useState(false);
 
   const t = TEXTS[lang] || TEXTS.bn;

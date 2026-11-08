@@ -7,6 +7,13 @@ import { useNavigate } from 'react-router-dom';
 import RashipholModal from '../components/panchang/RashipholModal';
 import CalendarModal from '../components/panchang/CalendarModal';
 import PujaDaysModal from '../components/panchang/PujaDaysModal';
+import MarriageDatesModal from '../components/panchang/MarriageDatesModal';
+import EkadashiModal from '../components/panchang/EkadashiModal';
+import EclipseModal from '../components/panchang/EclipseModal';
+import AuspiciousMuhuratModal from '../components/panchang/AuspiciousMuhuratModal';
+import MoonPhaseModal from '../components/panchang/MoonPhaseModal';
+import RashiNirnayModal from '../components/panchang/RashiNirnayModal';
+import VrataModal from '../components/panchang/VrataModal';
 
 const TRANSLATIONS = {
   bn: {
@@ -70,7 +77,27 @@ export default function PanchangPage() {
   const [lang, setLang] = useState('bn');
   const [showLangMenu, setShowLangMenu] = useState(false);
   const [isRashipholOpen, setIsRashipholOpen] = useState(false);
+  const [selectedRashiCode, setSelectedRashiCode] = useState('aries');
+  const [isMarriageOpen, setIsMarriageOpen] = useState(false);
+  const [isEkadashiOpen, setIsEkadashiOpen] = useState(false);
+  const [isEclipseOpen, setIsEclipseOpen] = useState(false);
+  const [isMuhuratOpen, setIsMuhuratOpen] = useState(false);
+  const [isMoonPhaseOpen, setIsMoonPhaseOpen] = useState(false);
+  const [moonPhaseTab, setMoonPhaseTab] = useState('amavasya');
+  const [isRashiNirnayOpen, setIsRashiNirnayOpen] = useState(false);
+  const [isVrataOpen, setIsVrataOpen] = useState(false);
   const navigate = useNavigate();
+
+  const scrollToPanchang = () => {
+    const el = document.getElementById('panchang-details');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.classList.add('ring-2', 'ring-indigo-400');
+      setTimeout(() => el.classList.remove('ring-2', 'ring-indigo-400'), 2000);
+    } else {
+      window.scrollTo({ top: 350, behavior: 'smooth' });
+    }
+  };
 
   const t = TRANSLATIONS[lang];
 
@@ -84,17 +111,17 @@ export default function PanchangPage() {
 
   const gridItems = [
     { label: t.grid[0], icon: '📅', color: 'text-orange-500', bg: 'bg-orange-50', action: () => setIsCalendarOpen(true) },
-    { label: t.grid[1], icon: '🌌', color: 'text-indigo-500', bg: 'bg-indigo-50', action: handleComingSoon },
+    { label: t.grid[1], icon: '🌌', color: 'text-indigo-500', bg: 'bg-indigo-50', action: scrollToPanchang },
     { label: t.grid[2], icon: '♈', color: 'text-purple-500', bg: 'bg-purple-50', action: () => setIsRashipholOpen(true) },
     { label: t.grid[3], icon: '🙏', color: 'text-teal-500', bg: 'bg-teal-50', action: () => setIsPujaDaysOpen(true) },
-    { label: t.grid[4], icon: '🎁', color: 'text-red-500', bg: 'bg-red-50', action: handleComingSoon },
-    { label: t.grid[5], icon: '📖', color: 'text-green-500', bg: 'bg-green-50', action: handleComingSoon },
-    { label: t.grid[6], icon: '🌑', color: 'text-slate-500', bg: 'bg-slate-50', action: handleComingSoon },
-    { label: t.grid[7], icon: '⊞', color: 'text-emerald-600', bg: 'bg-emerald-50', action: handleComingSoon },
-    { label: t.grid[8], icon: '🌒', color: 'text-stone-700', bg: 'bg-stone-100', action: handleComingSoon },
-    { label: t.grid[9], icon: '🌕', color: 'text-yellow-500', bg: 'bg-yellow-50', action: handleComingSoon },
-    { label: t.grid[10], icon: '☸️', color: 'text-blue-500', bg: 'bg-blue-50', action: handleComingSoon },
-    { label: t.grid[11], icon: '📆', color: 'text-rose-500', bg: 'bg-rose-50', action: handleComingSoon },
+    { label: t.grid[4], icon: '🎁', color: 'text-red-500', bg: 'bg-red-50', action: () => setIsMarriageOpen(true) },
+    { label: t.grid[5], icon: '📖', color: 'text-green-500', bg: 'bg-green-50', action: () => setIsEkadashiOpen(true) },
+    { label: t.grid[6], icon: '🌑', color: 'text-slate-500', bg: 'bg-slate-50', action: () => setIsEclipseOpen(true) },
+    { label: t.grid[7], icon: '⊞', color: 'text-emerald-600', bg: 'bg-emerald-50', action: () => setIsMuhuratOpen(true) },
+    { label: t.grid[8], icon: '🌒', color: 'text-stone-700', bg: 'bg-stone-100', action: () => { setMoonPhaseTab('amavasya'); setIsMoonPhaseOpen(true); } },
+    { label: t.grid[9], icon: '🌕', color: 'text-yellow-500', bg: 'bg-yellow-50', action: () => { setMoonPhaseTab('purnima'); setIsMoonPhaseOpen(true); } },
+    { label: t.grid[10], icon: '☸️', color: 'text-blue-500', bg: 'bg-blue-50', action: () => setIsRashiNirnayOpen(true) },
+    { label: t.grid[11], icon: '📆', color: 'text-rose-500', bg: 'bg-rose-50', action: () => setIsVrataOpen(true) },
   ];
 
   // Helper to convert english digits to bengali if needed
@@ -252,7 +279,7 @@ export default function PanchangPage() {
 
             {/* Detailed Panchang Data from API */}
             {panchangData && (
-              <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-5 mt-4">
+              <div id="panchang-details" className="bg-white rounded-2xl shadow-sm border border-stone-100 p-5 mt-4 transition-all duration-300">
                 <h3 className="text-lg font-bold text-stone-800 mb-4 border-b border-stone-100 pb-2">
                   {lang === 'bn' ? 'আজকের পঞ্চাঙ্গ' : lang === 'hi' ? 'आज का पंचांग' : 'Today\'s Panchang'}
                 </h3>
@@ -357,6 +384,85 @@ export default function PanchangPage() {
         isOpen={isRashipholOpen}
         onClose={() => setIsRashipholOpen(false)}
         lang={lang}
+        initialRashiCode={selectedRashiCode}
+      />
+
+      {/* Marriage Dates Modal */}
+      <MarriageDatesModal
+        isOpen={isMarriageOpen}
+        onClose={() => setIsMarriageOpen(false)}
+        lang={lang}
+        onSelectDate={(newDate) => {
+          setViewDate(newDate);
+          fetchDate(newDate);
+        }}
+      />
+
+      {/* Ekadashi Modal */}
+      <EkadashiModal
+        isOpen={isEkadashiOpen}
+        onClose={() => setIsEkadashiOpen(false)}
+        lang={lang}
+        onSelectDate={(newDate) => {
+          setViewDate(newDate);
+          fetchDate(newDate);
+        }}
+      />
+
+      {/* Eclipse Modal */}
+      <EclipseModal
+        isOpen={isEclipseOpen}
+        onClose={() => setIsEclipseOpen(false)}
+        lang={lang}
+        onSelectDate={(newDate) => {
+          setViewDate(newDate);
+          fetchDate(newDate);
+        }}
+      />
+
+      {/* Auspicious Muhurat Modal */}
+      <AuspiciousMuhuratModal
+        isOpen={isMuhuratOpen}
+        onClose={() => setIsMuhuratOpen(false)}
+        lang={lang}
+        onSelectDate={(newDate) => {
+          setViewDate(newDate);
+          fetchDate(newDate);
+        }}
+      />
+
+      {/* Moon Phase (Amavasya / Purnima) Modal */}
+      <MoonPhaseModal
+        isOpen={isMoonPhaseOpen}
+        onClose={() => setIsMoonPhaseOpen(false)}
+        initialTab={moonPhaseTab}
+        lang={lang}
+        onSelectDate={(newDate) => {
+          setViewDate(newDate);
+          fetchDate(newDate);
+        }}
+      />
+
+      {/* Rashi Nirnay Modal */}
+      <RashiNirnayModal
+        isOpen={isRashiNirnayOpen}
+        onClose={() => setIsRashiNirnayOpen(false)}
+        lang={lang}
+        onOpenRashiphol={(rashiCode) => {
+          setSelectedRashiCode(rashiCode);
+          setIsRashipholOpen(true);
+        }}
+      />
+
+      {/* Vrata Modal */}
+      <VrataModal
+        isOpen={isVrataOpen}
+        onClose={() => setIsVrataOpen(false)}
+        lang={lang}
+        onSelectDate={(newDate) => {
+          setViewDate(newDate);
+          fetchDate(newDate);
+        }}
       />
     </div>
   );
