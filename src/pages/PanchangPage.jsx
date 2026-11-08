@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { format } from 'date-fns';
 import { usePanchangStore } from '../store/panchangStore';
 import toast from 'react-hot-toast';
-import { ShoppingCart, Settings, MapPin, CalendarDays, ChevronRight, Globe } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import RashipholModal from '../components/panchang/RashipholModal';
 import CalendarModal from '../components/panchang/CalendarModal';
@@ -202,54 +202,28 @@ export default function PanchangPage() {
                   )}
                 </div>
 
-                <button className="text-teal-600 hover:text-teal-700 transition-colors hidden sm:block">
-                  <ShoppingCart size={24} />
-                </button>
-                <button className="text-slate-500 hover:text-slate-700 transition-colors hidden sm:block">
-                  <Settings size={24} />
-                </button>
-              </div>
-            </div>
 
-            {/* Location & Year Selector Row */}
-            <div className="flex gap-2">
-              <button className="flex-1 flex items-center justify-between bg-white shadow-sm rounded-xl px-4 py-3 border border-stone-100 active:bg-stone-50 hover:border-stone-200 transition-all">
-                <div className="flex items-center gap-2">
-                  <span className="text-xl">🇮🇳</span>
-                  <span className="text-lg font-medium text-stone-800">{t.india}</span>
-                </div>
-                <MapPin size={20} className="text-stone-400" />
-              </button>
-              
-              <button className="flex-[1.2] flex items-center justify-between bg-white shadow-sm rounded-xl px-4 py-3 border border-stone-100 active:bg-stone-50 hover:border-stone-200 transition-all">
-                <div className="flex items-center gap-2">
-                  <CalendarDays size={20} className="text-blue-600" />
-                  <div className="text-left leading-tight whitespace-pre-line">
-                    <span className="text-sm font-medium text-stone-800">{t.newYearBtn}</span>
-                  </div>
-                </div>
-                <ChevronRight size={20} className="text-purple-900" />
-              </button>
+              </div>
             </div>
 
             {/* The Blue Main Card */}
             <div className="bg-[#28559D] rounded-2xl overflow-hidden shadow-lg">
-              {/* Top half: Dates */}
-              <div className="p-5 lg:p-6 grid grid-cols-2 gap-4 items-center">
+              {/* Top half: Day & Date */}
+              <div className="p-5 lg:p-6 flex items-center justify-between">
                 <div>
-                  <h2 className="text-white text-3xl font-bold mb-2">{getDayName(viewDate)}</h2>
+                  <h2 className="text-white text-3xl font-bold mb-1">{getDayName(viewDate)}</h2>
                   <p className="text-blue-100 text-sm font-medium">{formatDate(viewDate)}</p>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-end gap-2">
-                    <span className="text-lg">🇧🇩</span>
-                    <span className="text-white text-sm font-medium">{toLocalNumbers('4')} {t.bdLabel}</span>
+                {panchangData?.tithi && (
+                  <div className="bg-white/15 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 text-right">
+                    <span className="text-[11px] text-blue-200 block font-medium uppercase tracking-wider">
+                      {lang === 'bn' ? 'আজকের তিথি' : "Today's Tithi"}
+                    </span>
+                    <span className="text-white font-bold text-base">
+                      {panchangData.tithi}
+                    </span>
                   </div>
-                  <div className="flex items-center justify-end gap-2">
-                    <span className="text-lg">🇮🇳</span>
-                    <span className="text-white text-sm font-medium">{toLocalNumbers('1')} {t.inLabel}</span>
-                  </div>
-                </div>
+                )}
               </div>
 
               {/* Bottom half: Sunrise/Sunset */}
