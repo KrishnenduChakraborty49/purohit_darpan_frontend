@@ -41,11 +41,11 @@ export default function PujaListPage() {
         <div className="mb-6 animate-fade-in">
           <div className="flex items-center gap-2 mb-1">
             <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-orange-500/20 text-orange-300 border border-orange-500/30 flex items-center gap-1">
-              <Sparkles size={11} className="text-orange-400" /> বৈদিক পূজা পদ্ধতি ও নির্দেশিকা
+              <Sparkles size={11} className="text-orange-400" /> নতুন পূজা সংযোজিত — শ্রীশ্রীদক্ষিণকালী পূজা
             </span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold text-orange-200 flex items-center gap-2">
-            <BookOpen size={26} className="text-orange-400" /> Puja Library (পূজা সম্ভার)
+            <BookOpen size={26} className="text-orange-400" /> Puja Library (পূজা লাইব্রেরি)
           </h1>
           <p className="text-orange-400/70 text-sm mt-1">Complete step-by-step Vedic ritual guides with mantra, vidhi and sacred video</p>
         </div>
@@ -174,7 +174,7 @@ export default function PujaListPage() {
                       <span className="flex items-center gap-1 font-medium"><Play size={12} /> Video</span>
                     </div>
                     <span className="text-xs text-orange-300 group-hover:text-orange-200 flex items-center gap-1 font-medium group-hover:translate-x-1 transition-all">
-                      পদ্ধতি শিখুন <ChevronRight size={14} className="text-orange-400" />
+                      পূজা শুরু করুন <ChevronRight size={14} className="text-orange-400" />
                     </span>
                   </div>
                 </div>
