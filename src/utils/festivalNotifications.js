@@ -198,7 +198,7 @@ export const MASTER_FESTIVALS = [
     description: 'মা কালীর নিশীথ আরাধনা, মঙ্গল প্রদীপ ও শুভ দীপাবলি উৎসব।',
     icon: '🪔',
     category: 'major',
-    pujaId: null
+    pujaId: 10
   },
   {
     id: 119,

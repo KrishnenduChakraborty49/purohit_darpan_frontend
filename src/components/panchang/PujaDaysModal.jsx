@@ -201,7 +201,7 @@ const MASTER_FESTIVALS = [
     description: 'মা কালীর নিশীথ আরাধনা ও দীপাবলি।',
     icon: '🪔',
     category: 'major',
-    pujaId: null
+    pujaId: 10
   },
   {
     id: 119,

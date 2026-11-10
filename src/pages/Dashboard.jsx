@@ -106,9 +106,29 @@ export default function Dashboard() {
                     <div className="w-14 h-14 rounded-xl bg-gradient-saffron flex-shrink-0
                                     flex items-center justify-center shadow-saffron text-2xl overflow-hidden">
                       {puja.thumbnailUrl ? (
-                        <img src={puja.thumbnailUrl} className="w-full h-full object-cover" alt="" />
+                        <img 
+                          src={puja.thumbnailUrl} 
+                          className="w-full h-full object-cover" 
+                          alt="" 
+                          onError={(e) => {
+                            e.currentTarget.onerror = null;
+                            if (puja.name.toLowerCase().includes('kali')) {
+                              e.currentTarget.src = '/images/kali_closeup.jpg';
+                            } else if (puja.name.toLowerCase().includes('durga')) {
+                              e.currentTarget.src = '/images/durga_closeup.jpg';
+                            } else if (puja.name.toLowerCase().includes('lakshmi') || puja.name.toLowerCase().includes('laxmi')) {
+                              e.currentTarget.src = '/images/lakshmi_closeup.jpg';
+                            } else if (puja.name.toLowerCase().includes('ganesh')) {
+                              e.currentTarget.src = '/images/ganesh_closeup.jpg';
+                            } else if (puja.name.toLowerCase().includes('saraswati')) {
+                              e.currentTarget.src = '/images/saraswati_closeup.jpg';
+                            } else if (puja.name.toLowerCase().includes('shiv')) {
+                              e.currentTarget.src = '/images/shiv_closeup.jpg';
+                            }
+                          }}
+                        />
                       ) : (
-                        puja.thumbnailEmoji || '??'
+                        puja.thumbnailEmoji || '🪔'
                       )}
                     </div>
                   <div className="flex-1 min-w-0">
