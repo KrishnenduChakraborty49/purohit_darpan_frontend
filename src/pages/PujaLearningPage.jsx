@@ -10,9 +10,10 @@ import PDFViewer from '../components/puja/PDFViewer';
 import toast from 'react-hot-toast';
 
 const FORMATS = [
-  { key: 'DOC',   label: 'Read',      icon: BookOpen, emoji: '📖' },
-  { key: 'VIDEO', label: 'Watch',     icon: Play,     emoji: '🎥' },
-  { key: 'PDF',   label: 'Study PDF', icon: FileText,  emoji: '📄' },
+  { key: 'DOC',   label: 'Read (পদ্ধতি)',   icon: BookOpen, emoji: '📖' },
+  { key: 'GUIDE', label: 'Complete Guide (সম্পূর্ণ গাইড)', icon: FileText, emoji: '📜' },
+  { key: 'VIDEO', label: 'Watch (ভিডিও)',   icon: Play,     emoji: '🎥' },
+  { key: 'PDF',   label: 'Study Material',  icon: FileText, emoji: '📄' },
 ];
 
 export default function PujaLearningPage() {
@@ -314,6 +315,38 @@ export default function PujaLearningPage() {
             {currentStep && (
               <div className="animate-fade-in">
                 {activeFormat === 'DOC' && <DocumentationViewer step={currentStep} />}
+                {activeFormat === 'GUIDE' && (
+                  <div className="bg-stone-900/60 border border-orange-500/20 rounded-2xl overflow-hidden shadow-2xl animate-fade-in">
+                    <div className="p-3.5 bg-stone-950/80 border-b border-orange-500/15 flex items-center justify-between flex-wrap gap-2">
+                      <div className="flex items-center gap-2.5">
+                        <span className="text-2xl">🪔</span>
+                        <div>
+                          <p className="text-orange-100 font-bold text-sm">
+                            শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি — সম্পূর্ণ গাইড
+                          </p>
+                          <p className="text-orange-400/50 text-xs">
+                            পণ্ডিত শ্যামাচরণ সাংখ্যতীর্থ সংকলিত · ৩২ ধাপ, ন্যাস, ষোড়শোপচার ও ফর্দমালা
+                          </p>
+                        </div>
+                      </div>
+                      <a
+                        href="/docs/kali_puja_guide.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-orange-500/20 hover:bg-orange-500/30 border border-orange-500/40 text-orange-200 text-xs font-semibold transition-all shadow-sm"
+                      >
+                        পূর্ণ স্ক্রিনে খুলুন ↗
+                      </a>
+                    </div>
+                    <div className="w-full h-[85vh] bg-[#0B0615]">
+                      <iframe
+                        src="/docs/kali_puja_guide.html"
+                        title="শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি গাইড"
+                        className="w-full h-full border-0"
+                      />
+                    </div>
+                  </div>
+                )}
                 {activeFormat === 'VIDEO' && <VideoPlayer step={currentStep} onComplete={() => setIsFormatCompleted(true)} />}
                 {activeFormat === 'PDF' && <PDFViewer step={currentStep} onComplete={() => setIsFormatCompleted(true)} />}
               </div>

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি — সম্পূর্ণ গাইড</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪔</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0B0615;
+  --bg2: #120A20;
+  --bg3: #1A0F2E;
+  --gold: #D4AF37;
+  --gold2: #F0D060;
+  --goldBg: rgba(212,175,55,0.08);
+  --goldBorder: rgba(212,175,55,0.25);
+  --crimson: #8B0000;
+  --crimsonBg: rgba(139,0,0,0.12);
+  --crimsonBorder: rgba(139,0,0,0.3);
+  --purple: #6B21A8;
+  --purpleBg: rgba(107,33,168,0.1);
+  --purpleBorder: rgba(107,33,168,0.28);
+  --text: #EDE5D8;
+  --text2: #B8A898;
+  --text3: #7A6A58;
+  --mantra: #F0D888;
+  --border: rgba(255,255,255,0.07);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Serif Bengali','Tiro Bangla',Georgia,serif;background:var(--bg);color:var(--text);min-height:100vh;padding:0 0 4rem;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,48px)}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,#0F0520 0%,#1F0830 50%,#0D0418 100%);padding:2.5rem 1.25rem 0;text-align:center;position:relative;overflow:hidden;border-bottom:1px solid var(--goldBorder)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% -10%,rgba(212,175,55,0.15) 0%,transparent 60%);pointer-events:none}
+.hero-lamp{font-size:3rem;margin-bottom:.3rem;line-height:1}
+.hero-tag{font-size:.7rem;letter-spacing:.25em;color:rgba(212,175,55,.65);margin-bottom:.4rem;font-family:'Noto Sans Bengali',sans-serif}
+.hero-title{font-size:2rem;font-weight:700;color:#fff;margin-bottom:.2rem;line-height:1.25;text-shadow:0 0 40px rgba(212,175,55,.35)}
+.hero-sub{font-size:.78rem;color:rgba(212,175,55,.6);margin-bottom:.15rem}
+.hero-author{font-size:.72rem;color:rgba(237,229,216,.4);margin-bottom:1.25rem}
+
+/* PROGRESS */
+.progress-wrap{max-width:340px;margin:0 auto 1.25rem;padding:.7rem 1rem;background:rgba(212,175,55,.07);border:1px solid var(--goldBorder);border-radius:12px}
+.progress-top{display:flex;justify-content:space-between;font-size:.7rem;color:rgba(212,175,55,.65);margin-bottom:.4rem;font-family:'Noto Sans Bengali',sans-serif}
+.progress-bar{height:5px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,#8B0000,#D4AF37);border-radius:3px;transition:width .5s ease}
+
+/* TABS */
+.tabs{display:flex;overflow-x:auto;scrollbar-width:none;border-top:1px solid rgba(255,255,255,.06);background:rgba(0,0,0,.3)}
+.tabs::-webkit-scrollbar{display:none}
+.tab-btn{padding:.75rem 1rem;font-size:.75rem;font-family:'Noto Sans Bengali',sans-serif;background:none;border:none;border-bottom:2px solid transparent;color:rgba(237,229,216,.45);cursor:pointer;white-space:nowrap;transition:all .2s;font-weight:400}
+.tab-btn.active{color:var(--gold);border-bottom-color:var(--gold);font-weight:600}
+.tab-btn:hover:not(.active){color:rgba(237,229,216,.75)}
+
+/* CONTENT */
+.content{padding:1.5rem 1.25rem;max-width:820px;margin:0 auto}
+.section{display:none}.section.active{display:block}
+
+/* CARDS */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:1.25rem;margin-bottom:1rem}
+.card-gold{background:var(--goldBg);border-color:var(--goldBorder);border-left:3px solid var(--gold)}
+.card-crimson{background:var(--crimsonBg);border-color:var(--crimsonBorder);border-left:3px solid var(--crimson)}
+.card-purple{background:var(--purpleBg);border-color:var(--purpleBorder);border-left:3px solid var(--purple)}
+.card-title{font-size:.7rem;letter-spacing:.15em;color:var(--gold);margin-bottom:.6rem;font-family:'Noto Sans Bengali',sans-serif}
+.card p,.card-body{font-size:.87rem;line-height:1.9;color:var(--text)}
+
+/* MANTRA BOX */
+.mantra-box{background:#080310;border:1px dashed rgba(212,175,55,.35);border-radius:10px;padding:1rem 1.25rem;margin:.6rem 0}
+.mantra-label{font-size:.62rem;letter-spacing:.18em;color:rgba(212,175,55,.55);margin-bottom:.45rem;font-family:'Noto Sans Bengali',sans-serif}
+.mantra-text{font-size:.87rem;color:var(--mantra);line-height:2.15;font-style:italic;white-space:pre-line}
+
+/* TIP */
+.tip{background:var(--purpleBg);border-left:2px solid rgba(107,33,168,.55);padding:.6rem .9rem;border-radius:0 8px 8px 0;font-size:.78rem;color:#C0A8D8;line-height:1.8;margin-top:.5rem}
+
+/* STEP */
+.step-wrap{display:flex;gap:14px;margin-bottom:.65rem}
+.step-timeline{display:flex;flex-direction:column;align-items:center;flex-shrink:0}
+.step-circle{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:.82rem;cursor:pointer;transition:all .25s;flex-shrink:0;font-family:'Noto Sans Bengali',sans-serif}
+.step-circle.done{background:var(--crimson);border-color:var(--crimson);color:#fff}
+.step-circle.open{background:rgba(212,175,55,.12);border-color:var(--gold);color:var(--gold)}
+.step-connector{width:1.5px;flex:1;min-height:14px;background:rgba(255,255,255,.06);margin:4px 0}
+.step-body{flex:1;padding-bottom:.4rem}
+.step-header{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:.4rem 0}
+.step-name{font-size:.88rem;font-weight:500;color:var(--text);line-height:1.4}
+.step-name.done{color:var(--text3)}
+.step-badge{font-size:.62rem;padding:2px 9px;border-radius:999px;font-family:'Noto Sans Bengali',sans-serif;flex-shrink:0;margin-left:8px}
+.step-detail{display:none;background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:10px;padding:1rem;margin-top:.4rem}
+.step-detail.open{display:block}
+.step-desc{font-size:.84rem;line-height:1.88;color:var(--text2);margin-bottom:.7rem}
+.done-btn{margin-top:.7rem;padding:.42rem .95rem;background:var(--crimson);color:#fff;border:none;border-radius:8px;font-size:.75rem;font-family:'Noto Sans Bengali',sans-serif;cursor:pointer;transition:opacity .2s}
+.done-btn.undone{background:rgba(255,255,255,.06);color:var(--text3);border:1px solid var(--border)}
+
+/* CHAPTER HEADER */
+.ch-header{font-size:1rem;font-weight:700;color:var(--gold);padding:.6rem 0;margin:1.5rem 0 .85rem;border-bottom:1px solid var(--goldBorder);display:flex;align-items:center;gap:8px}
+
+/* SUPPLIES */
+.supply-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:.45rem;margin:.75rem 0}
+.supply-chip{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:8px;padding:.5rem .8rem;display:flex;gap:7px;align-items:center;font-size:.78rem;color:var(--text)}
+.supply-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* FAQ */
+.faq-item{background:var(--bg2);border:1px solid var(--border);border-radius:10px;margin-bottom:.55rem;overflow:hidden}
+.faq-q{padding:.88rem 1rem;font-size:.86rem;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--text)}
+.faq-q.active{color:var(--gold)}
+.faq-a{display:none;padding:.75rem 1rem .88rem;font-size:.82rem;line-height:1.88;color:var(--text2);border-top:1px solid var(--border)}
+.faq-a.open{display:block}
+
+/* SEARCH */
+.search-wrap{position:relative;margin-bottom:1rem}
+.search-icon{position:absolute;left:.85rem;top:50%;transform:translateY(-50%);color:rgba(237,229,216,.25);font-size:15px;pointer-events:none}
+.search-input{width:100%;padding:.68rem 1rem .68rem 2.4rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:.85rem;font-family:'Noto Sans Bengali',sans-serif;outline:none}
+.search-input::placeholder{color:rgba(237,229,216,.25)}
+.search-input:focus{border-color:rgba(212,175,55,.35)}
+
+/* INFO GRID */
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.65rem;margin-bottom:1.25rem}
+.info-card{background:var(--crimsonBg);border:1px solid var(--crimsonBorder);border-radius:10px;padding:.85rem 1rem;display:flex;gap:10px;align-items:flex-start}
+.info-icon{font-size:1.35rem;flex-shrink:0}
+.info-lbl{font-size:.68rem;color:rgba(212,175,55,.65);margin-bottom:2px;font-family:'Noto Sans Bengali',sans-serif}
+.info-val{font-size:.84rem;font-weight:500;color:var(--text)}
+
+/* FOOTER */
+.footer{text-align:center;padding:2rem 1rem 1rem;font-size:.7rem;color:rgba(212,175,55,.35);letter-spacing:.1em;font-family:'Noto Sans Bengali',sans-serif;border-top:1px solid var(--goldBorder);margin-top:2rem}
+
+/* RESPONSIVE */
+@media(max-width:480px){
+  .hero-title{font-size:1.65rem}
+  .supply-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+  .info-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-lamp">🪔</div>
+  <div class="hero-tag">বরাত বিহীন · সম্পূর্ণ পূজা পদ্ধতি</div>
+  <h1 class="hero-title">শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি</h1>
+  <div class="hero-sub">বহুবিধ মুদ্রা, মাংস ও কারণ শোধন ও ফর্দমালা সহ</div>
+  <div class="hero-author">পণ্ডিত শ্যামাচরণ সাংখ্যতীর্থ সংকলিত · রাজেন্দ্র লাইব্রেরী, কলিকাতা</div>
+  <div class="progress-wrap">
+    <div class="progress-top"><span>পূজার অগ্রগতি</span><span id="prog-label">০ / ৩২ ধাপ সম্পন্ন</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="pbar" style="width:0%"></div></div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('intro',this)">ভূমিকা</button>
+    <button class="tab-btn" onclick="switchTab('supplies',this)">সামগ্রী</button>
+    <button class="tab-btn" onclick="switchTab('steps',this)">পূজাপদ্ধতি</button>
+    <button class="tab-btn" onclick="switchTab('nyasa',this)">ন্যাস</button>
+    <button class="tab-btn" onclick="switchTab('sodas',this)">ষোড়শোপচার</button>
+    <button class="tab-btn" onclick="switchTab('faq',this)">জিজ্ঞাসা</button>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ═══════════ INTRO ═══════════ -->
+<div id="tab-intro" class="section active">
+  <div class="card card-gold">
+    <div class="card-title">প্রকাশকের ভূমিকা</div>
+    <div class="card-body">জগজ্জননী মহামায়ার অসীম করুণায় আমাদের শ্রীশ্রীকালীপূজা পদ্ধতি গ্রন্থখানির পূর্বেকার কয়েকটি সংস্করণ অল্পদিনের মধ্যে শেষ হওয়াতে প্রমাণ হয় যে, গ্রন্থখানি পণ্ডিত সমাজে স্বীকৃত হইয়াছে। পূর্বের সংস্করণে মুদ্রণ বিরাটের জন্য যে সকল ভুলভ্রান্তি এবং অভাব ছিল, তাহা বর্তমান সংস্করণে সন্নিবেশিত করা হইয়াছে। এতদ্ব্যতীত শ্রীশ্রীশশান কালিকা পূজার ও অন্যান্য কালীপূজার সাধ্যমত বিধি সন্নিবেশিত করা হইয়াছে। ইহাতে একদিকে বৈদিক ও অপর দিকে তন্ত্রোক্ত মন্ত্রাদিও সন্নিবেশিত করা হইয়াছে।</div>
+  </div>
+
+  <div class="card card-crimson">
+    <div class="card-title">শ্রীশ্রীকালীপূজার বিশেষ জ্ঞাতব্য</div>
+    <div class="card-body"><strong style="color:var(--gold)">কালী কে?</strong> — 'কু' ধাতুর উত্তরে অন + কর্তৃবাচো অন যুক্ত হয়ে হয়েছে 'কাল' শব্দ। 'কাল' শব্দের অর্থ — মৃত্যু, মহাকাল অর্থাৎ মহাদেব। এই কাল শক্তি স্ত্রীলিঙ্গে 'ঈপ্' প্রত্যয় যুক্ত হয়ে 'কালী' শব্দ হয়েছে। তন্ত্রে যে কালী তারা ইত্যাদি দশমহাবিদ্যার উল্লেখ দেখা যায়, তন্মধ্যে 'কালী' আদি বিদ্যা, অনন্তকালের সৃষ্টিকাপিনী, পরমা প্রকৃতি, মহাশক্তিস্বরূপা এই দেবী।</div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="info-icon">📅</div><div><div class="info-lbl">শ্রেষ্ঠ তিথি</div><div class="info-val">অমাবস্যা ও অষ্টমী</div></div></div>
+    <div class="info-card"><div class="info-icon">📆</div><div><div class="info-lbl">শ্রেষ্ঠ বার</div><div class="info-val">শনি ও মঙ্গলবার</div></div></div>
+    <div class="info-card"><div class="info-icon">🌙</div><div><div class="info-lbl">পূজার সময়</div><div class="info-val">রাত্রিকালে (নিশীথে)</div></div></div>
+    <div class="info-card"><div class="info-icon">🎯</div><div><div class="info-lbl">পূজার ফল</div><div class="info-val">রোগ-শোক নাশ, মুক্তি লাভ</div></div></div>
+  </div>
+
+  <div class="mantra-box">
+    <div class="mantra-label">জপের শ্রেষ্ঠ মন্ত্র (মূলমন্ত্র)</div>
+    <div class="mantra-text">''ক্রীং ক্রীং ক্রীং হুং হুং হ্রীং হ্রীং দক্ষিণে কালিকে
+ক্রীং ক্রীং ক্রীং হুং হুং হ্রীং হ্রীং স্বাহা।''</div>
+  </div>
+  <div class="tip">এই মন্ত্রে সর্ববিঘ্ন, সর্বপাপ ও অরিষ্টনাশ হয়। গুরু নির্দেশিত মন্ত্রই শ্রেষ্ঠ। শূদ্র ও নারীগণ 'ওঁ' স্থলে 'নমঃ' বলিবেন।</div>
+</div>
+
+<!-- ═══════════ SUPPLIES ═══════════ -->
+<div id="tab-supplies" class="section">
+  <div class="card card-gold"><div class="card-title">ফর্দমালা — সম্পূর্ণ সামগ্রী তালিকা</div><div class="card-body">পূজা শুরুর অন্তত একদিন আগে সামগ্রী সংগ্রহ করুন। সকল সামগ্রী 'বং এতৈমে অর্ঘায় নমঃ' মন্ত্রে তিনবার জলছিটা দিয়ে শুদ্ধ করুন।</div></div>
+
+  <div class="ch-header">🌿 পূজার প্রধান সামগ্রী</div>
+  <div class="supply-grid">
+    <div class="supply-chip"><div class="supply-dot"></div>হরীতকী ১টি</div>
+    <div class="supply-chip"><div class="supply-dot"></div>বিল্বপত্র</div>
+    <div class="supply-chip"><div class="supply-dot"></div>কৃষ্ণতিল</div>
+    <div class="supply-chip"><div class="supply-dot"></div>কুশ</div>
+    <div class="supply-chip"><div class="supply-dot"></div>গঙ্গাজল</div>
+    <div class="supply-chip"><div class="supply-dot"></div>জবাফুল (লাল)</div>
+    <div class="supply-chip"><div class="supply-dot"></div>আতপ চাউল</div>
+    <div class="supply-chip"><div class="supply-dot"></div>দূর্বা</div>
+    <div class="supply-chip"><div class="supply-dot"></div>রক্তচন্দন</div>
+    <div class="supply-chip"><div class="supply-dot"></div>কর্পূর</div>
+    <div class="supply-chip"><div class="supply-dot"></div>ধূপ কাঠি</div>
+    <div class="supply-chip"><div class="supply-dot"></div>গাওয়া ঘি</div>
+    <div class="supply-chip"><div class="supply-dot"></div>সরিষার তেল</div>
+    <div class="supply-chip"><div class="supply-dot"></div>কজল</div>
+    <div class="supply-chip"><div class="supply-dot"></div>সিন্দুর</div>
+    <div class="supply-chip"><div class="supply-dot"></div>রোচনা</div>
+    <div class="supply-chip"><div class="supply-dot"></div>দব</div>
+    <div class="supply-chip"><div class="supply-dot"></div>মঙ্গলসূত্র</div>
+    <div class="supply-chip"><div class="supply-dot"></div>রূপা বা তামার পাত্র</div>
+    <div class="supply-chip"><div class="supply-dot"></div>তীরকাঠি</div>
+    <div class="supply-chip"><div class="supply-dot"></div>শঙ্খ</div>
+    <div class="supply-chip"><div class="supply-dot"></div>ঘণ্টা</div>
+  </div>
+
+  <div class="ch-header">🏺 পূজার পাত্র ও উপকরণ</div>
+  <div class="supply-grid">
+    <div class="supply-chip"><div class="supply-dot" style="background:#B8860B"></div>তাম্রপাত্র / কোশা</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#B8860B"></div>ঘট (নাতি দীর্ঘ)</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#B8860B"></div>প্রদীপ ও সলতে</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#B8860B"></div>পঞ্চপ্রদীপ</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#B8860B"></div>কোশা ও কুশি</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#B8860B"></div>বিতান (চাঁদোয়া)</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#B8860B"></div>আলপনার পাত্র</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#B8860B"></div>দর্পণ</div>
+  </div>
+
+  <div class="ch-header">🍚 নৈবেদ্য ও ভোগ</div>
+  <div class="supply-grid">
+    <div class="supply-chip"><div class="supply-dot" style="background:#2E7D32"></div>দুধ</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#2E7D32"></div>দধি</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#2E7D32"></div>মধু</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#2E7D32"></div>মিষ্টি নৈবেদ্য</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#2E7D32"></div>পান-সুপারি-লবঙ্গ</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#2E7D32"></div>ডাব</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#2E7D32"></div>ফলমূল</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#2E7D32"></div>ভোগ (অন্ন, ব্যঞ্জন)</div>
+  </div>
+
+  <div class="ch-header">⚔️ বলি ও তান্ত্রিক সামগ্রী</div>
+  <div class="supply-grid">
+    <div class="supply-chip"><div class="supply-dot" style="background:#8B0000"></div>মহিষ বা ছাগল</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#8B0000"></div>পঞ্চমকার (তন্ত্রসাধকের)</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#8B0000"></div>মাষকলাই (বলি মন্ত্রে)</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#8B0000"></div>শ্বেত সরিষা</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#8B0000"></div>কদলীপত্র</div>
+    <div class="supply-chip"><div class="supply-dot" style="background:#8B0000"></div>খড়্গ পূজার উপকরণ</div>
+  </div>
+
+  <div class="card card-purple" style="margin-top:1rem">
+    <div class="card-title">গুরুত্বপূর্ণ নির্দেশনা</div>
+    <div class="card-body">কোনো সামগ্রীর অভাব হলে জল দিয়ে বিকল্প করা যায়। অধিবাসের সময় — গন্ধ, শিলা, ধান, দূর্বা, পুষ্প, ফল, দধি, ঘৃত, স্বস্তিক, সিন্দুর, শঙ্খ, কজল, রোচনা, সিদ্ধার্থ, কাংস্য, রূপ্য, তাম্র, চামর, দর্পণ, দীপ, প্রশস্তিপাত্র, মঙ্গলসূত্র — প্রতিটির নিজস্ব মন্ত্র রয়েছে।</div>
+  </div>
+</div>
+
+<!-- ═══════════ STEPS ═══════════ -->
+<div id="tab-steps" class="section">
+  <div style="font-size:.82rem;color:var(--text2);margin-bottom:1rem;line-height:1.7">প্রতিটি ধাপে ক্লিক করুন — সম্পূর্ণ মন্ত্র ও নির্দেশনা দেখুন। সম্পন্ন হলে ✓ চিহ্নিত করুন।</div>
+
+  <div id="steps-container"></div>
+</div>
+
+<!-- ═══════════ NYASA ═══════════ -->
+<div id="tab-nyasa" class="section">
+  <div class="card card-gold"><div class="card-title">ন্যাস পদ্ধতি</div><div class="card-body">দক্ষিণকালী পূজায় বিভিন্ন ন্যাস করতে হয়। প্রতিটি ন্যাসের নিজস্ব বীজমন্ত্র রয়েছে। নিচে প্রধান ন্যাসগুলির বিবরণ দেওয়া হলো।</div></div>
+
+  <div class="ch-header">১. মাতৃকান্যাস</div>
+  <div class="card"><div class="card-body">'অসা মাতৃকামন্ত্রস্য ব্রহ্মর্ষির্গায়ত্রীচ্ছন্দো মাতৃকা সরস্বতী দেবতা হেলা বীজানি স্বরাঃ শক্তয়ঃ মাতৃকান্যাসে বিনিয়োগঃ।'</div>
+  <div class="mantra-box"><div class="mantra-label">মাতৃকান্যাস মন্ত্র</div><div class="mantra-text">শিরসি — ওঁ ব্রহ্মণে ঋষয়ে নমঃ।
+মুখে — ওঁ গায়ত্রীচ্ছন্দসে নমঃ।
+হৃদি — ওঁ মাতৃকা সরস্বতৈ দেবতায়ৈ নমঃ।
+গুহে — ওঁ হল্‌ভো বীজেভ্যো নমঃ।
+পাদয়ে — ওঁ স্বরেভ্যাঃ শক্তিভ্যো নমঃ।
+সর্বাঙ্গে — ওঁ অব্যাক্তায় কীলকায় নমঃ।।</div></div></div>
+
+  <div class="ch-header">২. করন্যাস</div>
+  <div class="mantra-box"><div class="mantra-label">করন্যাস মন্ত্র</div><div class="mantra-text">অং কং খং গং ঘং ৩ং আং অঙ্গুষ্ঠাভ্যাং নমঃ।
+ইং চং ছং জং ঝং এং ঈং তর্জনীভ্যাং স্বাহা।
+উং টং ঠং ডং ঢং ণং উং মধ্যমাভ্যাং বষট্।
+এং তং থং দং ধং নং ঐং অনামিকাভ্যাং হুং।
+ওং পং ফং বং ভং মং ঔং কনিষ্ঠাভ্যাং বৌষট্।
+অং যং রং লং বং শং মং সং হং লং ক্ষং অঃ অস্ত্রায় ফট্।।</div></div>
+
+  <div class="ch-header">৩. অঙ্গন্যাস</div>
+  <div class="mantra-box"><div class="mantra-label">অঙ্গন্যাস মন্ত্র</div><div class="mantra-text">ওঁ ক্রাং হৃদয়ায় নমঃ।
+ওঁ ক্রীং শিরসে স্বাহা।
+ওঁ ক্রূং শিখায়ে বষট্।
+ওঁ ক্রৈং কবচায় হুং।
+ওঁ ক্রৌং নেত্রত্রয়ায় বৌষট্।
+ওঁ ক্রঃ করতলপৃষ্ঠাভ্যাং অস্ত্রায় ফট্।।</div></div>
+
+  <div class="ch-header">৪. ঋষ্যাদিন্যাস</div>
+  <div class="card"><div class="card-body">অসা দক্ষিণকালিকামন্ত্রস্য মহাকালভৈরব ঋষিঃ নিষ্কলচ্ছন্দো মহাকালীভৈরব ঋষিঃ। শ্রীমদ্দক্ষিণকালিকা দেবতা হ্রীং বীজং হুং শক্তিঃ ক্রীং কীলকং পুরুষার্থচতুষ্টয়সিদ্ধে বিনিয়োগঃ।</div>
+  <div class="mantra-box"><div class="mantra-label">ঋষ্যাদিন্যাস</div><div class="mantra-text">শিরসি — ওঁ মহাকালভৈরব ঋষয়ে নমঃ।
+মুখে — ওঁ উষ্ণিক্‌ছন্দসে নমঃ।
+হৃদয়ে — ওঁ দক্ষিণকালিকায়ৈ দেবতায়ৈ নমঃ।
+গুহাদেশে — ওঁ হ্রীং বীজায় নমঃ।
+পাদদ্বয়ে — ওঁ হুং শক্তয়ে নমঃ।
+সর্বাঙ্গে — ওঁ ক্রীং কীলকায় নমঃ।।</div></div></div>
+
+  <div class="ch-header">৫. ষোড়ান্যাস (বৃহৎ)</div>
+  <div class="card card-purple"><div class="card-body">ষোড়ান্যাসের প্রমাণ — 'কেবলাং মাতৃকাং কৃত্বা মাতৃকাং তারসম্পুটাম্। মাতৃকাপুটিতাতারং ন্যাসেৎ সাধকসত্তমঃ।' কর্মুদ্রায় পুষ্পাদি লইয়া ধ্যান করিবেন।</div>
+  <div class="mantra-box"><div class="mantra-label">বৃহৎ ষোড়ান্যাস ধ্যানমন্ত্র</div><div class="mantra-text">''ওঁ কালীং কল্যাণরূপাং ত্রিজগতি পরমেশীং সুমহানন্দসংদেহোহৎমোহধবংসেকহেতুং
+ক্ষমসহনমহাভৈরবানন্দসংজ্ঞাম্।
+বর্ণাখ্যাং মঙ্গলাখ্যাং মরকতমণি ভামীশ্বরীং মোহহস্রীং
+বেদেযোড়াং মহাখ্যাং প্রমথপরিলসৎ কালরাপং ত্রিনেত্রাম্।।''</div></div></div>
+
+  <div class="ch-header">৬. সংক্ষেপ ষোড়ান্যাস</div>
+  <div class="mantra-box"><div class="mantra-label">সংক্ষেপ ষোড়ান্যাস মন্ত্র</div><div class="mantra-text">(মস্তকে) ওঁ নমঃ।
+(হৃদয়মধ্যে) হুং নমঃ।
+(কণ্ঠে) এং নমঃ।
+(হৃদয়ে) ক্রীং নমঃ।
+(নাভিতে) ঐং নমঃ।
+(লিঙ্গে) ক্লীং নমঃ।
+(গুহে) সৌং নমঃ।
+(দক্ষিণ বাহুতে) শ্রীং নমঃ।
+(দক্ষিণ পাদে) হ্রীং নমঃ।
+(বাম পাদে) ক্রীং নমঃ।
+(পৃষ্ঠে) ক্রৌং নমঃ।।</div></div>
+
+  <div class="ch-header">৭. পীঠন্যাস</div>
+  <div class="mantra-box"><div class="mantra-label">পীঠন্যাস মন্ত্র (হৃদয়ে আরম্ভ)</div><div class="mantra-text">পুষ্পের দ্বারা (হৃদয়ে) —
+ওঁ আধারশক্তয়ে নমঃ। ওঁ প্রকৃতয়ে নমঃ। ওঁ কূর্মায় নমঃ।
+ওঁ পৃথিব্যৈ নমঃ। ওঁ ক্ষীরসমুদ্রায় নমঃ। ওঁ শ্বেতদ্বীপায় নমঃ।
+ওঁ মণিমণ্ডপায় নমঃ। ওঁ কল্পবৃক্ষায় নমঃ। ওঁ মণিবেদিকায়ৈ নমঃ।
+ওঁ রত্নসিংহাসনায় নমঃ।।
+(দক্ষিণ স্কন্ধে) — ওঁ ধর্মায় নমঃ। (বামস্কন্ধে) — ওঁ জ্ঞানায় নমঃ।
+(বামোরুতে) — ওঁ বৈরাগ্যায় নমঃ। (দক্ষিণোরুতে) — ওঁ ঐশ্বর্যায় নমঃ।
+(মুখে) — ওঁ অধর্মায় নমঃ। (বামপার্শ্বে) — ওঁ অজ্ঞানায় নমঃ।
+(নাভিতে) — ওঁ অবৈরাগ্যায় নমঃ। (দক্ষিণপার্শ্বে) — ওঁ অনৈশ্বর্যায় নমঃ।।</div></div>
+</div>
+
+<!-- ═══════════ SODASA ═══════════ -->
+<div id="tab-sodas" class="section">
+  <div class="card card-gold"><div class="card-title">ষোড়শোপচার পূজা</div><div class="card-body">প্রথমে দেবীর ধ্যান পাঠ করিয়া গন্ধপুষ্প দ্বারা পূজা করিয়া মন্ত্র সহকারে যথাযথ ক্রমানুসারে দ্রবসকল নিবেদন করিবেন। প্রতিটি উপচারে মূলমন্ত্র (ক্রীং) পাঠ করিবেন।</div></div>
+
+  <div class="ch-header">১. রজতাসন</div>
+  <div class="mantra-box"><div class="mantra-label">রজতাসন নিবেদন মন্ত্র</div><div class="mantra-text">''বং এতৈমে রজতাসনায় নমঃ।''
+এতে গন্ধপুষ্পে এতদিধপতয়ে ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।
+আসন দান মন্ত্র —
+''ওঁ সর্বভূতান্তরস্থায়ে সর্বভূতান্তরাত্মনে।
+কল্যামুপবেশার্থং আসনং তে নমো নমঃ।''
+ইদং রজতাসনং ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।</div></div>
+
+  <div class="ch-header">২. স্বাগতম্</div>
+  <div class="mantra-box"><div class="mantra-label">স্বাগতম্ মন্ত্র</div><div class="mantra-text">ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকে মাতঃ স্বাগতং সুস্বাগতং কুশলং তে।
+ওঁ দেবাঃ স্বস্তিসিদ্ধার্থং যসা বাণ্পতি দর্শনম্।
+সুস্বাগতং মে সফলাঃ ক্রিয়াঃ। স্বাগতং যত্র্যায়ূমে তপসাং ফলমাগতম্।।
+আদা দেবি তসো তে পরমাত্মানে।। ওঁ ক্রীং দেবাং স্বস্তি-সিদ্ধার্থং যসা স্বাগতম্।।</div></div>
+
+  <div class="ch-header">৩. পাদ্য</div>
+  <div class="mantra-box"><div class="mantra-label">পাদ্য নিবেদন মন্ত্র</div><div class="mantra-text">এতৈমে ওঁ বং পাদোদকায় নমঃ (তিনবার)।
+অর্চনা করিয়া — এতে গন্ধপুষ্পে এতৈমে ওঁ বং পাদোদকায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ যৎ পাদজলসংস্পর্শাৎ শুদ্ধাপ জগতত্রয়ম্। তৎ পাদং প্রোক্ষণার্থং পাদং তে কল্যামাহম্।।
+এতে পাদং ওঁ শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।</div></div>
+
+  <div class="ch-header">৪. অর্ঘ্য</div>
+  <div class="mantra-box"><div class="mantra-label">অর্ঘ্য নিবেদন মন্ত্র</div><div class="mantra-text">এতৈমে ওঁ বং অর্ঘায় নমঃ (অর্চনা করিয়া)।
+এতে গন্ধপুষ্পে ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ পরমানন্দ সন্দোহো জায়তে যৎ প্রসাদতঃ। তসো সর্বভূতেঃ আনন্দার্থং সমর্পয়ে।।
+ইদমর্ঘ্যম্ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ স্বাহা।।
+(যজুর্বেদীদিগের ইদম্ অর্ঘ্য হলে — এষঃ অর্ঘ্যঃ)</div></div>
+
+  <div class="ch-header">৫. আচমনীয়</div>
+  <div class="mantra-box"><div class="mantra-label">আচমনীয় মন্ত্র</div><div class="mantra-text">এতৈমে ওঁ বং আচমনীয়োদকায় নমঃ (তিনবার)।
+এতে গন্ধপুষ্পে আচমনীয়োদকায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ যদৃচ্ছিষ্টমৃষিপৃষ্ঠং শুদ্ধিমেতাতিখিলং জগৎ। তসো মুখারবিন্দায় অঙ্গং কল্যামি তে।।
+ইদমাচমনীয়ং ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ স্বাহা।।</div></div>
+
+  <div class="ch-header">৬. মধুপর্ক</div>
+  <div class="mantra-box"><div class="mantra-label">মধুপর্ক নিবেদন মন্ত্র</div><div class="mantra-text">(একটি কাংস্যপাত্রে ঘৃত, দধি ও মধু লইয়া বামহাতে ধরিয়া)
+এতৈমে ওঁ বং সাধার মধুপর্কায় নমঃ (তিনবার)।
+একটি সচন্দনপুষ্প লইয়া —
+এতে গন্ধপুষ্পে ওঁ বং সাধার মধুপর্কায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় মধুপর্কং ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ তাপত্রয়বিনাশার্থমখণ্ডানন্দ হেতবে।
+মধুপর্ক দদামদ প্রসীদ পরমেশ্বরি।।
+এয়ঃ সাধার মধুপর্কঃ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ স্বাহা।।</div></div>
+
+  <div class="ch-header">৭. পুনরাচমনীয়</div>
+  <div class="mantra-box"><div class="mantra-label">পুনরাচমনীয় মন্ত্র</div><div class="mantra-text">এতৈমে ওঁ বং পুনরাচমনীয়োদকায় নমঃ (তিনবার)।
+একটি সচন্দন পুষ্প লইয়া —
+এতে গন্ধপুষ্পে পুনরাচমনীয়োদকায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় পুনরাচমনীয়োদকং ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ অশুচি শুচিতামেতি যৎস্পৃষ্টপর্শমাত্রতঃ। অমিংস্তে বদনাভোজে পুনরাচমনীয়কম্।।
+ইদং পুনরাচমনীয়ং ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ স্বাহা।।</div></div>
+
+  <div class="ch-header">৮. স্নানীয়</div>
+  <div class="mantra-box"><div class="mantra-label">স্নানীয় মন্ত্র</div><div class="mantra-text">কুশীতে জল লইয়া —
+এতৈমে ওঁ বং স্নানীয়োদকায় নমঃ (তিনবার)।
+একটি সচন্দনপুষ্প লইয়া —
+এতে গন্ধপুষ্পে এতৈমে ওঁ বং স্নানীয়োদকায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ যৎতেজসা জগদ্ব্যাপ্তং যেতো জাতিমিদং জগৎ। তস্মৈ তে জগদাধারে স্নানার্থং তোয়মর্পয়ে।।
+ইদং স্নানীয়োদকম্ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নিবেদয়ামি।।</div></div>
+
+  <div class="ch-header">৯. বস্ত্র</div>
+  <div class="mantra-box"><div class="mantra-label">বস্ত্র নিবেদন মন্ত্র</div><div class="mantra-text">বস্ত্র বামহাতে ধরিয়া —
+এতৈমে ওঁ বং বস্ত্রায় নমঃ (তিনবার)।
+তাহার পর —
+এতে গন্ধপুষ্পে ওঁ বং বস্ত্রায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় বস্ত্রং ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নিবেদয়ামি।
+ওঁ সর্বাভরণহীনায়ে মায়াপ্রচ্ছন্ন তেজসে। বসনং পরিধানায় কল্যামি নমোহস্তুতে।।
+ইদং বস্ত্রং ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নিবেদয়ামি।।</div></div>
+
+  <div class="ch-header">১০. আভরণ</div>
+  <div class="mantra-box"><div class="mantra-label">আভরণ নিবেদন মন্ত্র</div><div class="mantra-text">রজতাভরণ একটি পাত্রে অথবা বিল্বপত্রের উপর রাখিয়া বামহাত স্পর্শ করিয়া —
+এতৈমে ওঁ বং রজতাভরণায় নমঃ (তিনবার)।
+একটি সচন্দনপুষ্প লইয়া —
+এতে গন্ধপুষ্পে ওঁ বং রজতাভরণায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় রজতাভরণং ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ বিশ্বাভরণভূতায়ৈ বিশ্বসেবকযানয়ে। মায়াগ্রহ ভূষার্থং ভূষণানি সমর্পয়ে।।
+ইদং রজতাভরণম্ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নিবেদয়ামি।।</div></div>
+
+  <div class="ch-header">১১. গন্ধ</div>
+  <div class="mantra-box"><div class="mantra-label">গন্ধ নিবেদন মন্ত্র</div><div class="mantra-text">একটি পুষ্পে রক্তচন্দন লইয়া —
+এতৈমে ওঁ বং গন্ধায় নমঃ (তিনবার)।
+কুশোদক দিয়া একটি পুষ্প লইয়া —
+এতে গন্ধপুষ্পে এতৈমে ওঁ গন্ধায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় গন্ধং ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ গন্ধমাত্রা স্থৈ যযা গন্ধধারাধরা। তসো পরায়নে তুভ্যাং পরং গন্ধমর্পয়ে।।
+এষঃ গন্ধঃ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।</div></div>
+
+  <div class="ch-header">১২. পুষ্প</div>
+  <div class="mantra-box"><div class="mantra-label">পুষ্প নিবেদন মন্ত্র</div><div class="mantra-text">একটি পুষ্প লইয়া বামদিকে পুষ্পের উপর রাখিয়া বামহাতে ধরিয়া —
+এতৈমে ওঁ বং পুষ্পায় নমঃ (তিনবার)।
+পদ্মপুষ্প হইলে — এতৈমে ওঁ বং পদ্মপুষ্পায় নমঃ।
+বা জবাপুষ্প হইলে — এতৈমে ওঁ বং জবাপুষ্পায় নমঃ।
+তাহার পর —
+এতে গন্ধপুষ্পে (যে পুষ্প তাহার নাম উল্লেখ করিবেন) নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় এতে গন্ধপুষ্পে এতৈমে ওঁ অমুকপুষ্পায় নমঃ।
+এতৎ সম্প্রদানায় অমুকপুষ্পম্ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ পুষ্পং মনোহরং রম্যং সুগন্ধি দেব-নির্মিতম্। ময়া নিবেদিতং ভক্ত্যা পুষ্পমেতং প্রগৃহ্যতাম্।।
+এষ সচন্দন গন্ধপুষ্প বা পদ্মপুষ্প বা জবাপুষ্প ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।</div></div>
+
+  <div class="ch-header">১৩. বিল্বপত্র</div>
+  <div class="mantra-box"><div class="mantra-label">বিল্বপত্র নিবেদন মন্ত্র</div><div class="mantra-text">একটি বিল্বপত্র রক্তচন্দনসহ বামদিকে বিল্বপত্রের উপর রাখিয়া —
+এতৈমে ওঁ বং শ্রীফলপত্রায় নমঃ (তিনবার)।
+কুশোদক দিয়া —
+এতে গন্ধপুষ্পে শ্রীফলপত্রায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ ক্রীং কালিকায়ৈ বিদ্মহে শশানবাসিন্যৈ ধীমহি তন্নো ঘোরে প্রচোদয়াৎ।।
+এষ সচন্দন বিল্বপত্রম্ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।</div></div>
+
+  <div class="ch-header">১৪. পুষ্পমালা</div>
+  <div class="mantra-box"><div class="mantra-label">পুষ্পমালা নিবেদন মন্ত্র</div><div class="mantra-text">মালাটি বামদিকে পুষ্পের উপর রাখিয়া বামহাতে ধরিয়া —
+এতৈমে ওঁ বং পুষ্পমালায়ৈ নমঃ (তিনবার)।
+তিনবার কুশোদক দিয়া —
+এতে গন্ধপুষ্পে পুষ্পমালায়ৈ নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ সূত্রেণ গ্রথিতং মালাং নানাপুষ্পোপশোভিতম্। শ্রীযুক্ত লক্ষ্মানংশ গৃহাণ পরমেশ্বরি।।
+ইদং মালাম্ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।</div></div>
+
+  <div class="ch-header">১৫. ধূপ</div>
+  <div class="mantra-box"><div class="mantra-label">ধূপ নিবেদন মন্ত্র</div><div class="mantra-text">একটি প্রজ্জলিত ধূপ বামদিকে রাখিয়া —
+এতৈমে ওঁ বং ধূপায় নমঃ (তিনবার)।
+তাহার পর 'জয়ধনি মন্ত্রমাতো স্বাহা' বলিয়া একটি পুষ্প ঘণ্টায় দিয়া ঘণ্টাবাদ্য করিতে করিতে —
+এতে গন্ধপুষ্পে এতৈমে ওঁ বং ধূপায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ বনস্পতিরসো দিব্যো গন্ধাঢ্যঃ সুমনোহরঃ। আঘ্রেয়ঃ সর্বদেবানাং ধূপোহয়ং প্রতিগৃহ্যতাম্।।
+এষ ধূপঃ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নিবেদয়ামি।।</div></div>
+
+  <div class="ch-header">১৬. দীপ</div>
+  <div class="mantra-box"><div class="mantra-label">দীপ নিবেদন মন্ত্র</div><div class="mantra-text">একটি দীপ প্রজ্জলিত করিয়া বামদিকে রাখিয়া —
+এতৈমে ওঁ বং দীপায় নমঃ (তিনবার)।
+তিনবার কুশোদক দিয়া —
+এতে গন্ধপুষ্পে ওঁ এতৈমে দীপায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় দীপম্ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ সুপ্রকাশো মহাদীপঃ সর্বতিমিরাপহঃ। সবাহ্যাভ্যন্তরং জ্যোতির্দীপোহয়ং প্রতিগৃহ্যতাম্।।
+এষ দীপঃ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।</div></div>
+
+  <div class="ch-header">১৭. নৈবেদ্য</div>
+  <div class="mantra-box"><div class="mantra-label">নৈবেদ্য নিবেদন মন্ত্র</div><div class="mantra-text">এতৈমে ওঁ বং সোপকরণ আমান্ নৈবেদ্যায় নমঃ (তিনবার)।
+কুশোদক দিয়া একটি সচন্দন পুষ্প লইয়া —
+এতে গন্ধপুষ্পে এতৈমে ওঁ বং সোপকরণ আমান্ নৈবেদ্যায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ নৈবেদ্যং স্বাদসংযুক্তং নানাভক্ষ্যসমন্বিতম্। নিবেদয়ামি দেবেশি জুষ্ব্যৎ পরমেশ্বরি।।
+ইদং সোপকরণ আমান্ নৈবেদ্যম্ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।</div></div>
+
+  <div class="ch-header">১৮. পানীয় (কর্পূর মিশ্রিত জল)</div>
+  <div class="mantra-box"><div class="mantra-label">পানীয় নিবেদন মন্ত্র</div><div class="mantra-text">কর্পূর মিশ্রিত জল —
+এতৈমে ওঁ বং পানার্থোদকায় নমঃ (তিনবার)।
+কুশোদক দিয়া একটি সচন্দন পুষ্প লইয়া —
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ পানার্থং সলিলং দেবী কর্পূরাদি সুবাসিতম্। সর্বতৃপ্তিকরং স্বচ্ছমর্পয়ামি নমোহস্তুতে।।
+ইদং পানার্থোদকং ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।</div></div>
+
+  <div class="ch-header">১৯. পুনরাচমনীয়</div>
+  <div class="mantra-box"><div class="mantra-label">পুনরাচমনীয় মন্ত্র (নৈবেদ্যান্তে)</div><div class="mantra-text">কুশীতে করিয়া জল লইয়া —
+এতৈমে ওঁ বং পুনরাচমনীয়োদকায় নমঃ (তিনবার)।
+একটি সচন্দন পুষ্প লইয়া —
+এতে গন্ধপুষ্পে পুনরাচমনীয়োদকায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় পুনরাচমনীয়োদকং ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ অশুচি শুচিতামেতি যৎস্পৃষ্টপর্শমাত্রতঃ। অমিংস্তে বদনাভোজে পুনরাচমনীয়কম্।।
+ইদং পুনরাচমনীয়ম্ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।</div></div>
+
+  <div class="ch-header">২০. তাম্বুল</div>
+  <div class="mantra-box"><div class="mantra-label">তাম্বুল নিবেদন মন্ত্র</div><div class="mantra-text">এতৈমে ওঁ বং ফলতাম্বুলায় নমঃ (তিনবার)।
+একটি সচন্দনপুষ্প লইয়া —
+এতে গন্ধপুষ্পে ফলতাম্বুলায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় ফলতাম্বুলং ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+ওঁ পূগকরখিদরলবঙ্গেলাদিসংযুতম্। তাম্বুলং মুখরাগায় কল্যামি নমোহস্তুতে।।
+ইদং ফলতাম্বুলম্ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।</div></div>
+
+  <div class="ch-header">২১. সবত্রেজসাধারভোজ্যাদি</div>
+  <div class="mantra-box"><div class="mantra-label">সবত্রেজসাধার ভোজ্য নিবেদন মন্ত্র</div><div class="mantra-text">বাম হাতে ভোজা স্পর্শ করিয়া —
+এতৈমে ওঁ বং সবত্রেজসাধারভোজ্যায় নমঃ (তিনবার)।
+কুশোদক দিয়া একটি সচন্দন পুষ্প লইয়া —
+এতে গন্ধপুষ্পে সবত্রেজসাধার ভোজ্যায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় সবত্রেজসাধারভোজ্যম্ ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।</div></div>
+
+  <div class="ch-header">২২. অন্ন (ভোগ)</div>
+  <div class="mantra-box"><div class="mantra-label">অন্ন নিবেদন মন্ত্র</div><div class="mantra-text">এতৈমে ওঁ বং সঘৃত সোপকরণ আমান্ অন্নায় নমঃ (তিনবার)।
+কুশোদক দিয়া —
+এতে গন্ধপুষ্পে সঘৃত সোপকরণ আমান্ অন্নায় নমঃ।
+এতে গন্ধপুষ্পে এতদিধপতয়ে দেবায় ওঁ বিষ্ণবে নমঃ।
+এতৎ সম্প্রদানায় সঘৃতোপকরণ আমান্ অন্নং ওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।
+''ওঁ অন্নং চতুর্বিধং দেবি রসৈঃ ষড্ভিঃ সমন্বিতম্। উত্তমং প্রাণদং চৈব গৃহাণ মম ভাবতঃ।।''</div></div>
+
+  <div class="card card-crimson" style="margin-top:1.25rem">
+    <div class="card-title">বিঃ দ্রঃ</div>
+    <div class="card-body">ষোড়শোপচার শেষ হলে — শ্রীলোক ও শূদ্রগণ 'ওঁ নমঃ শিবায়ঃ' স্থলে 'নমঃ শিবায়ঃ' বলিবেন। কোন দ্রবের অভাব হইলে তৎপরিবর্তে জল দিবেন। অতঃপর পিনাটের গোড়ায় গৌরীর পঞ্চোপচারে পূজা করিবেন।</div>
+  </div>
+</div>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<div id="tab-faq" class="section">
+  <div class="search-wrap">
+    <div class="search-icon">🔍</div>
+    <input type="text" class="search-input" placeholder="প্রশ্ন খুঁজুন..." id="faq-search" oninput="filterFAQ(this.value)">
+  </div>
+  <div id="faq-list"></div>
+</div>
+
+</div><!-- /content -->
+
+<div class="footer">জয় মা দক্ষিণকালী · পণ্ডিত শ্যামাচরণ সাংখ্যতীর্থ রচিত গ্রন্থ অবলম্বনে নির্মিত</div>
+
+<script>
+const STEPS = [
+  {id:1,title:"পূজাবিধি — প্রস্তুতি",badge:"প্রাথমিক",bc:"#B8860B",icon:"🛁",
+   desc:"হস্ত পদাদি ধৌত করিয়া উত্তরাস্যে শুদ্ধাসনে বসিয়া বৈদিক আচমন পূর্বক নিত্যক্রিয়াদি সুসম্পন্ন করিবেন। পূজক নিজে পূজায় অসমর্থ হইলে প্রথমেই বরণকার্য শেষ করিবেন।",
+   mantra:null,
+   tip:"নারীগণ ও শূদ্রগণ 'ওঁ' শব্দের পরিবর্তে 'নমঃ' বলিবেন। অব্রাহ্মণ বা নারী শক্তিমন্ত্রে দীক্ষিত হইলে তাহার মাতৃপূজায় অধিকার জন্মে।"},
+  {id:2,title:"আচমন ও বিষ্ণুস্মরণ",badge:"অবশ্যিক",bc:"#E07B00",icon:"💧",
+   desc:"দক্ষিণ হস্তের তালু গোকর্ণাকৃতি করিয়া মাষকলাই ডুবিতে পারে এইরূপ জল লইয়া তিনবার কায়তীর্থ দ্বারা পান করিবেন এবং তিনবার বলিবেন।",
+   mantra:"''ওঁ বিষ্ণুঃ, ওঁ বিষ্ণুঃ, ওঁ বিষ্ণুঃ।\nওঁ তদ্বিষেণাঃ পরমং পদম্। সদা পশ্যন্তি সুরয়ঃ দিবীব চক্ষুরাতমম্।।\nওঁ অপবিত্রঃ পবিত্রো বা সর্বাবস্থাং গতোহপি বা।\nযঃ স্মরেৎ পুণ্ডরীকাক্ষং স বাহ্যাভ্যন্তরঃ শুচিঃ।।\nওঁ বিষ্ণুঃ, ওঁ বিষ্ণুঃ, ওঁ বিষ্ণুঃ।।''",
+   tip:"শূদ্র ও নারীগণ 'ওঁ বিষ্ণুঃ' স্থলে 'নমো বিষ্ণু' বলিবেন।"},
+  {id:3,title:"জলশুদ্ধি ও আসনশুদ্ধি",badge:"প্রাথমিক",bc:"#B8860B",icon:"🌊",
+   desc:"জলশুদ্ধি ও আসনশুদ্ধি করিয়া গায়ত্রী শাপোদ্ধার পূর্বক যথাশক্তি জপ করিয়া গন্ধপুষ্পাদি দিয়া গুরুমন্ত্র যথাশক্তি জপ করিবেন।",
+   mantra:"''এতে গন্ধপুষ্পে — ওঁ শ্রীগুরবে নমঃ, এতে গন্ধপুষ্পে ওঁ নমঃ শিবায় নমঃ, এতে গন্ধপুষ্পে ওঁ গণেশায় নমঃ।''\n\nআসনশুদ্ধি —\n''এতে গন্ধপুষ্পে ওঁ হ্রীং আধারশক্তয়ে কমলাসনায় নমঃ।''\nআসন পাতিয়া আসন স্পর্শ পূর্বক পাঠ করিবেন —\n''আসনমস্য মেরুপৃষ্ঠধ্নিষেঃ সুতলং ছন্দঃ কূর্মো দেবতা আসনোপবেশনে বিনিয়োগঃ।\nওঁ পৃথি ত্বয়া ধৃতা লোকা দেবি তুং বিষ্ণুনা ধৃতা। তুষ্ণ ধারয় মাং নিত্যং পবিত্রং কূরচাসনম্।।''",
+   tip:"গুরুমন্ত্র না হইলে গায়ত্রী অথবা দেবীর মূলমন্ত্র যথাশক্তি জপ করিবেন।"},
+  {id:4,title:"দীক্ষিতগণের তর্পণ",badge:"প্রাথমিক",bc:"#B8860B",icon:"🙏",
+   desc:"দীক্ষিতগণ তর্পণ করিবেন। তারপর আসনের জলের ছিটা দিয়া মন্ত্রোচ্চারণ করিবেন। পাপক্ষয় মন্ত্র পাঠ করিবেন।",
+   mantra:"তর্পণ মন্ত্র —\n''ওঁ দেবাংস্তর্পয়ামি, ওঁ ঋষিংস্তর্পয়ামি, ওঁ পিতৃংস্তর্পয়ামি, ওঁ মনুষ্যংস্তর্পয়ামি, ওঁ গুরুংস্তর্পয়ামি, ওঁ পরম গুরুংস্তর্পয়ামি, ওঁ পরাপর গুরুংস্তর্পয়ামি, ওঁ পরমেষ্ঠীগুরুংস্তর্পয়ামি।''\n\nনিজ ইষ্টদেবতার মূলমন্ত্র মনে মনে উচ্চারণ পূর্বক —\n''অমুকদেবীং তর্পয়ামি স্বাহা।'' মন্ত্রে তর্পণ করিবেন।\n\nপাপক্ষয় মন্ত্র —\n''ওঁ বেজাদকে হুং ফট্ স্বাহা।''\n''ওঁ হ্রীং বিশুদ্ধ ধর্মপাপানি শমযাশেষ। বিক্রলমপনয় হুং।।''",
+   tip:"অতঃপর তান্ত্রিক আচমন করিবেন।"},
+  {id:5,title:"তান্ত্রিক আচমন",badge:"তান্ত্রিক",bc:"#6B21A8",icon:"🕉️",
+   desc:"এই মন্ত্রে তিনবার জলপান করিয়া আচমন করিবেন। অতঃপর 'ওঁ কালেঃ নমঃ' মন্ত্রে উপরের ওষ্ঠ মার্জনা করিয়া বিভিন্ন অঙ্গ স্পর্শ করিবেন।",
+   mantra:"''ওঁ হ্রীং আত্মতত্ত্বায় স্বাহা।\nওঁ হ্রীং বিদ্যাতত্ত্বায় স্বাহা।\nওঁ হ্রীং শিবতত্ত্বায় স্বাহা।''\n\nস্থান স্পর্শ মন্ত্র —\nবিরোধিন্যৈ নমঃ (দক্ষিণ নাসা) ওঁ বিপ্রচিত্তায়ৈ নমঃ (বাম নাসায়)\nওঁ উগ্রায়ৈ নমঃ (দক্ষিণ নেত্র) ওঁ উগ্রপ্রভায়ৈ নমঃ (বাম নেত্র)\nওঁ দীপ্তায়ৈ নমঃ (দক্ষিণ কর্ণ) ওঁ নীলায়ৈ নমঃ (বাম কর্ণ)\nওঁ ঘনায়ৈ নমঃ (নাভি) ওঁ বলাকায়ৈ নমঃ (বক্ষ)\nওঁ মাতায়ৈ নমঃ (মস্তক) ওঁ মুদ্রায়ৈ নমঃ (দক্ষিণ স্কন্ধ)\nওঁ মিতায়ৈ নমঃ (বামস্কন্ধ)।।",
+   tip:"অতঃপর তন্ত্রোক্ত সূর্যার্ঘ্য প্রদান করিবেন।"},
+  {id:6,title:"তান্ত্রিক সূর্যার্ঘ্য",badge:"তান্ত্রিক",bc:"#6B21A8",icon:"☀️",
+   desc:"কোশা বা কুশীতে ১টি হরীতকী, জল, একগাছি অগ্রভাগযুক্ত কুশ, একটি জবাফুল, আতপ চাউল, দূর্বা ও কৃষ্ণতিল লইয়া ধারণ পূর্বক 'বং এতৈমে অর্ঘায় নমঃ' মন্ত্রটি তিনবার উচ্চারণ করিয়া তিনবার জলের ছিটা দিবেন।",
+   mantra:"অর্ঘ্য মন্ত্র —\n''ওঁ হ্রীং হংসঃ মার্তণ্ডভৈরবায় প্রকাশ শক্তিসহিতায় ওঁ শ্রীসূর্যায় স্বাহা।''\n\nঅর্চনা করিয়া মূলমন্ত্র (ক্রীং) উচ্চারণপূর্বক দেবীর উদ্দেশে অর্ঘ্য প্রদান করিবেন —\n''ওঁ উদ্যাদিত্যমণ্ডলমধ্যবর্তিন্যৈ নিত্যচৈতন্যদায়িন্যৈ ইদমর্ঘ্যং (যজু-এষোহর্ঘ্যঃ) শ্রীমদ্দক্ষিণকালিকাদৈব্যে স্বাহা।''\n\nপ্রণাম মন্ত্র —\n''ওঁ জবাকুসুম সংকাশং কাশ্যপেয়ং মহাদ্যুতিম্।\nধ্বান্তারিং সর্বপাপঘ্নং প্রণতোহস্মি দিবাকরম্।।''",
+   tip:"অর্ঘ্যান্তে সূর্যের উদ্দেশে তাম্রকুণ্ডে ঢালিয়া দিয়া প্রণাম করিবেন। পরে স্বস্তিবাচন করিবেন।"},
+  {id:7,title:"তান্ত্রিক স্বস্তিবাচন",badge:"তান্ত্রিক",bc:"#6B21A8",icon:"🌸",
+   desc:"কুশীতে আতপ চাউল, দূর্বা, একটি জবা পুষ্প বা রক্তবর্ণ পুষ্প বামহস্তের মধ্যদেশে রাখিয়া দক্ষিণ হস্তে আচ্ছাদন করিয়া স্বস্তিবাচন মন্ত্র পাঠ করিবেন।",
+   mantra:"তান্ত্রিক স্বস্তিবাচন —\n''হ্রীং হুং স্বস্তি নঃ কাত্যায়নী অপর্ণাশ্বা স্বস্তি নঃ কালী হৌং মেধা অমৃতময়ী হুং স্বস্তি নঃ প্রতিগিরা দেবতা দধাতু হ্রীং শ্রীং হুং ফট্ স্বাহা।''\n\nসামবেদোক্ত স্বস্তিবাচন —\n''ওঁ কর্তবোহৎশিন শ্রীমদ্দক্ষিণকালিকা পূজা করণি ওঁ পুণ্যাহং ভবন্তো ব্রুবন্তু, ওঁ পুণ্যাহং ভবন্তো ব্রুবন্তু, ওঁ পুণ্যাহং ভবন্তো ব্রুবন্তু। ওঁ পুণ্যাহম্, ওঁ পুণ্যাহম্, ওঁ পুণ্যাহম্।।''",
+   tip:"কালীপূজায় তন্ত্রোক্ত স্বস্তিবাচনই প্রশস্ত। যাহারা বৈদিক স্বস্তিবাচন করিবেন তাহাদের জন্য ত্রিবেদীয় স্বস্তিবাচন পাঠ করিবেন।"},
+  {id:8,title:"সংকল্প",badge:"অবশ্যিক",bc:"#E07B00",icon:"📿",
+   desc:"কোশাতে একটি কুশ ত্রিপত্র, কৃষ্ণতিল, হরীতকী, বিল্বপত্র এবং গঙ্গাজল লইয়া দক্ষিণ জানু ভূপাতিত করিয়া উপবেশন পূর্বক সংকল্প করিবেন। সংকল্প ছাড়া কোন কার্য করিলে পূর্ণফল হয় না।",
+   mantra:"''বিষ্ণুরোম্ তৎসদয় অমুকমাসি অমুকরাশিস্থে ভাস্করে অমুকে পক্ষে অমুকতিথৌ ** (দীপান্বিতামমাবস্যায়াং তিথৌ) অমুকগোত্রঃ শ্রীঅমুকদেবশর্মা মারীভয় নিবারণ ধনধান্য অতুল ঐশ্বর্য ধর্ম অর্থ কাম মোক্ষ চতুর্বর্গঃ সিদ্ধিকামঃ (শ্রীমদ্দক্ষিণকালিকা প্রীতিকামো বা) শ্রীমদ্দক্ষিণকালিকাপূজন কর্মাহং করিষ্যে (পরার্থে — করিষ্যামি)।''\n\nতান্ত্রিক সংকল্পসূক্ত —\n''ওঁ ইন্দ্রানো বিবেশী পৃষ্টাং মা কৃতসতাং শিবেঃ সিণ্ণদ্ধ মদত কলক্ষায়ুদেবোহতেক্রীং হুং ফট্ স্বাহা।।''",
+   tip:"** দীপান্বিতা অমাবস্যায় রাশি উল্লেখ নিষিদ্ধ। কালীপূজায় তান্ত্রিক সংকল্পসূক্ত পাঠ করাই আবশ্যক।"},
+  {id:9,title:"বরণ",badge:"প্রাথমিক",bc:"#B8860B",icon:"🙏",
+   desc:"যজমান নিজে পূজা করিতে না পারিলে তাহার প্রতিনিধিরূপে পূজক ও তন্ত্রধারক বরণ করিবেন। বরণকর্তার কর্মসমূহ আলাদা।",
+   mantra:"নিয়ম — যজমান পূর্বাস্যে এবং ব্রাহ্মণ উত্তরাস্যে বসিবেন।\n\nব্রাহ্মণ বলিবেন — ''ওঁ অচ্ছিয়ামো ভবস্তুম্।''\nযজমান বলিবেন — ''ওঁ অচ্য।''\n\nবরণের পর যজমান দক্ষিণ হস্ত দূর্বা ও আতপ চাউল লইয়া বামহস্ত যুক্ত করিয়া ব্রাহ্মণের দক্ষিণ জানুতে ধরিয়া বরণ বাক্য পাঠ করিবেন।",
+   tip:"পূজক আসনে বসিবার পূর্বেই বরণকার্য সমাধা করিতে হয়।"},
+  {id:10,title:"পঞ্চগব্য শোধন",badge:"শোধন",bc:"#B8860B",icon:"🐄",
+   desc:"বরণের পর পূজক পূর্ব বা উত্তরাস্যো শুদ্ধাসনে বসিয়া তান্ত্রিক আচমন সমাপ্ত করিয়া পঞ্চগব্য শোধন করিবেন। গোমূত্র, গোময়, দুগ্ধ, দধি, ঘৃত — প্রতিটির নিজস্ব মন্ত্র।",
+   mantra:"গোমূত্র (সামবেদী):\n''ওঁ গাবিচ্চিদ্ গা সমনয়ঃ সজেতন মরুতঃ সংবঙ্কঃ রিহতে কবুতো মিথঃ।''\n\nদুগ্ধ:\n''ওঁ গব্যং য়ু নো যথা পুরাশ্যেরাত রথ্যা। বিরবস্য মেহোনাম্।।''\n\nদধি:\n''ওঁ দধিক্রাবণো অকারিষং বিজিৎ অর্ষং বিজিনেঃ। সুরবি তো নো মুখকরোণং প্রণ অআয়ুষি তারিষৎ।।''\n\nঘৃত:\n''ওঁ ঘৃতবতী ভুবনানামভিশ্রয়োকি পৃথি মধুদে দায়াপতিথ বর্ণস্য ধর্মণা বিক্ষিতে অজরে ভুরিরেতসা।''",
+   tip:"কুশোদক — 'ওঁ দেবস্য তা সবিতুঃ প্রসেবিশ্নোর্বাহবাং পুষ্ণো হস্তাভ্যামাদে।' গায়ত্রী পাঠ পূর্বক সমস্ত একীকরণ করিবেন।"},
+  {id:11,title:"সামান্যার্ঘ্য স্থাপন",badge:"স্থাপন",bc:"#8B0000",icon:"🏺",
+   desc:"ভূমিতে ত্রিকোণ মঙ্গল, তাহার বাইরে বৃত্ত, তাহার বাইরে চতুষ্কোণ মঙ্গল অঙ্কিত করিয়া তদুপরি গন্ধপুষ্প দ্বারা পূজা করিবেন। 'ফট্' মন্ত্রে শঙ্খপ্রক্ষালন করিয়া তাহার উপর স্থাপন করিবেন।",
+   mantra:"''এতে গন্ধপুষ্পে ওঁ আধারশক্তয়ে নমঃ, এইক্রমে — ওঁ অনন্তায় নমঃ, ওঁ কূর্মায় নমঃ, ওঁ পৃথিব্যৈ নমঃ।''\n\n'ক্রীং' মন্ত্রে শুদ্ধজলে শঙ্খ পূর্ণ করিয়া বিলোম মাতৃকাপাঠপূর্বক তিনভাগ পূর্ণ করিবেন। যথা —\n''ওঁ ক্রীং ক্ষং লং হং সং যং শং বং লং রং\nযং মং ভং বং ফং পং নং ধং দং থং তং\nণং ঢং ডং ঠং টং ঙং ঝং জং ছং চং ঙং\nঘং গং খং কং অঃ অং ওঁং ঔং ওং ঐং এং\nঐং এং ঈং ইং আং অং ক্রীং।''\n\nতীর্থাবাহন —\n''ওঁ ক্রীং গঙ্গে চ যমুনে চৈব গোদাবরি সরস্বতি। নর্মদে সিন্ধু কাবেরি জলেহস্মিন্ সন্নিধিং কুরু।।''",
+   tip:"আবাহন করিয়া গন্ধপুষ্প দ্বারা পূজা করিবেন। মৎসামুদ্রায় আচ্ছাদন করিয়া 'ক্রীং' মন্ত্র দশবার জপ করিবেন।"},
+  {id:12,title:"দ্বারপূজা",badge:"পূজা",bc:"#8B0000",icon:"🚪",
+   desc:"'ফট্' মন্ত্রে কোশার জলে দ্বারদেশ অভ্যক্ষণপূর্বক আবাহনাদি পঞ্চমুদ্রা দ্বারা দ্বারদেবতাগণের আবাহন করিবেন।",
+   mantra:"''ওঁ দ্বারদেবতাঃ ইহাগচ্ছত ইহাগচ্ছত, ইহিতিষ্ঠত ইহিতিষ্ঠত, ইহসমিষ্ণত, ইহসমিরক্ষাধম, অত্রাধিষ্ঠানং কুরুতঃ, মম পূজাং গৃহীতা।।''\n\nগন্ধপুষ্পাদি দিয়া পূজা —\n''উর্দ্ধে এতে গন্ধপুষ্পে ওঁ গাং গণেশায় নমঃ।\nএইক্রমে — (বামভাগে) ওঁ ক্ষাং ক্ষেত্রপালায় নমঃ।\n(দক্ষিণভাগে) ওঁ বাং বটুকায় নমঃ।\n(উত্তরে) ওঁ যাং যোগিনীভ্যো নমঃ।\n(ঈশানে) ওঁ গাং গঙ্গায়ৈ নমঃ।\n(অগ্নিকোণে) ওঁ যাং যমুনায়ৈ নমঃ।\n(নৈর্ঋতে) ওঁ শ্রীং লক্ষ্ম্যৈ নমঃ।\n(বায়ুকোণে) ওঁ এং সরস্বত্যৈ নমঃ।\n(মধ্যে) ওঁ বাস্তুপুরুষায় নমঃ।\nওঁ অষ্টেমাতৃকাভ্যো নমঃ।\nওঁ ব্রহ্মণে নমঃ।''\n\nঅশক্তপক্ষে — ''ওঁ দ্বারদেবতাগেণভ্যো নমঃ।''",
+   tip:"অতঃপর স্বামে ত্রিকোণ মঙ্গল করিয়া — 'ওঁ বেজাদকে হুং ফট্ স্বাহা' মন্ত্রে তদুপরি কুশোদক দিয়া ভূমি শোধন করিবেন।"},
+  {id:13,title:"বিঘ্নাপসারণ",badge:"শোধন",bc:"#B8860B",icon:"✨",
+   desc:"'ক্রীং' মন্ত্রে দিব্যাদৃষ্টি দ্বারা দিব্যবিভু। 'ওঁ অস্ত্রায় ফট্' মন্ত্রে অন্তরীক্ষের বিঘ্ন এবং ভূমিতে বামপদের গোড়ালি দ্বারা তিনবার আঘাত করিয়া ভৌমবিঘ্ন অপসারণ করিবেন।",
+   mantra:"''ওঁ অপসর্পন্তু তে ভূতা যে ভূতা ভূবি সংস্থিতাঃ।\nযে ভূতা বিঘ্নকর্তারস্তে নশান্তু শিবাজ্ঞয়া।।''\n\n''ওঁ মণিধির বিজিনী মহাপ্রতিসরেঃ রক্ষ রক্ষ হুং ফট্ স্বাহা।''\n(মন্ত্রপাঠ করিয়া বস্ত্রাঞ্চলে গ্রন্থি বাঁধিয়া বিঘ্নাপসারণ করিবেন)",
+   tip:"অতঃপর মাষভক্তবলি দিবেন।"},
+  {id:14,title:"মাষভক্তবলি",badge:"পূজা",bc:"#8B0000",icon:"🍚",
+   desc:"স্বামে ত্রিকোণ মঙ্গল অঙ্কন করিয়া তদুপরি নূতন মৃৎপাত্রে অথবা কদলীপত্রে মাষকলাই, দধি, আতপচাউল একত্রিত করিয়া স্থাপন পূর্বক আবাহনাদি পঞ্চমুদ্রা দ্বারা ভূতগণের আবাহন করিবেন।",
+   mantra:"আবাহন মন্ত্র —\n''ভূতাদয়ঃ ইহাগচ্ছত ইহাগচ্ছত, ইহিতিষ্ঠত ইহিতিষ্ঠত, ইহসমিনধত, ইহসমিরক্ষাধম, অত্রাধিষ্ঠানং কুরুতঃ, মম পূজাং গৃহীত।''\n\nবলি মন্ত্র —\n''বং এতৈমে মাষভক্তবলয়ে নমঃ।''\n(তিনবার এই মন্ত্র পাঠান্তে তিনবার কুশোদকে অভ্যাক্ষণপূর্বক বলি প্রদান)\n\nগন্ধপুষ্প লইয়া —\n''এতে গন্ধপুষ্পে ওঁ মাষভক্তবলয়ে নমঃ।\nএতে গন্ধপুষ্পে এতদিধপতয়ে ওঁ শ্রীবিষ্ণবে নমঃ।।\nএতৎ সম্প্রদানায় ওঁ ভূতাদিভ্যো নমঃ।।''\n\nউৎসর্গ মন্ত্র —\n''ওঁ ভূতাঃ প্রেতাঃ পিশাচাশ্চ যে বসন্ত্যার ভূতলে। তে গৃহন্তু ময়া দত্তো বলিরেষ প্রসিদ্ধতাঃ।।\nপূজিতা গন্ধপুষ্পাদিবলিভিস্তর্পিতাঃস্থথা। দেশাদস্মাৎ বিনিঃসৃতা পূজাং পশ্চাত্ মৎকৃতাম্।।''",
+   tip:"একগণ্ডুষ জলগ্রহণ করিয়া — 'ওঁ ভূতাদয় ক্ষমক্ষম্।' মন্ত্রে ভূতগণের বিসর্জন করিয়া কিছু শ্বেত সরিষা লইয়া 'ফট্' মন্ত্রে সাতবার অভিমন্ত্রিত করিয়া মন্ত্রপাঠান্তে চতুর্দিকে বিকিরণ করিবেন।"},
+  {id:15,title:"আসনশুদ্ধি ও গুরুপংক্তি প্রণাম",badge:"প্রাথমিক",bc:"#B8860B",icon:"🧘",
+   desc:"আসনের নিম্মে ত্রিকোণমঙ্গল করিয়া তাহার উপর গন্ধপুষ্পদ্বারা পূজা করিবেন। তদুপরি আসন পাতিয়া আসন স্পর্শ পূর্বক পাঠ করিবেন।",
+   mantra:"আসন মন্ত্র —\n''ওঁ আসনমস্য মেরুপৃষ্ঠধ্নিষেঃ সুতলং ছন্দঃ কূর্মো দেবতা আসনোপবেশনে বিনিয়োগঃ। ওঁ পৃথি ত্বয়া ধৃতা লোকা দেবি তুং বিষ্ণুনা ধৃতা। তুষ্ণ ধারয় মাং নিত্যং পবিত্রং কুরচাসনম্।।''\n\nগুরুপংক্তি প্রণাম —\n(বামে) ওঁ গুরোভো নমঃ, ওঁ পরমগুরোভো নমঃ, ওঁ পরাপরগুরোভো নমঃ, ওঁ পরমেষ্ঠীগুরোভো নমঃ।\n(দক্ষিণে) ওঁ গণেশায় নমঃ।\n(মধ্যে) শ্রীমমহাকালভৈরব সহিত শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।।",
+   tip:"ইহার পর করশোধন করিবেন।"},
+  {id:16,title:"করশোধন ও পুষ্পশুদ্ধি",badge:"শোধন",bc:"#B8860B",icon:"🌺",
+   desc:"'ফট্' মন্ত্রে একটি সচন্দন রক্তবর্ণ পুষ্প দুই করতলে পেষণ ও আঘাণ করিয়া 'হেঁসৌ' মন্ত্রে ঈশান কোণে নিক্ষেপ করিয়া ওঁ অস্ত্রায় ফট্ মন্ত্রে উর্দ্ধে তালি দিয়া ছোটিকার দ্বারা দশদিক বন্ধন করিবেন।",
+   mantra:"করশোধন মন্ত্র —\n''ওঁ হ্রীং ক্রীং কালিকে মম হস্তে অধিষ্ঠতা সুপ্রসন্না ভব।''\n\nপুষ্পশুদ্ধি মন্ত্র —\n''ওঁ শতিবিষেকে হুং ফট্ স্বাহা।''\n''ওঁ পুষ্পকেতু রাজাইতে শতায় সমক্ষ হুং।''\nমন্ত্রে পুষ্পে কুশোদক দিয়া নারাচমুদ্রায় পুষ্প স্পর্শ করিয়া পাঠ করিবেন —\n''ওঁ পুষ্পে পুষ্পে মহাপুষ্পে সুপুষ্পে পুষ্পসম্ভবে।\nপুষ্পচয়াবকীর্ণে চ হুং ফট্ স্বাহা।।''",
+   tip:"অতঃপর কায়াদি শোধন করিবেন। 'ওঁ বেজাদকে হুং ফট্ স্বাহা' মন্ত্রে এক গণ্ডুষ জল পান করিয়া নিজ হৃদয়ে হস্ত রাখিয়া মন্ত্র পাঠ করিবেন।"},
+  {id:17,title:"ভূতশুদ্ধি",badge:"তান্ত্রিক",bc:"#6B21A8",icon:"🔥",
+   desc:"'রং' মন্ত্রে আপনার চতুর্দিকে জলধারা দিয়া নিজেকে বহ্নি-প্রাচীর দ্বারা বেষ্টিত চিন্তা করিয়া নিম্নলিখিত চারটি মন্ত্র পাঠ করিবেন। সংক্ষেপে ভূতশুদ্ধি করার বিকল্পও রয়েছে।",
+   mantra:"সংক্ষেপ ভূতশুদ্ধি চতুষ্টয় মন্ত্র —\n\n১. ''ওঁ মূলশৃঙ্গাটচ্ছিদ্রে সুষুম্নাপথেন জীবশিবং পরমশিবপদে যোজয়ামি স্বাহা।।১।।''\n\n২. ''ওঁ যং লিঙ্গ শরীরং শোষয় শোষয় স্বাহা।।২।।''\n\n৩. ''ওঁ রং সন্দেহাচ্ছরীরং দহ দহ স্বাহা।।৩।।''\n\n৪. ''ওঁ পরমশিব সুষুম্নাপথেন মূলশৃঙ্গাটমূলনাসান্স জুল জুল প্রজুল প্রজুল হংসঃ সোহহং স্বাহা।।৪।।''",
+   tip:"অতঃপর প্রাণায়াম করিবেন। প্রাণায়াম — দক্ষিণ হস্তের অঙ্গুষ্ঠ দ্বারা দক্ষিণ নাসাপুট রুদ্ধ করিতে করিতে মূলমন্ত্র 'ক্রীং' ষোড়শবার জপ করিতে করিতে বাম নাসাপুট দিয়া বায়ু পূরণ করিবেন।"},
+  {id:18,title:"প্রাণায়াম",badge:"তান্ত্রিক",bc:"#6B21A8",icon:"🌬️",
+   desc:"দক্ষিণ হস্তের অঙ্গুষ্ঠ দ্বারা দক্ষিণ নাসাপুট রুদ্ধ করতঃ মূলমন্ত্র 'ক্রীং' ষোড়শবার জপ করিতে করিতে বাম নাসাপুট দিয়া বায়ুপূরণ করিয়া কনিষ্ঠা ও অনামিকা অঙ্গুলিদ্বারা বামনাসাপুট ধারণ করতঃ মূলমন্ত্র ৬৪ বার জপ করিতে করিতে কুম্ভক করিবেন।",
+   mantra:"পূরক — 'ক্রীং' মন্ত্র ১৬ বার (বাম নাসা দিয়া বায়ু পূরণ)\nকুম্ভক — 'ক্রীং' মন্ত্র ৬৪ বার (উভয় নাসা রুদ্ধ)\nরেচক — 'ক্রীং' মন্ত্র ৩২ বার (দক্ষিণ নাসা দিয়া বায়ু ত্যাগ)\n\nএইরূপ তিনবার করিলে একবার প্রাণায়াম হয়।\n\nঅসামর্থ্যপক্ষে —\n১৬ সংখ্যার স্থলে ৮ বার বা ৪ বার\n৬৪ সংখ্যার স্থলে ৩২ বা ১৬ বার\n৩২ সংখ্যার স্থলে ১৬ বা ৮ বার করিবেন।",
+   tip:"অসামর্থ্যপক্ষে একবার করিলেও সিদ্ধ হয়। প্রাণায়াম শেষে আত্মপ্রাণ প্রতিষ্ঠা করিবেন।"},
+  {id:19,title:"আত্মপ্রাণ প্রতিষ্ঠা",badge:"তান্ত্রিক",bc:"#6B21A8",icon:"💠",
+   desc:"দক্ষিণ হস্তের অঙ্গুষ্ঠ ও মধ্যমার অগ্রভাগ আপন হৃদয়ে স্পর্শ করিয়া পাঠ করিবেন।",
+   mantra:"''ওঁ আং হ্রীং ক্রোং যং রং লং বং শং মং সং হৌং হংসঃ শ্রীমদ্দক্ষিণকালিকায়াঃ প্রাণা ইহ প্রাণাঃ।''\n\nএইরূপে —\n''ওঁ আং হ্রীং ক্রোং...... হংসঃ শ্রীমদ্দক্ষিণকালিকায়াঃ জীব ইহিস্থিতঃ।''\n\n''ওঁ আং হ্রীং ক্রোং...... হংসঃ শ্রীমদ্দক্ষিণকালিকায়াঃ সর্বেন্দ্রিয়ানি ইহ স্থিতানি।''\n\n''ওঁ আং হ্রীং ক্রোং...... হংসঃ শ্রীমদ্দক্ষিণকালিকায়াঃ বাঙ্মনশ্চক্ষুঃশ্রোত্রাণপ্রাণা ইহাগতা সুখং চিরং তিষ্ঠতু স্বাহা।''\n\nঅতঃপর নাসাদি ক্রিয়া করিবেন।",
+   tip:"মাতৃকান্যাস, করন্যাস, অঙ্গন্যাস, অন্তর্মাতৃকান্যাস, বাহ্যমাতৃকান্যাস, সংহার মাতৃকান্যাস, পীঠন্যাস করিবেন। বিস্তারিত ন্যাস ট্যাবে দেখুন।"},
+  {id:20,title:"বীজন্যাস ও দক্ষিণকালিকার ধ্যান",badge:"ধ্যান",bc:"#8B0000",icon:"🪬",
+   desc:"বীজন্যাস করিয়া তারপর 'ক্রীং' মূলমন্ত্রে সাতবার ব্যাপকন্যাস করিবেন। অতঃপর কর্মমুদ্রায় পুষ্প গ্রহণ পূর্বক দেবীর ধ্যান করিবেন।",
+   mantra:"বীজন্যাস —\n(ব্রহ্মরন্ধ্রে) ওঁ হ্রীং নমঃ। (হৃদয়মধ্যে) ওঁ ক্রীং নমঃ। (ললাটে) ওঁ ক্রীং নমঃ।\n(নাভিতে) ওঁ হুং নমঃ। (গুহে) ওঁ হুং নমঃ। (মুখে) ওঁ হ্রীং নমঃ।\n(সর্বাঙ্গে) ওঁ হ্রীং নমঃ।। (এইরূপে তিনবার বীজন্যাস করিবেন)\n\nদক্ষিণকালিকার ধ্যানমন্ত্র —\n''ওঁ করালবদনাং ঘোরাং মুক্তকেশীং চতুর্ভুজাম্।\nকালিকাং দক্ষিণাং দিব্যাং মুণ্ডমালাবিভূষিতাম্।।\nসদ্যশ্ছিন্নশিরঃখড়্গ বামাধোর্দ্ধকরাম্বুজাম্।\nঅভয়ং বরদং চৈব দক্ষিণোর্দ্ধাধঃপাণিকাম্।।\nমহামেঘপ্রভাং শ্যামাং তথা চৈব দিগম্বরীম্।\nকণ্ঠাবসক্তমুণ্ডালীং শবযানোপরিষ্ঠিতাম্।।\nমহাকালেন চ সমং বিপরীতরতাতুরাম্।\nসুখপ্রসন্নবদনাং স্মেরাননসরোরুহাম্।।\nএবং সংচিন্তয়েৎ কালীং সর্বকামসমৃদ্ধিদাম্।।''",
+   tip:"একাক্ষর মন্ত্র পক্ষে — 'ওঁ শবারূঢ়াং মহাভীমাং ঘোরদংষ্টাং বরপ্রদাম্। হাস্যযুক্তাং ত্রিনেত্রাংশ কপাল কর্তৃকাক্রমাম্।।' মানসোপচারে পূজা করিবেন।"},
+  {id:21,title:"মানসোপচার",badge:"পূজা",bc:"#8B0000",icon:"🧠",
+   desc:"ধ্যানান্তে পুষ্পটি নিজ মস্তকে দিয়া মানসোপচারে পূজা করিবেন। হৃদয় পদ্ম দেবীকে আসন রূপে দিবেন।",
+   mantra:"হৃদয়ে —\nপদ্ম দেবীকে আসন রূপে দিবেন।\nসহস্রার পদ্ম ক্ষীরত অমৃত দেবীকে পাদ্য দিবেন।\nমনকে অর্ঘ্যরূপে, সহস্রদল পদ্ম রক্তিত জলকে আচমনীয় ও স্নানীয় রূপে দিবেন।\nআকাশতত্ত্বকে বস্ত্র, ক্ষিতিতত্ত্বকে গন্ধ, অহিংসা, বিজ্ঞান, ক্ষমা, দয়া, অলোভ, অমোহ, অমায়া, অনহঙ্কার, অভাগ, অদ্বেষ — পুষ্পরূপে কল্পনা করিয়া দেবীকে দিবেন।\nপ্রাণকে ধূপ, তেজস্তত্ত্বকে দীপ, আকাশতত্ত্বকে চামর, সহস্রার পদ্মকে ছত্র, অনাহতধ্বনিকে ঘণ্টা বাদ্য কল্পনা করিবেন।",
+   tip:"অতঃপর বিশেষার্ঘ্য স্থাপন করিবেন।"},
+  {id:22,title:"বিশেষার্ঘ্য স্থাপন",badge:"স্থাপন",bc:"#8B0000",icon:"🏺",
+   desc:"স্বামে সচন্দন যুক্ত জল দ্বারা অধোমুখ ত্রিকোণমঙ্গল করিয়া, ত্রিকোণের মধ্যে 'হুং' বীজমন্ত্র লিখিয়া ত্রিকোণের বাইরে বৃত্ত তাহার বাইরে চতুষ্কোণ মঙ্গল করতঃ সামান্যার্ঘ্য জলে উক্ত মঙ্গল প্রোক্ষণ পূর্বক গন্ধ পুষ্প দ্বারা পূজা করিবেন।",
+   mantra:"''হ্রীং এতে গন্ধপুষ্পে ওঁ আধারশক্তয়ে নমঃ।\nএইক্রমে — ওঁ অনন্তায় নমঃ, ওঁ কূর্মায় নমঃ, ওঁ পৃথিব্যৈ নমঃ।''\n\nঅতঃপর 'ফট্' মন্ত্রে সামান্যার্ঘ্য জল দ্বারা শঙ্খ প্রক্ষালন করিয়া তাহার উপর স্থাপন পূর্বক 'নমঃ' মন্ত্রে কোশা জলপূর্ণ করিয়া বিলোম মাতৃকাপাঠপূর্বক তিনভাগ পূর্ণ করিবেন।\n\nতীর্থাবাহন করিয়া গন্ধপুষ্প দ্বারা পূজা করিবেন। যথা —\n(আধারে) হ্রীং এতে গন্ধপুষ্পে মং বহ্নিমঙ্গলায় দশকলাষে নমঃ।\nএইক্রমে (জলে) হ্রীং উং সোমমঙ্গলায় ষোড়শকলাষে নমঃ।\n(শঙ্খে) হ্রীং অং সূর্যমঙ্গলায় দ্বাদশকলাষে নমঃ।\n\nআবাহন করিয়া গন্ধপুষ্প দ্বারা পূজা করিবেন —\n'শ্রীমমহাকালভৈরব সহিত শ্রীমদ্দক্ষিণকালিকে ইহাগচ্ছ ইহাগচ্ছ, ইহিতিষ্ঠ ইহিতিষ্ঠ, ইহসমিনেহি, ইহসমিরক্ষস্ব, ইহসমুখীভব, মম পূজাং গৃহাণ।'",
+   tip:"মৎসামুদ্রা (পৃষ্ঠে ৮) দ্বারা আচ্ছাদন করিয়া 'ক্রীং' মন্ত্র দশবার জপ করিবেন। তারপর ধেনুমুদ্রা দ্বারা অমৃতীকরণ, অবগুষ্ঠনমুদ্রা ও যোনিমুদ্রা প্রদর্শন করিয়া শঙ্খের জল কিঞ্চিৎ কোশার জলে দিয়া 'ক্রীং' মন্ত্রে নিজেকে ও পূজোপকরণ সমূহ অভ্যক্ষণ করিবেন।"},
+  {id:23,title:"পীঠপূজা",badge:"পূজা",bc:"#8B0000",icon:"🏛️",
+   desc:"পীঠের উপর — এতে গন্ধপুষ্পে ওঁ মণিপীঠায় নমঃ। পীঠের মধ্যে — ওঁ মুনিভ্যো নমঃ, ওঁ শব-মুণ্ডেভ্যো নমঃ। চতুর্দিকে বিভিন্ন মন্ত্রে পূজা করিবেন।",
+   mantra:"পীঠপূজা মন্ত্র —\nপীঠের উপরে — ''এতে গন্ধপুষ্পে ওঁ মণিপীঠায় নমঃ।''\nপীঠের মধ্যে — ''ওঁ মুনিভ্যো নমঃ। ওঁ শব-মুণ্ডেভ্যো নমঃ।''\n\nচতুর্দিকে পুষ্পদ্বারা —\n(চতুর্দিকে) ওঁ ধর্মায় নমঃ। ওঁ জ্ঞানায় নমঃ। ওঁ বৈরাগ্যায় নমঃ। ওঁ ঐশ্বর্যায় নমঃ।\n(কোণচতুষ্টয়ে) ওঁ অধর্মায় নমঃ। ওঁ অজ্ঞানায় নমঃ। ওঁ অবৈরাগ্যায় নমঃ। ওঁ অনৈশ্বর্যায় নমঃ।\n\nএতে গন্ধপুষ্প অং সূর্যমঙ্গলায় দ্বাদশকলাষে নমঃ। এইক্রমে —\nউং সোমমঙ্গলায় ষোড়শকলাষে নমঃ। মং বহ্নিমঙ্গলায় দশকলাষে নমঃ।\nরং রজসে নমঃ। তং তমসে নমঃ। আং আত্মনে নমঃ। অং অন্তরাত্মনে নমঃ।\nপং পরমাত্মনে নমঃ। হ্রীং জ্ঞানাত্মনে নমঃ।\n\n(কেশের পূর্বদিকে হইতে আরতু করিয়া) এতে গন্ধপুষ্পে অং আয়ে নমঃ। ওঁ ইচ্ছায়ে নমঃ।\nএইক্রমে — ওঁ জ্ঞানায়ে নমঃ, ওঁ অজ্ঞানায়ে নমঃ, ওঁ ক্রিয়ায়ে নমঃ, ওঁ কামিনে নমঃ, ওঁ কামদায়িনে নমঃ।",
+   tip:"পীঠশক্তির ন্যাস — (হৃদয়ে) ওঁ সুধাসুধ্যৈ নমঃ, ওঁ মণিদ্বীপায় নমঃ, ওঁ চিন্তামণিগৃহায় নমঃ, ওঁ শশানায় নমঃ, ওঁ পারিজাতায় নমঃ, ওঁ মণিপীঠায় নমঃ। অতঃপর বেদিশোধন ও বিতান শোধন করিয়া ঘটস্থাপন করিবেন।"},
+  {id:24,title:"ঘটস্থাপন, কাঙুরোপণ ও অধিবাস",badge:"স্থাপন",bc:"#8B0000",icon:"🪔",
+   desc:"নাতি হ্রস্ব নাতি দীর্ঘ সুদৃড় ঘট লইয়া ক্রীং মন্ত্রে ধৌত করিয়া 'ঐং' মন্ত্রে কুশোদক দ্বারা ঘট শোধন করিয়া 'হ্রীং' মন্ত্রে পঞ্চগুড়ি অঙ্কিত অষ্টদল পদ্মাদি প্রশ্নের উপর ঘটটি স্থাপন করিবেন।",
+   mantra:"ঘটস্থাপন মন্ত্র —\n'ক্রীং' মন্ত্রে পঞ্চগুড়ি, অষ্টদল পদ্মের উপর স্থাপন পূর্বক 'হ্রীং মন্ত্রে জলপূর্ণ করিবেন।\n\nতীর্থাবাহন —\n''ওঁ গঙ্গাদাঃ সরিতঃ সর্বাঃ সমুদ্রাশ্চ সরাংসি চ। হৃদাঃ প্রস্রবণাঃ পুণ্যাঃ স্বর্গপাতালভূগতাঃ। সর্বতীর্থানি পুণ্যানি ঘটে কুর্বন্তু সন্নিধিম্।।''\n\nকাঙুরোপণ মন্ত্র —\nতীরকাঠি স্পর্শ করিয়া —\n''ওঁ কাণ্টাৎ কাণ্টাৎ প্রেরোহন্তি, পরক পরক্ষম্পরি। এবা নো দুর্বে প্রতনু সহস্রেণ শতেন চ।।''\n\nসূত্রবেষ্টন মন্ত্র —\n''ওঁ সূত্রামাণং পৃথিবীং দ্যামেনহসং সুসমানমিদিতিং সুপ্রণীতিম্। দেবীং নাবং স্বরিত্রামানগমক্ষবস্তি মা রুহেমা স্বস্তয়ে।।''\n\nঅধিবাস —\n''অনয়া মহা অস্যা মুরয়াঃ ক্রীং শ্রীমদ্দক্ষিণ কালিকা দেবতায়া শুভাধিবাসন মস্তু।''\n(গন্ধ)—''অনেন গন্ধেন অস্যা ইত্যাদি।''\n(শিলা)—''অনয়া শিলয়া অস্যা ইত্যাদি।''",
+   tip:"অধিবাসের সময় — গন্ধ, শিলা, ধান, দূর্বা, পুষ্প, ফল, দধি, ঘৃত, স্বস্তিক, সিন্দুর, শঙ্খ, কজল, রোচনা, সিদ্ধার্থ, কাংস্য, রূপ্য, তাম্র, চামর, দর্পণ, দীপ, প্রশস্তিপাত্র, মঙ্গলসূত্র — প্রতিটির নিজস্ব মন্ত্র রয়েছে।"},
+  {id:25,title:"গণেশাদির পূজা",badge:"পূজা",bc:"#8B0000",icon:"🐘",
+   desc:"'ওঁ ভূর্ভুবঃ গণপতে ইহাগচ্ছ' ইত্যাদি মন্ত্রে আবাহনাদি পঞ্চমুদ্রা দ্বারা আবাহন করিয়া পূজা করিবেন।",
+   mantra:"গণেশ ধ্যান —\n''ওঁ খর্বং স্থূলতনুং গজেন্দ্রবদনং লম্বোদরং সুন্দরং, প্রসন্নমগ্ধলুক্রমধুপব্যালোল গণ্ডস্থলম্। দতাঘাত বিদারিতারিরুধিরৈঃ সিন্দুর শোভাকরং, বেদে শৈলসুতাসুতং গণপতিং সিদ্ধিপ্রদং কামদম্।।''\n\nগণেশ পূজা মন্ত্র —\n''এষ গন্ধঃ ওঁ গাং গণেশায় নমঃ। এতৎ পুষ্পম্ ওঁ গাং গণেশায় নমঃ। এষ ধূপঃ ওঁ গাং গণেশায় নমঃ। এষ দীপঃ ওঁ গাং গণেশায় নমঃ। এতৎ নিবেদ্যম্ ওঁ গাং গণেশায় নমঃ।''\n\nসূর্য পূজার পরে নারায়ণের পূজা করিবেন। ধ্যান —\n''ওঁ ধ্যেয়ঃ সদা সবিতৃমণ্ডল মধ্যবর্তী নারায়ণঃ সরসিজাসন সন্নিবিষ্টঃ। কেয়ূরবান কনককুণ্ডলবান কিরীটহারী হিরণয় বপুর্ধৃতশঙ্খচক্রঃ।।''\n\nশিব পূজার পরে জয়দুর্গার পূজা করিবেন।",
+   tip:"নবগ্রহ ও ইন্দ্রাদি দশদিকপালের পূজাও করিতে হয়। অতঃপর আবাহন পূর্বক দেবীর ধ্যান করিবেন।"},
+  {id:26,title:"দেবীর আবাহন",badge:"পূজা",bc:"#8B0000",icon:"🕯️",
+   desc:"কর্মযোড়ে পাঠ করিবেন। আবাহনাদি পঞ্চমুদ্রা দ্বারা আবাহন করিবেন। মূর্তির উপরে 'হুং' মন্ত্র দ্বারা অবগুষ্ঠনমুদ্রা প্রদর্শন পূর্বক দেবীর ষড়ঙ্গন্যাস করিবেন।",
+   mantra:"আবাহন মন্ত্র (করযোড়ে) —\n''ওঁ এহেহি ভগবতীর্ত্ব ভক্তানুগ্রহবিগ্রহে। যোগিনীভিঃ সমং দেবি রক্ষার্থং মম সর্বদা।।\nওঁ মহাপদ্মবনাস্তে কারণানন্দ বিগ্রহে। সর্বভূতিহিতে মাতরেহি পরমেশ্বরি।।\nওঁ দেবেশি ভক্তিসুলভে পরিবার সমন্বিতে। যাবৎ পূজায়িষ্যামি তাবত্বং সুস্থিরা ভব।।''\n\nতারপর আবাহনাদি পঞ্চমুদ্রা দ্বারা আবাহন করিবেন —\n''ওঁ ক্রীং শ্রীমমহাকালভৈরব সহিত শ্রীমদ্দক্ষিণকালিকাদেবী ইহাগচ্ছ ইহাগচ্ছ, ইহিতিষ্ঠ ইহিতিষ্ঠ, ইহসমিনিতাভব, ইহসমিরক্ষাভব, অত্রাধিষ্ঠানং কুরু, মম পূজাং গৃহাণ।''",
+   tip:"আবাহন করিয়া 'হুং' মন্ত্র দ্বারা অবগুষ্ঠনমুদ্রা, 'বং' মন্ত্রে ধেনুমুদ্রা এবং যোনিমুদ্রা প্রদর্শন করিয়া পরমীকরণমুদ্রায় আচ্ছাদন করিয়া লেলিহানমুদ্রাদ্বারা প্রাণপ্রতিষ্ঠা করিবেন।"},
+  {id:27,title:"চক্ষুদান ও প্রাণপ্রতিষ্ঠা",badge:"পূজা",bc:"#8B0000",icon:"👁️",
+   desc:"বিল্বপত্রাদিতে কজল গ্রহণ করিয়া চক্ষুদান ও প্রাণপ্রতিষ্ঠা করিবেন।",
+   mantra:"চক্ষুদান মন্ত্র —\n''উদ্ধচক্ষু ওঁ ক্রীং কালিকায়ৈ বিদ্মহে শশানবাসিন্যৈ ধীমহি তন্নো ঘোরে প্রচোদয়াৎ।\nওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়াঃ উদ্ধচক্ষুঃ কল্যামি।''\n\nবামনেত্রে —\n''ওঁ ক্রীং কালিকায়ৈ বিদ্মহে শশানবাসিন্যৈ ধীমহি তন্নো ঘোরে প্রচোদয়াৎ।\nওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়াঃ বামচক্ষুঃ কল্যামি।''\n\nদক্ষিণ চক্ষুতে —\n''ওঁ ক্রীং কালিকায়ৈ বিদ্মহে শশানবাসিন্যৈ ধীমহি তন্নো ঘোরে প্রচোদয়াৎ।\nওঁ ক্রীং শ্রীমদ্দক্ষিণকালিকায়াঃ দক্ষিণচক্ষুঃ কল্যামি।।''\n\nপ্রাণপ্রতিষ্ঠা মন্ত্র —\nপ্রথমে দেবীর মস্তকে 'ক্রীং' মন্ত্রটি ১০৮ বার জপ করিবেন।\n''ওঁ অস্য প্রাণপ্রতিষ্ঠামন্ত্রস্য ব্রহ্মাবিষ্ণুমহেশ্বরাঃয় ঋষকযজুঃসামানিচ্ছন্দাংসি চেতনারূপপ্রাণশক্তিদেবতা প্রাণপ্রতিষ্ঠাপনে বিনিয়োগঃ।\nওঁ আং হ্রীং ক্রোং যং রং লং বং শং যং সং হৌং হংসঃ শ্রীমদ্দক্ষিণকালিকায়াঃ প্রাণা ইহ প্রাণাঃ।''",
+   tip:"ভূতিনী, আক্ষিণী ও যোনিমুদ্রা প্রদর্শন পূর্বক লেলিহানমুদ্রাদ্বারা দেবতার হৃদয়ে দূর্বা ও আতপ তণ্ডুল ধারণ করিয়া প্রাণপ্রতিষ্ঠা মন্ত্র পাঠ করিবেন।"},
+  {id:28,title:"ষোড়শোপচার পূজা",badge:"পূজা",bc:"#8B0000",icon:"🌺",
+   desc:"প্রথমে দেবীর ধ্যান পাঠ করিয়া গন্ধপুষ্প দ্বারা পূজা করিয়া মন্ত্র সহকারে যথাযথ ক্রমানুসারে দ্রবসকল নিবেদন করিবেন। বিস্তারিত 'ষোড়শোপচার' ট্যাবে দেখুন।",
+   mantra:"প্রতিটি উপচারে মূলমন্ত্র পাঠ করিবেন —\n''ক্রীং ক্রীং ক্রীং হুং হুং হ্রীং হ্রীং দক্ষিণে কালিকে ক্রীং ক্রীং ক্রীং হুং হুং হ্রীং হ্রীং স্বাহা।''\n\nষোড়শোপচার ক্রম —\n১. রজতাসন ২. স্বাগতম্ ৩. পাদ্য ৪. অর্ঘ্য ৫. আচমনীয়\n৬. মধুপর্ক ৭. পুনরাচমনীয় ৮. স্নানীয় ৯. বস্ত্র\n১০. আভরণ ১১. গন্ধ ১২. পুষ্প ১৩. বিল্বপত্র\n১৪. পুষ্পমালা ১৫. ধূপ ১৬. দীপ\n১৭. নৈবেদ্য ১৮. পানীয় ১৯. পুনরাচমনীয়\n২০. তাম্বুল ২১. সবত্রেজসাধারভোজ্যাদি ২২. অন্ন",
+   tip:"ষোড়শোপচার ট্যাবে প্রতিটি উপচারের সম্পূর্ণ মন্ত্র দেখুন।"},
+  {id:29,title:"সপরিবার পূজা ও আবরণ পূজা",badge:"পূজা",bc:"#8B0000",icon:"👪",
+   desc:"মূলদেবীর পূজার পরে পরিবারদেবতাগণের পূজা করিবেন। আবাহন করিবেন, পরে আবরণ পূজা করিবেন।",
+   mantra:"সপরিবার পূজা মন্ত্র —\n''ওঁ আদিত্যাদি নবগ্রহেভ্যো নমঃ।\nওঁ ইন্দ্রাদি দশদিকপালেভ্যো নমঃ।\nওঁ মৎস্যাদি দশাবতারেভ্যো নমঃ।\nওঁ কাল্যাদি দশমহাবিদ্যাভ্যো নমঃ।\nওঁ বাস্তুদেবতায়ৈ নমঃ। ওঁ কুলদেবতায়ৈ নমঃ।\nওঁ সর্বেভ্যো দেবেভ্যো নমঃ। ওঁ সর্বাভ্যো দেবীভ্যো নমঃ।।''\n\nতারপর করযোড়ে — ''ওঁ ক্রীং দক্ষিণকালিকামূর্তিং কল্যামি।''\nমন্ত্রটি পাঠপূর্বক দেবীর মূর্তি কল্পনা করিবেন।\n\nআবরণ পূজা — প্রথমে আবাহন করিবেন —\n''ওঁ আবরণদেবতাঃ ইহাগচ্ছত ইহাগচ্ছত, ইহিতিষ্ঠত ইহিতিষ্ঠত, ইহসমিনেহি, ইহসমিরক্ষস্ব, অত্রাধিষ্ঠানং কুরু, মম পূজাং গৃহীতা।''\n\nএইক্রমে — ''এতে গন্ধপুষ্পে ওঁ সাং হৃদয়ায় নমঃ। ওঁ সীং শিরসে স্বাহা। ওঁ সুং শিখায়ে বষট্। ওঁ সৈং কবচায় হুং। ওঁ সৌং নেত্রত্রয়ায় বৌষট্। ওঁ সঃ করতলপৃষ্ঠাভ্যাং অস্ত্রায় ফট্।।''",
+   tip:"ব্রাহ্মণ্যাদিঅষ্টশক্তি পূজা, বাকিনীযোগিনী পূজা, ক্ষেত্রপালগণের পূজা, লোকপালগণের পূজা ও মহাকালভৈরবের পূজা করিবেন।"},
+  {id:30,title:"বলিদান (মহিষ বা ছাগ বলি)",badge:"বলি",bc:"#8B0000",icon:"⚔️",
+   desc:"বলিদান তন্ত্রশাস্ত্রের বিশেষ বিধি। মহিষবলি ও ছাগবলির আলাদা পদ্ধতি। নবীন পুরোহিত প্রথমবার অবশ্যই অভিজ্ঞ পুরোহিতের নির্দেশনায় এই কাজ করিবেন।",
+   mantra:"বলির পূর্বে মাংস শোধন মন্ত্র —\n''ওঁ পশব যে পশুমালভন্তে তে পশুমালভন্তাং।''\n\nবলিদানের সময় খড়্গে মূলমন্ত্র পাঠ পূর্বক —\nছাগবলি বিধিতে (তন্ত্রোক্ত) —\n''ওঁ ক্রীং ক্রীং ক্রীং হুং হুং হ্রীং হ্রীং দক্ষিণকালিকে এতৎ পশুং ব্যাপৃণমি ক্রীং স্বাহা।''\n\nখড়্গ পূজা —\n''এতে গন্ধপুষ্পে ওঁ বজ্রায় নমঃ।''\nএইক্রমে — ''ওঁ শক্তয়ে নমঃ। ওঁ দণ্ডায় নমঃ। ওঁ খড়্গায় নমঃ।\nওঁ পাশায় নমঃ। ওঁ অঙ্কুশায় নমঃ। ওঁ গদায় নমঃ।\nওঁ শূলায় নমঃ। ওঁ চক্রায় নমঃ। ওঁ পদ্মায় নমঃ।''",
+   tip:"স্তব পূজার পরে — মহিষবলি বিধি ও তৈলাক্ত ছাগবলি বিধি আলাদা। খড়্গপূজা করার পরে বলিদান করিবেন।"},
+  {id:31,title:"পুষ্পাঞ্জলি ও প্রণাম",badge:"সমাপন",bc:"#B8860B",icon:"🙏",
+   desc:"পূজান্তে পুষ্পাঞ্জলি প্রদান করিবেন। অতঃপর করযোড়ে প্রণাম মন্ত্র পাঠ করিবেন।",
+   mantra:"পুষ্পাঞ্জলি মন্ত্র —\n''ওঁ হ্রীং ক্রীং শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।\nএতে গন্ধপুষ্পে মহাকালীদেবতায়ৈ নমঃ।''\n\nপ্রণাম মন্ত্র —\n''ওঁ জয়ন্তী মঙ্গলা কালী ভদ্রকালী কপালিনী।\nদুর্গা ক্ষমা শিবা ধাত্রী স্বাহা স্বধা নমোহস্তুতে।।''\n\nমূলমন্ত্রে প্রণাম —\n''ওঁ ক্রীং ক্রীং ক্রীং হুং হুং হ্রীং হ্রীং দক্ষিণে কালিকে ক্রীং ক্রীং ক্রীং হুং হুং হ্রীং হ্রীং স্বাহা।\nএই মন্ত্রে প্রণাম করিবেন।''",
+   tip:"পূজান্তে দক্ষিণহস্তের তজনী ও অঙ্গুষ্ঠযোগে দক্ষিণ গালে আঘাত করিতে করিতে 'বম্ বম্' শব্দে পাঁচবার তালব্রাদ করিয়া যথাশক্তি স্তব-কবচাদি পাঠ করিবেন।"},
+  {id:32,title:"বৈগুণ্য সমাধান ও দক্ষিণান্ত",badge:"সমাপন",bc:"#B8860B",icon:"✅",
+   desc:"পূজায় কোনো ভুল হইলে বৈগুণ্য সমাধান করিবেন। অতঃপর দক্ষিণান্তে যথাবিধি দক্ষিণা প্রদান করিবেন।",
+   mantra:"বৈগুণ্য সমাধান মন্ত্র —\n''ওঁ কৃতেতৎ শ্রীমদ্দক্ষিণকালী শিবপূজা কর্মাসীভূত যদ্যদ বৈগুণ্য জাতং তদ্দোষ প্রশমনায় শ্রীবিষ্ণুস্মরণমহং করিষ্যে।''\nঅতঃপর দশবার 'ওঁ শ্রীবিষ্ণুঃ' জপ করিবেন।\n\nদক্ষিণান্ত মন্ত্র —\n''বিষ্ণু রোমিত্যাদি শ্রীঅমুক দেবশর্মা ইত্যাদি শ্রীমদ্দক্ষিণকালী পূজাকর্মণি সাঙ্গতার্থং দক্ষিণামিদং কাষ্ঠনমূল্যাং (রজতখণ্ড, হরিতকী ফলং বা) শ্রীবিষ্ণুদেবতমচিত্তং ব্রাহ্মণায় অহং সম্প্রদদে।''\n\nশান্তিমন্ত্র —\n''ওঁ শান্তিঃ শান্তিঃ শান্তিঃ।''",
+   tip:"তান্ত্রিক শান্তিমন্ত্র — 'ওঁ শান্তিঃ শান্তিঃ শান্তিঃ। ওঁ দ্যৌঃ শান্তিরন্তরিক্ষং শান্তিঃ পৃথিবী শান্তিরাপঃ শান্তিরোষধয়ঃ শান্তিঃ। বনস্পতয়ঃ শান্তির্বিশ্বে দেবাঃ শান্তির্ব্রহ্ম শান্তিঃ সর্বং শান্তিঃ শান্তিরেব শান্তিঃ সা মা শান্তিরেধি।।'"}
+];
+
+const FAQS = [
+  {q:"কালী কে এবং 'কালী' শব্দের অর্থ কী?",a:"'কু' ধাতুর উত্তরে অন + কর্তৃবাচো অন যুক্ত হয়ে হয়েছে 'কাল' শব্দ। 'কাল' শব্দের অর্থ — মৃত্যু, মহাকাল অর্থাৎ মহাদেব। এই কাল শক্তি স্ত্রীলিঙ্গে 'ঈপ্' প্রত্যয় যুক্ত হয়ে 'কালী' শব্দ হয়েছে। তন্ত্রে যে কালী তারা ইত্যাদি দশমহাবিদ্যার উল্লেখ দেখা যায়, তন্মধ্যে 'কালী' আদি বিদ্যা, অনন্তকালের সৃষ্টিকাপিনী, পরমা প্রকৃতি, মহাশক্তিস্বরূপা এই দেবী।"},
+  {q:"কালীপূজার ফল কী?",a:"কালী পূজায় গৃহ দোষ উপশম, অগ্নি, চোর, রাজভয়, শক্রভয়, রোগ, শোক, দুঃখ-দারিদ্র্যনাশ, সম্পদ লাভ, জয়লাভ প্রভৃতি এই দেবীর পূজায় লাভ হয়ে থাকে। এবং সর্বোপরি সাধক দেবীর কৃপায় মুক্তি লাভ করেন।"},
+  {q:"কালীপূজার শ্রেষ্ঠ সময় কখন?",a:"শনিবার, মঙ্গলবার, অষ্টমী ও অমাবস্যা এই দেবী পূজায় প্রশস্ত। এতদ্ব্যতীত পুণ্যাংশক্রতযুক্ত ঐ সকল বার ও তিথিতে পূজায় বিশেষ ফল লাভ হয়। বিশেষ কামনাযুক্ত পূজার জন্য বৈশাখ, জ্যৈষ্ঠ, কার্তিক, মাঘ ও ফাল্গুন মাসের অমাবস্যা প্রশস্ত কাল।"},
+  {q:"জপের শ্রেষ্ঠ মন্ত্র কোনটি?",a:"গুরু নির্দেশিত মন্ত্রই শ্রেষ্ঠ। এতদ্ব্যতীত নিম্নলিখিত মন্ত্রটি শ্রেষ্ঠ মন্ত্র। এই মন্ত্রে সর্ববিঘ্ন, সর্বপাপ ও অরিষ্টনাশ হয় — 'ক্রীং ক্রীং ক্রীং হুং হুং হ্রীং হ্রীং দক্ষিণে কালিকে ক্রীং ক্রীং ক্রীং হুং হুং হ্রীং হ্রীং স্বাহা।'"},
+  {q:"নারী ও শূদ্র কি কালীপূজা করতে পারেন?",a:"হ্যাঁ। শূদ্র ও নারীগণ 'ওঁ' শব্দের পরিবর্তে 'নমঃ' বলিবেন। অব্রাহ্মণ বা নারী শক্তিমন্ত্রে দীক্ষিত হইলে তাহার মাতৃপূজায় অধিকার জন্মে। কর্তা স্বয়ং পূজায় অসমর্থ হইলে প্রথমেই বরণকার্য শেষ করিবেন।"},
+  {q:"সংকল্প ছাড়া পূজা করা যাবে?",a:"না। সংকল্পেন বিনা রাজন্ যৎকিঞ্চিৎ ক্রুরতে নরঃ — অর্থাৎ সংকল্প না করিয়া মানুষ যে কোন কার্য করে, তাহার পূর্ণফল প্রাপ্ত হওয়া যায় না এবং ধর্মের অর্ধেক ভাগ অধ্যন্ত নষ্ট হইয়া যায়। তবে কেহ নিত্য কালীপূজা করিলে তাহাতে স্বস্তিবাচন ও সংকল্পের প্রয়োজন হয় না।"},
+  {q:"পূজায় ভুল হলে কী করবেন?",a:"'ওঁ কৃতেতৎ শ্রীমদ্দক্ষিণকালী শিবপূজা কর্মাসীভূত যদ্যদ বৈগুণ্য জাতং তদ্দোষ প্রশমনায় শ্রীবিষ্ণুস্মরণমহং করিষ্যে।' বলিয়া দশবার 'ওঁ শ্রীবিষ্ণুঃ' জপ করিবেন। অতঃপর শান্তিনাদি করিবেন।"},
+  {q:"ভূতশুদ্ধি কীভাবে সংক্ষেপে করা যায়?",a:"সংক্ষেপে ভূতশুদ্ধির জন্য চারটি মন্ত্র পাঠ করিতে হয়: (১) 'ওঁ মূলশৃঙ্গাটচ্ছিদ্রে সুষুম্নাপথেন জীবশিবং পরমশিবপদে যোজয়ামি স্বাহা।' (২) 'ওঁ যং লিঙ্গ শরীরং শোষয় শোষয় স্বাহা।' (৩) 'ওঁ রং সন্দেহাচ্ছরীরং দহ দহ স্বাহা।' (৪) 'ওঁ পরমশিব সুষুম্নাপথেন মূলশৃঙ্গাটমূলনাসান্স জুল জুল প্রজুল প্রজুল হংসঃ সোহহং স্বাহা।'"},
+  {q:"কোন সামগ্রীর অভাব হলে কী করবেন?",a:"কোনো সামগ্রীর অভাব হলে জল দিয়ে বিকল্প করা যায় — এই নিয়ম শাস্ত্রে স্বীকৃত। তবে মূলমন্ত্র (ক্রীং) পাঠ করিতে হইবে।"},
+  {q:"বলিদান না দিয়ে পূজা করা যাবে?",a:"হ্যাঁ। বলিদান তন্ত্রশাস্ত্রের ঐচ্ছিক অনুষ্ঠান। গৃহস্থ পূজায় বলিদান না দিয়েও পূর্ণাঙ্গ পূজা করা যায়। তবে তান্ত্রিক সাধনায় বলিদানের বিশেষ গুরুত্ব রয়েছে।"}
+];
+
+// STATE
+let completed = new Set();
+let openStep = null;
+let openFaq = null;
+
+function switchTab(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+function updateProgress() {
+  const pct = Math.round((completed.size / STEPS.length) * 100);
+  document.getElementById('pbar').style.width = pct + '%';
+  document.getElementById('prog-label').textContent = completed.size + ' / ' + STEPS.length + ' ধাপ সম্পন্ন';
+}
+
+function buildSteps() {
+  const container = document.getElementById('steps-container');
+  container.innerHTML = '';
+  STEPS.forEach((s, idx) => {
+    const isDone = completed.has(s.id);
+    const isOpen = openStep === s.id;
+    const wrap = document.createElement('div');
+    wrap.className = 'step-wrap';
+    wrap.innerHTML = `
+      <div class="step-timeline">
+        <div class="step-circle ${isDone?'done':isOpen?'open':''}" id="circ-${s.id}" onclick="toggleStep(${s.id})">
+          ${isDone ? '✓' : s.icon}
+        </div>
+        ${idx < STEPS.length-1 ? '<div class="step-connector"></div>' : ''}
+      </div>
+      <div class="step-body">
+        <div class="step-header" onclick="toggleStep(${s.id})">
+          <div class="step-name${isDone?' done':''}">${s.id}. ${s.title}</div>
+          <span class="step-badge" style="background:${s.bc}22;color:${s.bc}">${s.badge}</span>
+        </div>
+        <div class="step-detail${isOpen?' open':''}" id="detail-${s.id}">
+          <div class="step-desc">${s.desc}</div>
+          ${s.mantra ? `<div class="mantra-box"><div class="mantra-label">মন্ত্র</div><div class="mantra-text">${s.mantra}</div></div>` : ''}
+          ${s.tip ? `<div class="tip">${s.tip}</div>` : ''}
+          <button class="done-btn${isDone?' undone':''}" onclick="toggleDone(event,${s.id})">
+            ${isDone ? '✓ সম্পন্ন হয়েছে — পূর্বাবস্থায় ফেরান' : 'সম্পন্ন করুন ✓'}
+          </button>
+        </div>
+      </div>`;
+    container.appendChild(wrap);
+  });
+}
+
+function toggleStep(id) {
+  openStep = openStep === id ? null : id;
+  buildSteps();
+}
+
+function toggleDone(e, id) {
+  e.stopPropagation();
+  if (completed.has(id)) completed.delete(id);
+  else { completed.add(id); openStep = id < STEPS.length ? id + 1 : null; }
+  buildSteps();
+  updateProgress();
+}
+
+function buildFAQ(filter) {
+  const list = document.getElementById('faq-list');
+  list.innerHTML = '';
+  const data = filter ? FAQS.filter(f => f.q.includes(filter) || f.a.includes(filter)) : FAQS;
+  if (!data.length) { list.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--text3);font-size:.85rem">কোনো প্রশ্ন পাওয়া যায়নি।</div>'; return; }
+  data.forEach((f, i) => {
+    const div = document.createElement('div');
+    div.className = 'faq-item';
+    div.innerHTML = `<div class="faq-q${openFaq===i?' active':''}" onclick="toggleFaq(${i})">${f.q}<span>${openFaq===i?'▲':'▼'}</span></div>
+    <div class="faq-a${openFaq===i?' open':''}">${f.a}</div>`;
+    list.appendChild(div);
+  });
+}
+
+function toggleFaq(i) {
+  openFaq = openFaq === i ? null : i;
+  buildFAQ(document.getElementById('faq-search')?.value || '');
+}
+
+function filterFAQ(v) {
+  openFaq = null;
+  buildFAQ(v);
+}
+
+buildSteps();
+buildFAQ('');
+updateProgress();
+</script>
+</body>
+</html>

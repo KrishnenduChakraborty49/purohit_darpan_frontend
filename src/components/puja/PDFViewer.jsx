@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { useAuthStore } from '../../store/authStore';
 import axiosInstance from '../../api/axiosInstance';
-import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Bookmark, Download } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Bookmark, Download, ExternalLink, FileText } from 'lucide-react';
 import toast from 'react-hot-toast';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
@@ -12,7 +12,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 
 export default function PDFViewer({ step, onComplete }) {
   const { user } = useAuthStore();
-  const resource = step.pdfResource;
+  const resource = step?.pdfResource;
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [scale, setScale] = useState(1.1);
@@ -22,13 +22,19 @@ export default function PDFViewer({ step, onComplete }) {
   const [clickPos, setClickPos] = useState({ x: 0.5, y: 0.5 });
   const [loading, setLoading] = useState(false);
 
+  const fileUrl = resource?.fileUrl;
+
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
     if (numPages <= 1) onComplete?.();
   };
 
   const prevPage = () => setPageNumber(Math.max(1, pageNumber - 1));
-  const nextPage = () => { const next = Math.min(numPages || 1, pageNumber + 1); setPageNumber(next); if (next >= (numPages || 1)) onComplete?.(); };
+  const nextPage = () => { 
+    const next = Math.min(numPages || 1, pageNumber + 1); 
+    setPageNumber(next); 
+    if (next >= (numPages || 1)) onComplete?.(); 
+  };
   const zoomIn = () => setScale(Math.min(2.5, scale + 0.2));
   const zoomOut = () => setScale(Math.max(0.5, scale - 0.2));
 
@@ -53,26 +59,70 @@ export default function PDFViewer({ step, onComplete }) {
       });
       setSelectedAnnotation('');
       setShowAnnotationInput(false);
-      toast.success('Annotation saved 📌');
+      toast.success('Annotation saved 🔖');
     } catch {
       toast.error('Failed to save annotation');
     }
   };
 
-  if (!resource?.fileUrl) {
+  // If no resource is directly attached to the step, but this is a Kali Puja step:
+  const effectiveUrl = fileUrl || (step?.title?.toLowerCase().includes('kali') || step?.description?.includes('কালী') ? '/docs/kali_puja_guide.html' : null);
+
+  if (!effectiveUrl) {
     return (
       <div className="bg-stone-900/60 border border-orange-500/15 rounded-2xl p-12 text-center">
-        <p className="text-orange-200/50 text-4xl mb-3">📚</p>
+        <p className="text-orange-200/50 text-4xl mb-3">📄</p>
         <p className="text-orange-200/50">No study material available for this step.</p>
       </div>
     );
   }
 
-  // For non-PDF files (DOCX, etc.) — show a download card instead of react-pdf
-  const fileUrl = resource.fileUrl;
-  const isDocx = resource.resourceType === 'DOCX'
-    || fileUrl?.toLowerCase().endsWith('.docx')
-    || fileUrl?.toLowerCase().endsWith('.doc');
+  // 1. Handle HTML Guide Document (.html)
+  const isHtml = effectiveUrl.toLowerCase().endsWith('.html') || effectiveUrl.toLowerCase().includes('.html');
+  if (isHtml) {
+    return (
+      <div className="bg-stone-900/60 border border-orange-500/20 rounded-2xl overflow-hidden shadow-2xl animate-fade-in">
+        {/* Header Bar */}
+        <div className="p-3.5 bg-stone-950/80 border-b border-orange-500/15 flex items-center justify-between flex-wrap gap-2">
+          <div className="flex items-center gap-2.5">
+            <span className="text-2xl">📜</span>
+            <div>
+              <p className="text-orange-100 font-semibold text-sm">
+                {resource?.title || 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি — সম্পূর্ণ গাইড'}
+              </p>
+              <p className="text-orange-400/50 text-xs">
+                পণ্ডিত শ্যামাচরণ সাংখ্যতীর্থ সংকলিত · সম্পূর্ণ ৩২ ধাপ, ন্যাস, ষোড়শোপচার ও ফর্দমালা
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <a
+              href={effectiveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500/20 hover:bg-orange-500/30 border border-orange-500/40 text-orange-200 text-xs font-semibold transition-all shadow-sm"
+            >
+              <ExternalLink size={13} /> পূর্ণ স্ক্রিনে খুলুন ↗
+            </a>
+          </div>
+        </div>
+
+        {/* Embedded HTML Frame */}
+        <div className="w-full h-[85vh] bg-[#0B0615]">
+          <iframe
+            src={effectiveUrl}
+            title={resource?.title || 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি গাইড'}
+            className="w-full h-full border-0"
+          />
+        </div>
+      </div>
+    );
+  }
+
+  // 2. Handle DOCX
+  const isDocx = resource?.resourceType === 'DOCX'
+    || effectiveUrl.toLowerCase().endsWith('.docx')
+    || effectiveUrl.toLowerCase().endsWith('.doc');
 
   if (isDocx) {
     return (
@@ -81,14 +131,14 @@ export default function PDFViewer({ step, onComplete }) {
           <span className="text-3xl">📄</span>
         </div>
         <div>
-          <p className="text-orange-100 font-semibold text-lg">{resource.title || 'Study Document'}</p>
+          <p className="text-orange-100 font-semibold text-lg">{resource?.title || 'Study Document'}</p>
           <p className="text-orange-200/50 text-sm mt-1">Word Document (.docx)</p>
         </div>
         <p className="text-orange-200/60 text-sm max-w-sm">
           This study guide is available as a Word document. Click below to download and open it.
         </p>
         <a
-          href={fileUrl}
+          href={effectiveUrl}
           download
           target="_blank"
           rel="noreferrer"
@@ -98,13 +148,11 @@ export default function PDFViewer({ step, onComplete }) {
           <Download size={16} />
           Download Study Guide
         </a>
-        {resource.pageCount && (
-          <p className="text-orange-200/40 text-xs">{resource.pageCount} pages</p>
-        )}
       </div>
     );
   }
 
+  // 3. Handle PDF
   return (
     <div className="bg-stone-900/60 border border-orange-500/15 rounded-2xl overflow-hidden">
       {/* Toolbar */}
@@ -131,8 +179,8 @@ export default function PDFViewer({ step, onComplete }) {
           </button>
         </div>
 
-        {resource.isDownloadable && (
-          <a href={resource.fileUrl} download target="_blank" rel="noreferrer"
+        {resource?.isDownloadable && (
+          <a href={effectiveUrl} download target="_blank" rel="noreferrer"
             className="ml-auto flex items-center gap-1.5 px-3 py-1.5 rounded-lg
                        bg-orange-500/15 text-orange-400 border border-orange-500/30
                        text-xs hover:bg-orange-500/25 transition-all">
@@ -145,7 +193,7 @@ export default function PDFViewer({ step, onComplete }) {
       <div className="flex overflow-auto justify-center bg-stone-950/50 min-h-[500px] p-4"
         onClick={handlePageClick}>
         <Document
-          file={resource.fileUrl}
+          file={effectiveUrl}
           onLoadSuccess={onDocumentLoadSuccess}
           loading={
             <div className="flex items-center justify-center py-20">
@@ -192,5 +240,3 @@ export default function PDFViewer({ step, onComplete }) {
     </div>
   );
 }
-
-

@@ -3,7 +3,7 @@ import { useAuthStore } from '../../store/authStore';
 import { useAIStore } from '../../store/aiStore';
 import axiosInstance from '../../api/axiosInstance';
 import ShlokWord from './ShlokWord';
-import { PenLine, Highlighter, StickyNote, BookOpen } from 'lucide-react';
+import { PenLine, Highlighter, StickyNote, BookOpen, ExternalLink } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 export default function DocumentationViewer({ step }) {
@@ -15,6 +15,7 @@ export default function DocumentationViewer({ step }) {
   const [newNote, setNewNote] = useState('');
   const [savingNote, setSavingNote] = useState(false);
   const [expandedWord, setExpandedWord] = useState(null);
+  const [showFullGuide, setShowFullGuide] = useState(false);
 
   useEffect(() => {
     if (user && step) {
@@ -90,7 +91,7 @@ export default function DocumentationViewer({ step }) {
               Mantra {sequenceOrder} • {mantra.sourceText}
             </p>
 
-            {/* Devanagari shlok — each word clickable */}
+            {/* Devanagari shlok */}
             <div className="font-devanagari text-xl text-orange-200 leading-loose mb-3">
               {mantra.shlokText.split(/\s+/).map((word, i) => (
                 <span key={i}>
@@ -138,91 +139,134 @@ export default function DocumentationViewer({ step }) {
   };
 
   return (
-    <div className="bg-stone-900/60 border border-orange-500/15 rounded-2xl p-6">
-      {/* Toolbar */}
-      <div className="flex items-center gap-2 mb-5 pb-4 border-b border-orange-500/10">
-        <button
-          onMouseUp={handleTextSelect}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg
-                     bg-yellow-500/15 text-yellow-400 border border-yellow-500/30
-                     text-xs hover:bg-yellow-500/25 transition-all">
-          <Highlighter size={13} /> Highlight
-        </button>
-        <button
-          onClick={() => setShowNoteInput(!showNoteInput)}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg
-                     bg-blue-500/15 text-blue-400 border border-blue-500/30
-                     text-xs hover:bg-blue-500/25 transition-all">
-          <StickyNote size={13} /> Add Note
-        </button>
-        <span className="ml-auto text-orange-400/40 text-xs">
-          {highlights.length} highlights • {notes.length} notes
-        </span>
+    <div className="space-y-4">
+      {/* Interactive Complete Guide Banner */}
+      <div className="bg-gradient-to-r from-amber-950/50 via-purple-950/40 to-stone-900/80 border border-orange-500/30 rounded-2xl p-4 sm:p-5 flex items-center justify-between flex-wrap gap-3 shadow-lg">
+        <div className="flex items-center gap-3">
+          <span className="text-3xl">🪔</span>
+          <div>
+            <h4 className="text-orange-200 font-bold text-sm sm:text-base flex items-center gap-2">
+              শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি — সম্পূর্ণ প্রামাণ্য গাইড
+            </h4>
+            <p className="text-orange-400/70 text-xs mt-0.5">
+              পণ্ডিত শ্যামাচরণ সাংখ্যতীর্থ সংকলিত · ৩২টি ধাপ, ন্যাস, ষোড়শোপচার, ফর্দমালা ও প্রশ্নোত্তর
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-2 flex-wrap">
+          <button
+            onClick={() => setShowFullGuide(!showFullGuide)}
+            className="px-4 py-2 rounded-xl bg-orange-500/20 hover:bg-orange-500/30 border border-orange-500/40 text-orange-200 text-xs font-semibold transition-all shadow-sm flex items-center gap-1.5"
+          >
+            {showFullGuide ? 'ধাপের বিবরণে ফিরুন ↩' : 'সম্পূর্ণ গাইড ব্রাউজ করুন 📜'}
+          </button>
+          <a
+            href="/docs/kali_puja_guide.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-2 rounded-xl bg-stone-800 hover:bg-stone-700 border border-orange-500/20 text-orange-300 text-xs font-medium transition-all flex items-center gap-1"
+          >
+            পূর্ণ স্ক্রিন ↗
+          </a>
+        </div>
       </div>
 
-      {/* Note input */}
-      {showNoteInput && (
-        <div className="mb-5 p-4 bg-blue-500/10 border border-blue-500/20 rounded-xl animate-fade-in">
-          <textarea
-            value={newNote}
-            onChange={(e) => setNewNote(e.target.value)}
-            placeholder="Write your note..."
-            rows={3}
-            className="w-full bg-transparent text-blue-100 placeholder-blue-300/40
-                       text-sm resize-none outline-none"
+      {showFullGuide ? (
+        <div className="bg-stone-900/60 border border-orange-500/20 rounded-2xl overflow-hidden shadow-2xl h-[85vh]">
+          <iframe
+            src="/docs/kali_puja_guide.html"
+            title="শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি সম্পূর্ণ গাইড"
+            className="w-full h-full border-0"
           />
-          <div className="flex justify-end gap-2 mt-2">
-            <button onClick={() => setShowNoteInput(false)}
-              className="text-xs text-blue-400/60 hover:text-blue-300 px-3 py-1">Cancel</button>
-            <button onClick={saveNote} disabled={savingNote}
-              className="text-xs bg-blue-500/30 text-blue-300 px-3 py-1.5 rounded-lg hover:bg-blue-500/40 transition-all">
-              {savingNote ? 'Saving...' : 'Save Note'}
+        </div>
+      ) : (
+        <div className="bg-stone-900/60 border border-orange-500/15 rounded-2xl p-6">
+          {/* Toolbar */}
+          <div className="flex items-center gap-2 mb-5 pb-4 border-b border-orange-500/10">
+            <button
+              onMouseUp={handleTextSelect}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg
+                         bg-yellow-500/15 text-yellow-400 border border-yellow-500/30
+                         text-xs hover:bg-yellow-500/25 transition-all">
+              <Highlighter size={13} /> Highlight
             </button>
+            <button
+              onClick={() => setShowNoteInput(!showNoteInput)}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg
+                         bg-blue-500/15 text-blue-400 border border-blue-500/30
+                         text-xs hover:bg-blue-500/25 transition-all">
+              <StickyNote size={13} /> Add Note
+            </button>
+            <span className="ml-auto text-orange-400/40 text-xs">
+              {highlights.length} highlights • {notes.length} notes
+            </span>
           </div>
-        </div>
-      )}
 
-      {/* Main description */}
-      <div
-        className="prose prose-invert max-w-none text-orange-100/80 leading-relaxed text-sm"
-        dangerouslySetInnerHTML={{ __html: step.description || '<p>No content available for this step.</p>' }}
-      />
-
-      {/* Shloks */}
-      {renderShloks()}
-
-      {/* Samagri */}
-      {step.stepSamagri?.length > 0 && (
-        <div className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-xl">
-          <h4 className="text-green-400 font-medium text-sm mb-3 flex items-center gap-2">
-            <BookOpen size={15} /> Samagri Required for this step
-          </h4>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-            {step.stepSamagri.map(({ samagri, quantity, notes: sNote }) => (
-              <div key={samagri.id} className="bg-green-500/10 rounded-lg p-2.5">
-                <p className="text-green-300 text-sm font-medium">{samagri.name}</p>
-                {samagri.nameDevanagari && (
-                  <p className="font-devanagari text-green-400/60 text-xs">{samagri.nameDevanagari}</p>
-                )}
-                {quantity && <p className="text-green-200/50 text-xs mt-1">{quantity}</p>}
+          {/* Note input */}
+          {showNoteInput && (
+            <div className="mb-5 p-4 bg-blue-500/10 border border-blue-500/20 rounded-xl animate-fade-in">
+              <textarea
+                value={newNote}
+                onChange={(e) => setNewNote(e.target.value)}
+                placeholder="Write your note..."
+                rows={3}
+                className="w-full bg-transparent text-blue-100 placeholder-blue-300/40
+                           text-sm resize-none outline-none"
+              />
+              <div className="flex justify-end gap-2 mt-2">
+                <button onClick={() => setShowNoteInput(false)}
+                  className="text-xs text-blue-400/60 hover:text-blue-300 px-3 py-1">Cancel</button>
+                <button onClick={saveNote} disabled={savingNote}
+                  className="text-xs bg-blue-500/30 text-blue-300 px-3 py-1.5 rounded-lg hover:bg-blue-500/40 transition-all">
+                  {savingNote ? 'Saving...' : 'Save Note'}
+                </button>
               </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* User notes */}
-      {notes.length > 0 && (
-        <div className="mt-6 space-y-2">
-          <h4 className="text-blue-400/70 text-xs font-medium uppercase tracking-wider">My Notes</h4>
-          {notes.map((note) => (
-            <div key={note.id} className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-xl">
-              <p className="text-blue-200/80 text-sm">{note.noteText}</p>
-              <p className="text-blue-400/40 text-xs mt-1">
-                {new Date(note.createdAt).toLocaleDateString()}
-              </p>
             </div>
-          ))}
+          )}
+
+          {/* Main description */}
+          <div
+            className="prose prose-invert max-w-none text-orange-100/80 leading-relaxed text-sm"
+            dangerouslySetInnerHTML={{ __html: step.description || '<p>No content available for this step.</p>' }}
+          />
+
+          {/* Shloks */}
+          {renderShloks()}
+
+          {/* Samagri */}
+          {step.stepSamagri?.length > 0 && (
+            <div className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-xl">
+              <h4 className="text-green-400 font-medium text-sm mb-3 flex items-center gap-2">
+                <BookOpen size={15} /> Samagri Required for this step
+              </h4>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                {step.stepSamagri.map(({ samagri, quantity, notes: sNote }) => (
+                  <div key={samagri.id} className="bg-green-500/10 rounded-lg p-2.5">
+                    <p className="text-green-300 text-sm font-medium">{samagri.name}</p>
+                    {samagri.nameDevanagari && (
+                      <p className="font-devanagari text-green-400/60 text-xs">{samagri.nameDevanagari}</p>
+                    )}
+                    {quantity && <p className="text-green-200/50 text-xs mt-1">{quantity}</p>}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* User notes */}
+          {notes.length > 0 && (
+            <div className="mt-6 space-y-2">
+              <h4 className="text-blue-400/70 text-xs font-medium uppercase tracking-wider">My Notes</h4>
+              {notes.map((note) => (
+                <div key={note.id} className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-xl">
+                  <p className="text-blue-200/80 text-sm">{note.noteText}</p>
+                  <p className="text-blue-400/40 text-xs mt-1">
+                    {new Date(note.createdAt).toLocaleDateString()}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>
