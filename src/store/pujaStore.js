@@ -5,8 +5,8 @@ export const FALLBACK_PUJAS = [
   {
     id: 10,
     name: 'Kali Puja',
-    nameDevanagari: 'काली पूजा',
-    description: 'Complete ritual procedure for Kartik Amavasya Shyama Puja - invocation, shodashopachara worship, pushpanjali, and midnight arati.',
+    nameDevanagari: 'শ্রীশ্রী দক্ষিণকালী পূজা',
+    description: 'Complete ritual procedure for Kartik Amavasya Shyama Puja - Shodashopachara Puja and Tantrokto Home.',
     durationMinutes: 180,
     difficulty: 'ADVANCED',
     category: 'Shakti',
@@ -16,7 +16,7 @@ export const FALLBACK_PUJAS = [
   {
     id: 3,
     name: 'Durga Puja',
-    nameDevanagari: 'दुर्गा पूजा',
+    nameDevanagari: 'দুর্গা পূজা',
     description: 'Worship of the Divine Mother for victory.',
     durationMinutes: 300,
     difficulty: 'ADVANCED',
@@ -27,7 +27,7 @@ export const FALLBACK_PUJAS = [
   {
     id: 2,
     name: 'Lakshmi Puja',
-    nameDevanagari: 'लक्ष्मी पूजा',
+    nameDevanagari: 'লক্ষ্মী পূজা',
     description: 'Worship for wealth and prosperity.',
     durationMinutes: 90,
     difficulty: 'BEGINNER',
@@ -38,7 +38,7 @@ export const FALLBACK_PUJAS = [
   {
     id: 1,
     name: 'Ganesh Puja',
-    nameDevanagari: 'गणेश पूजा',
+    nameDevanagari: 'গণেশ পূজা',
     description: 'Foundational ritual for removing obstacles.',
     durationMinutes: 60,
     difficulty: 'BEGINNER',
@@ -49,7 +49,7 @@ export const FALLBACK_PUJAS = [
   {
     id: 8,
     name: 'Saraswati Puja',
-    nameDevanagari: 'सरस्वती पूजा',
+    nameDevanagari: 'সরস্বতী পূজা',
     description: 'Worship of Knowledge and Arts.',
     durationMinutes: 60,
     difficulty: 'BEGINNER',
@@ -60,7 +60,7 @@ export const FALLBACK_PUJAS = [
   {
     id: 9,
     name: 'Shiv Puja',
-    nameDevanagari: 'शिव पूजा',
+    nameDevanagari: 'শিব পূজা',
     description: 'Worship of Lord Mahadev — the destroyer and transformer. Attain blessings, peace and liberation.',
     durationMinutes: 90,
     difficulty: 'INTERMEDIATE',
@@ -75,14 +75,14 @@ export const KALI_PUJA_STEPS = [
     id: 101,
     pujaId: 10,
     stepOrder: 1,
-    title: 'Achamana & Svastivachana',
-    titleDevanagari: 'आचमन एवं स्वस्तिवाचन',
-    titleBengali: 'আচমন ও স্বস্তিবচন',
-    description: '<h3>আচমন ও স্বস্তিবচন (Achamana & Svastivachana)</h3><p>পবিত্র গঙ্গাজল কুশীতে নিয়ে তিনবার আচমন এবং ওঁ বিষ্ণু স্মরণ। স্বস্তিবাচন মন্ত্র পাঠ করে পূজার শুভারম্ভ করা হয়।</p><div class="bg-amber-950/30 p-3 rounded-lg border border-orange-500/20 mt-2"><p class="text-orange-300 font-semibold">মন্ত্র:</p><p class="italic text-orange-200">ওঁ তদ্বিষ্ণোঃ পরমং পদং সদা পশ্যন্তি সূরয়ঃ দিবীব চক্ষুরাততম্।</p></div>',
-    videoUrl: 'https://www.youtube.com/watch?v=kYJ5oQ6zFZs',
+    title: 'Shodashopachara Puja',
+    titleDevanagari: 'षोडशोपचार पूजा',
+    titleBengali: 'ষোড়শোপচার পূজা',
+    description: '<h3>ষোড়শোপচার পূজা (Shodashopachara Puja)</h3><p>মা দক্ষিণকালিকার উদ্দেশ্যে ষোড়শ উপাচারে যথাবিধি পূজা নিবেদন — আসন, স্বাগত, পদ্য, অর্ঘ্য, আচমনীয়, স্নানীয়, বসন, ভূষণ, গন্ধ, পুষ্প, ধূপ, দীপ, নৈবেদ্য, পানীয় ও তাম্বুল প্রদান।</p><div class="bg-amber-950/30 p-3 rounded-lg border border-orange-500/20 mt-2"><p class="text-orange-300 font-semibold">জবা পুষ্প প্রদান মন্ত্র:</p><p class="italic text-orange-200">ওঁ রক্তচন্দন সংমিশ্রং রক্তপুষ্পং মনোহরম্। কাল্যৈ দত্তং ময়া দেব্যৈ গৃহাণ পরমেশ্বরী॥</p><p class="text-orange-300 font-semibold mt-2">বসন ও অর্ঘ্য নিবেদন মন্ত্র:</p><p class="italic text-orange-200">ওঁ রক্তবস্ত্রযুগং দেবি সর্বকামার্থসিদ্ধয়ে। ময়া নিবেদিতং ভক্ত্যা গৃহাণ পরমেশ্বরী॥</p></div>',
+    videoUrl: 'https://youtu.be/N4wpFi0iyxw?si=ca12IbkVCK1B479I',
     pdfResource: {
       id: 10,
-      title: 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি সম্পূর্ণ গাইড',
+      title: 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি — সম্পূর্ণ গাইড',
       resourceType: 'DOCX',
       fileUrl: '/docs/kali_puja_guide.html',
       isDownloadable: true
@@ -92,82 +92,14 @@ export const KALI_PUJA_STEPS = [
     id: 102,
     pujaId: 10,
     stepOrder: 2,
-    title: 'Sankalpa & Ghatasthapana',
-    titleDevanagari: 'संकल्प एवं घटस्थापन',
-    titleBengali: 'সংকল্প ও ঘটস্থাপন',
-    description: '<h3>সংকল্প ও ঘটস্থাপন (Sankalpa & Ghatasthapana)</h3><p>কার্তিক অমাবস্যা তিথিতে মা কালীর পূজার সংকল্প গ্রহণ এবং পঞ্চগুঁড়ি, গঙ্গামৃত্তিকা ও পঞ্চপল্লব সহযোগে মঙ্গলঘট স্থাপন।</p><div class="bg-amber-950/30 p-3 rounded-lg border border-orange-500/20 mt-2"><p class="text-orange-300 font-semibold">সংকল্প বাক্য:</p><p class="italic text-orange-200">বিষ্ণুরোম্ তৎসৎ অদ্য কার্তিকী অমাবস্যায়াং তিথৌ... শ্রীমদ্দক্ষিণকালিকা প্রীতিকামঃ পূজাকর্মাহং করিষ্যে।</p></div>',
-    videoUrl: 'https://www.youtube.com/watch?v=yQt_GhyWOXc',
+    title: 'Tantrokto Home',
+    titleDevanagari: 'तन्त्रोक्त होम',
+    titleBengali: 'তন্ত্রোক্ত হোম',
+    description: '<h3>তন্ত্রোক্ত হোম (Tantrokto Home)</h3><p>দেবী কালীর প্রতি তান্ত্রিক বিধান অনুযায়ী হোম ও যজ্ঞবিধি — স্থণ্ডিল নির্মাণ, অগ্নিসংস্কার, বিশ্বামিত্র গোত্রীয় যজ্ঞভুক্ অগ্নি স্থাপন, কুশণ্ডিকা, আজ্যভাগাহুতি, দেবী কালীর সিদ্ধ মূলমন্ত্রে আহুতি এবং মহাব্যাহৃতি ও পূর্ণাহুতি প্রদান।</p><div class="bg-amber-950/30 p-3 rounded-lg border border-orange-500/20 mt-2"><p class="text-orange-300 font-semibold">অগ্নি আবাহন মন্ত্র:</p><p class="italic text-orange-200">ওঁ অগ্নিং দূতং পুরোধায় হব্যবাহমুপব্রুবে। দেবাঁ আসাদয়াদিহ॥ ওঁ যজ্ঞভুগগ্নয়ে নমঃ।</p><p class="text-orange-300 font-semibold mt-2">দেবী কালীর হোম আহুতি মূলমন্ত্র:</p><p class="italic text-orange-200">ওঁ ক্রীঁ দক্ষিণকালিকায়ৈ স্বাহা (ॐ क्रीं काल्यै स्वाहा) — ১০৮ বার যথাবিধি ঘৃতাহুতি।</p><p class="text-orange-300 font-semibold mt-2">পূর্ণাহুতি মন্ত্র:</p><p class="italic text-orange-200">ওঁ পূর্ণমদঃ পূর্ণমিদং পূর্ণাৎ পূর্ণমুদচ্যতে। পূর্ণস্য পূর্ণমাদায় পূর্ণমেবাবশিষ্যতে॥ স্বাহা।</p></div>',
+    videoUrl: 'https://youtu.be/62qCR6aaUbw?si=Nr_P-AZXnHcSkpRE',
     pdfResource: {
       id: 10,
-      title: 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি সম্পূর্ণ গাইড',
-      resourceType: 'DOCX',
-      fileUrl: '/docs/kali_puja_guide.html',
-      isDownloadable: true
-    },
-  },
-  {
-    id: 103,
-    pujaId: 10,
-    stepOrder: 3,
-    title: 'Maa Kali Dhyana & Avahana',
-    titleDevanagari: 'माँ काली ध्यान एवं आवाहन',
-    titleBengali: 'মা কালীর ধ্যান ও আবাহন',
-    description: '<h3>মা কালীর ধ্যান ও আবাহন (Maa Kali Dhyana & Avahana)</h3><p>শ্রী শ্রী দক্ষিণকালিকার দিব্য ধ্যান ও প্রাণপ্রতিষ্ঠা। করালবদনা চতুর্ভুজা খড়্গধারিণী মা ভবতারিণীর রূপ ধ্যান।</p><div class="bg-amber-950/30 p-3 rounded-lg border border-orange-500/20 mt-2"><p class="text-orange-300 font-semibold">ধ্যান মন্ত্র:</p><p class="italic text-orange-200">ওঁ করালবদনাং ঘোরাং মুক্তকেশীং চতুর্ভুজাং। কালিকাং দক্ষিণাং দিব্যাং মুণ্ডমালাবিভূষিতাম্॥ সদাহাস্যাননাং দেবীং পীনোন্নতপয়োধরাম্। মহামেঘপ্রভাং শ্যামাং ত্রিনেত্রাং বরদাভয়াম্॥</p></div>',
-    videoUrl: 'https://www.youtube.com/watch?v=JAl7pjMa2q8',
-    pdfResource: {
-      id: 10,
-      title: 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি সম্পূর্ণ গাইড',
-      resourceType: 'DOCX',
-      fileUrl: '/docs/kali_puja_guide.html',
-      isDownloadable: true
-    },
-  },
-  {
-    id: 104,
-    pujaId: 10,
-    stepOrder: 4,
-    title: 'Shodashopachara Puja',
-    titleDevanagari: 'षोडशोपचार पूजा',
-    titleBengali: 'ষোড়শোপচারে পূজা',
-    description: '<h3>ষোড়শোপচারে পূজা ও অর্ঘ্য প্রদান (Shodashopachara Puja)</h3><p>দেবীকে ষোড়শ উপচার নিবেদন — আসন, স্বাগত, পদ্য, অর্ঘ্য, আচমনীয়, মধুপর্ক, স্নানীয়, বস্ত্র, ভূষণ, গন্ধ (রক্তচন্দন), পুষ্প (১০৮ লাল জবা ফুল), ধূপ, দীপ, নৈবেদ্য, পানীয় ও তাম্বুল।</p><div class="bg-amber-950/30 p-3 rounded-lg border border-orange-500/20 mt-2"><p class="text-orange-300 font-semibold">জবা পুষ্প প্রদান মন্ত্র:</p><p class="italic text-orange-200">ওঁ রক্তচন্দন সংমিশ্রং রক্তপুষ্পং মনোহরম্। কাল্যৈ দত্তং ময়া দেব্যৈ গৃহাণ পরমেশ্বরী॥</p></div>',
-    videoUrl: 'https://www.youtube.com/watch?v=5u-uulot9X4',
-    pdfResource: {
-      id: 10,
-      title: 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি সম্পূর্ণ গাইড',
-      resourceType: 'DOCX',
-      fileUrl: '/docs/kali_puja_guide.html',
-      isDownloadable: true
-    },
-  },
-  {
-    id: 105,
-    pujaId: 10,
-    stepOrder: 5,
-    title: 'Pushpanjali & Japa Mantra',
-    titleDevanagari: 'पुष्पाञ्जलि एवं मूल मन्त्र',
-    titleBengali: 'পুষ্পাঞ্জলি মন্ত্র ও জপ',
-    description: '<h3>পুষ্পাঞ্জলি ও মূল বীজ মন্ত্র (Pushpanjali & Japa)</h3><p>ভক্তবৃন্দের সমবেত পুষ্পাঞ্জলি এবং দেবী কালীর সিদ্ধ বীজমন্ত্র জপ।</p><div class="bg-amber-950/30 p-3 rounded-lg border border-orange-500/20 mt-2"><p class="text-orange-300 font-semibold">পুষ্পাঞ্জলি মন্ত্র:</p><p class="italic text-orange-200">ওঁ জয়ন্তী মঙ্গলা কালী ভদ্রকালী কপালিনী। দুর্গা শিবা ক্ষমা ধাত্রী স্বাহা স্বধা নমোঽস্তু তে॥<br/>এষ সচন্দন পুষ্পবিল্বপত্রাঞ্জলিঃ শ্রীমদ্দক্ষিণকালিকায়ৈ নমঃ।</p><p class="text-orange-300 font-semibold mt-2">মূল বীজ মন্ত্র:</p><p class="italic text-orange-200">ওঁ ক্রীঁ কাল্যৈ নমঃ (ॐ क्रीं काल्यै नमः)</p></div>',
-    videoUrl: 'https://www.youtube.com/watch?v=roS3QBV_xyU',
-    pdfResource: {
-      id: 10,
-      title: 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি সম্পূর্ণ গাইড',
-      resourceType: 'DOCX',
-      fileUrl: '/docs/kali_puja_guide.html',
-      isDownloadable: true
-    },
-  },
-  {
-    id: 106,
-    pujaId: 10,
-    stepOrder: 6,
-    title: 'Nishitha Aarti & Visarjan',
-    titleDevanagari: 'निशीथ आरती एवं विसर्जन',
-    titleBengali: 'নিশীথ আরতি ও বিসর্জন',
-    description: '<h3>নিশীথ আরতি, স্তব ও বিসর্জন (Nishitha Aarti & Visarjan)</h3><p>অমাবস্যার নিশীথকালে পঞ্চপ্রদীপ ও কর্পূর আরতি। দেবীস্তোত্র পাঠ, অপরাধ ভঞ্জন স্তব এবং সর্বশেষে মায়ের শান্তিজল গ্রহণ।</p><div class="bg-amber-950/30 p-3 rounded-lg border border-orange-500/20 mt-2"><p class="text-orange-300 font-semibold">প্রণাম মন্ত্র:</p><p class="italic text-orange-200">সর্বমঙ্গল মঙ্গল্যে শিবে সর্বার্থ সাধিকে। শরণ্যে ত্র্যম্বকে গৌরি নারায়ণি নমোঽস্তু তে॥</p></div>',
-    videoUrl: 'https://www.youtube.com/watch?v=uBr9f0tMrGs',
-    pdfResource: {
-      id: 10,
-      title: 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি সম্পূর্ণ গাইড',
+      title: 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি — সম্পূর্ণ গাইড',
       resourceType: 'DOCX',
       fileUrl: '/docs/kali_puja_guide.html',
       isDownloadable: true
@@ -209,9 +141,22 @@ export const usePujaStore = create((set, get) => ({
         axiosInstance.get(`/pujas/${pujaId}`),
         axiosInstance.get(`/pujas/${pujaId}/steps`),
       ]);
-      const steps = (stepsRes.data && stepsRes.data.length > 0) 
+      let steps = (stepsRes.data && stepsRes.data.length > 0) 
         ? stepsRes.data 
         : (isKali ? KALI_PUJA_STEPS : []);
+
+      if (isKali) {
+        // Enforce the 2 specific steps (Shodashopachara Puja & Tantrokto Home)
+        if (steps.length !== 2 || steps[0]?.title !== 'Shodashopachara Puja' || steps[1]?.title !== 'Tantrokto Home') {
+          steps = KALI_PUJA_STEPS;
+        } else {
+          steps = steps.map((s, idx) => ({
+            ...s,
+            pdfResource: s.pdfResource || KALI_PUJA_STEPS[idx]?.pdfResource || KALI_PUJA_STEPS[0].pdfResource
+          }));
+        }
+      }
+
       set({
         currentPuja: pujaRes.data,
         currentSteps: steps,

@@ -10,9 +10,9 @@ import PDFViewer from '../components/puja/PDFViewer';
 import toast from 'react-hot-toast';
 
 const FORMATS = [
-  { key: 'DOC',   label: 'Read (পদ্ধতি)',   icon: BookOpen, emoji: '📖' },
+  { key: 'DOC',   label: 'Read (পঠন)',   icon: BookOpen, emoji: '📖' },
   { key: 'GUIDE', label: 'Complete Guide (সম্পূর্ণ গাইড)', icon: FileText, emoji: '📜' },
-  { key: 'VIDEO', label: 'Watch (ভিডিও)',   icon: Play,     emoji: '🎥' },
+  { key: 'VIDEO', label: 'Watch (দর্শন)',   icon: Play,     emoji: '🎥' },
   { key: 'PDF',   label: 'Study Material',  icon: FileText, emoji: '📄' },
 ];
 
