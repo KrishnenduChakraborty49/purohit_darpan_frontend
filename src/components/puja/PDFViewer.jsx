@@ -66,7 +66,7 @@ export default function PDFViewer({ step, onComplete }) {
   };
 
   // If no resource is directly attached to the step, but this is a Kali Puja step:
-  const effectiveUrl = fileUrl || (step?.title?.toLowerCase().includes('kali') || step?.description?.includes('কালী') ? '/docs/kali_puja_guide.html' : null);
+  const effectiveUrl = fileUrl || (step?.title?.toLowerCase().includes('kali') || step?.titleBengali?.includes('কালী') || step?.description?.includes('কালী') || step?.description?.includes('কালিকা') ? '/docs/kali_puja_guide.html' : null);
 
   if (!effectiveUrl) {
     return (
@@ -90,9 +90,7 @@ export default function PDFViewer({ step, onComplete }) {
               <p className="text-orange-100 font-semibold text-sm">
                 {resource?.title || 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি — সম্পূর্ণ গাইড'}
               </p>
-              <p className="text-orange-400/50 text-xs">
-                পণ্ডিত শ্যামাচরণ সাংখ্যতীর্থ সংকলিত · সম্পূর্ণ ৩২ ধাপ, ন্যাস, ষোড়শোপচার ও ফর্দমালা
-              </p>
+              <p className="text-orange-400/50 text-xs">পণ্ডিত শ্যামাচরণ সাংখ্যতীর্থ সংকলিত · সম্পূর্ণ ৩২ ধাপ, ন্যাস, ষোড়শোপচার ও ফর্দমালা</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -102,8 +100,7 @@ export default function PDFViewer({ step, onComplete }) {
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-orange-500/20 hover:bg-orange-500/30 border border-orange-500/40 text-orange-200 text-xs font-semibold transition-all shadow-sm"
             >
-              <ExternalLink size={13} /> পূর্ণ স্ক্রিনে খুলুন ↗
-            </a>
+              <ExternalLink size={13} /> সম্পূর্ণ গাইড নতুন ট্যাবে খুলুন ↗</a>
           </div>
         </div>
 
@@ -111,7 +108,7 @@ export default function PDFViewer({ step, onComplete }) {
         <div className="w-full h-[85vh] bg-[#0B0615]">
           <iframe
             src={effectiveUrl}
-            title={resource?.title || 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি গাইড'}
+            title={resource?.title || 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি সম্পূর্ণ গাইড'}
             className="w-full h-full border-0"
           />
         </div>
@@ -131,7 +128,7 @@ export default function PDFViewer({ step, onComplete }) {
           <span className="text-3xl">📄</span>
         </div>
         <div>
-          <p className="text-orange-100 font-semibold text-lg">{resource?.title || 'Study Document'}</p>
+          <p className="text-orange-100 font-semibold text-lg">{resource?.title || 'শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি — সম্পূর্ণ গাইড'}</p>
           <p className="text-orange-200/50 text-sm mt-1">Word Document (.docx)</p>
         </div>
         <p className="text-orange-200/60 text-sm max-w-sm">

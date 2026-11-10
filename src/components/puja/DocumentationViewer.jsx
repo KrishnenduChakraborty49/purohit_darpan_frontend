@@ -15,7 +15,7 @@ export default function DocumentationViewer({ step }) {
   const [newNote, setNewNote] = useState('');
   const [savingNote, setSavingNote] = useState(false);
   const [expandedWord, setExpandedWord] = useState(null);
-  const [showFullGuide, setShowFullGuide] = useState(false);
+  
 
   useEffect(() => {
     if (user && step) {
@@ -140,47 +140,7 @@ export default function DocumentationViewer({ step }) {
 
   return (
     <div className="space-y-4">
-      {/* Interactive Complete Guide Banner */}
-      <div className="bg-gradient-to-r from-amber-950/50 via-purple-950/40 to-stone-900/80 border border-orange-500/30 rounded-2xl p-4 sm:p-5 flex items-center justify-between flex-wrap gap-3 shadow-lg">
-        <div className="flex items-center gap-3">
-          <span className="text-3xl">🪔</span>
-          <div>
-            <h4 className="text-orange-200 font-bold text-sm sm:text-base flex items-center gap-2">
-              শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি — সম্পূর্ণ প্রামাণ্য গাইড
-            </h4>
-            <p className="text-orange-400/70 text-xs mt-0.5">
-              পণ্ডিত শ্যামাচরণ সাংখ্যতীর্থ সংকলিত · ৩২টি ধাপ, ন্যাস, ষোড়শোপচার, ফর্দমালা ও প্রশ্নোত্তর
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center gap-2 flex-wrap">
-          <button
-            onClick={() => setShowFullGuide(!showFullGuide)}
-            className="px-4 py-2 rounded-xl bg-orange-500/20 hover:bg-orange-500/30 border border-orange-500/40 text-orange-200 text-xs font-semibold transition-all shadow-sm flex items-center gap-1.5"
-          >
-            {showFullGuide ? 'ধাপের বিবরণে ফিরুন ↩' : 'সম্পূর্ণ গাইড ব্রাউজ করুন 📜'}
-          </button>
-          <a
-            href="/docs/kali_puja_guide.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3 py-2 rounded-xl bg-stone-800 hover:bg-stone-700 border border-orange-500/20 text-orange-300 text-xs font-medium transition-all flex items-center gap-1"
-          >
-            পূর্ণ স্ক্রিন ↗
-          </a>
-        </div>
-      </div>
-
-      {showFullGuide ? (
-        <div className="bg-stone-900/60 border border-orange-500/20 rounded-2xl overflow-hidden shadow-2xl h-[85vh]">
-          <iframe
-            src="/docs/kali_puja_guide.html"
-            title="শ্রীশ্রীদক্ষিণকালী পূজা পদ্ধতি সম্পূর্ণ গাইড"
-            className="w-full h-full border-0"
-          />
-        </div>
-      ) : (
-        <div className="bg-stone-900/60 border border-orange-500/15 rounded-2xl p-6">
+      <div className="bg-stone-900/60 border border-orange-500/15 rounded-2xl p-6">
           {/* Toolbar */}
           <div className="flex items-center gap-2 mb-5 pb-4 border-b border-orange-500/10">
             <button
@@ -268,7 +228,6 @@ export default function DocumentationViewer({ step }) {
             </div>
           )}
         </div>
-      )}
     </div>
   );
 }
